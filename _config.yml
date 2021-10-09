@@ -1,0 +1,22 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "SubSeven >> Full-Stack Web Development" # the name of your site, e.g. ACME Corp.
+email: "info@subseven.io"
+
+
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /blog/:title
+      author: "Daniel Hernandez"
+
+  - 
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      author: "Daniel Hernandez"

@@ -1,0 +1,11 @@
+list:
+  - degree: Stupid Degree
+    school: Stupid School
+    start: 2010
+    end: 2032
+    blurb: Ipsum adipisiciorem consectetur esse mollit. Lorem
+  - degree: More Stupid Degree
+    school: Stupid School
+    start: 2010
+    end: 2032
+    blurb: Ipsum adipisiciorem consectetur esse mollit. Lorem
