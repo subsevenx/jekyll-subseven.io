@@ -1,26 +1,29 @@
 ---
 layout: resume
-title: "resume"
+title: "Resume"
+description: You can see these on my LinkedIn...but here they are for convenience.
 ---
 
-<h2 class="header-c">Employment</h2>
+<h2>Employment</h2>
+
+<p>{{ page.description }}</p>
 
 {% for item in site.data.exp.list %}
-<div class="body-c">
-  <h4 class="name-c">{{ item.title }} at {{ item.job }}</h4>
-  <span class="it"> From {{ item.start }} to {{ item.end }}</span>
-  <hr class="divider" />
-  <p class="blurb-c">{{ item.blurb }}</p>
+<div>
+  <h4>{{ item.title }} at {{ item.job }}</h4>
+  <span> From {{ item.start }} to {{ item.end }}</span>
+  <hr />
+  <p>{{ item.blurb }}</p>
 </div>
 
 {% endfor %}
 
-<h2 class="header-c">Education</h2>
+<h2>Education</h2>
 
 {% for item in site.data.ed.list %}
-<div class="body-c">
-  <h4 class="name-c"> {{ item.degree }} at {{ item.school }}</h4> <span class="it"> From {{ item.start }} to {{ item.end }}</span>
-  <hr class="divider">
-  <p class="blurb-c">{{ item.blurb }}</p>
+<div>
+  <h4> {{ item.degree }} at {{ item.school }}</h4> <span class="it"> From {{ item.start }} to {{ item.end }}</span>
+  <hr/>
+  <p>{{ item.blurb }}</p>
 </div>
 {% endfor %}

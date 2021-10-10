@@ -8,10 +8,10 @@ layout: wrapper
             <span> By: {{page.author}} </span>
             <div>
                 {% if page.image %}
-                <img src="{{ page.image | relative_url}}" alt="">
+                <img src="{{ page.image | relative_url}}" class="img-fluid" alt="">
                 {% else %} 
                 <!-- Fallback image in case of no image declared in the post -->
-                <img src="/assets/img/featured/img.png" alt="">
+                <img src="/assets/img/featured/img.png" class="img-fluid" alt="">
                 {% endif %}
 
             </div>
