@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    {% include meta.html %}
     <title>{{ page.title }} | {{ site.title }} </title>
+    {% include meta.html %}
+    {% include favicon.html %}
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    {% include favicon.html %}
   </head>
   <body>
   <!-- Begin page scaffold -->
