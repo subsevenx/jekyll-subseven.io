@@ -11,19 +11,23 @@
     <header>
       {%- include nav.html -%}
     </header>
-    <!-- Begin content scaffold -->
+    <!-- Begin page scaffold -->
     <div class="container p-5">
+      <!-- Begin main content scaffold -->
       <div class="row">
         <div class="col-md-10">
           {{ content }}
         </div> 
+      <!-- End main content scaffold -->
         
+        <!-- Begin sidebar scaffold -->
         <div class="col-md-2">
           {% include sidebar.html %}
         </div>
+    <!-- End sidebar scaffold -->
       </div>
     </div>
-    <!-- End content scaffold -->
     {% include footer.html %}
+    <!-- End page scaffold -->
   </body>
 </html>
