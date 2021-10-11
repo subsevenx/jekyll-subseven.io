@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ page.title }} | {{ site.title }} </title>
+    <title> {{ page.title }} | {{ site.title }} </title>
     {% include meta.html %}
     {% include favicon.html %}
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
@@ -22,6 +22,7 @@
         <div class="col-md-12">
           {{ content }}
         </div> 
+      </div>
     </div>
     {%- else -%}
     <div class="container">
@@ -37,11 +38,12 @@
           {% include sidebar.html %}
           {% endif %}
         </div>
+      </div>
+    </div>
         {% endif %}
         <!-- End sidebar scaffold -->
   <!-- End main content scaffold -->
-      </div>
-    </div>
+
     {% include footer.html %}
   <!-- End page scaffold -->
   </body>
