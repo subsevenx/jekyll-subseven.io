@@ -5,35 +5,46 @@ description: You can see these on my LinkedIn...but here they are for convenienc
 full: true
 ---
 
-<h2>Employment</h2>
+  <h2>Employment</h2>
 
-<p>{{ page.description }}</p>
+  <p>{{ page.description }}</p>
 
-{% for item in site.data.experience.list %}
-<div class="accordion accordion-flush" id="acc-parent-{{item.id}}">
-  <h4>{{ item.title }} at {{ item.job }}</h4>
-  <span> From {{ item.start }} to {{ item.end }}</span>
-  <hr>
-  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc-{{item.id}}" aria-expanded="true" aria-controls="acc-{{item.id}}">
-    Read More >>
-  </button>
-  <div class="accordion-item">
-    <div id="acc-{{item.id}}" class="accordion-collapse collapse show" data-bs-parent="#acc-parent">
-      <div class="accordion-body">
-        <p>{{ item.blurb }}</p>
+  {% for item in site.data.experience.list %}
+  <div class="accordion accordion-flush mt-3" id="acc-parent-exp-{{item.id}}">
+    <hr>
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc-exp-{{item.id}}" aria-expanded="true" aria-controls="acc-exp-{{item.id}}">
+      {{ item.job }}
+    </button>
+    <div class="accordion-item">
+      <div id="acc-exp-{{item.id}}" class="accordion-collapse collapse" data-bs-parent="#acc-parent-exp-{{item.id}}">
+        <div class=" card accordion-body">
+          <h4 class="panel-title">{{ item.title }}</h4>
+          <span class="fw-bold"> From {{ item.start }} to {{ item.end }}</span>
+          <p>{{ item.blurb }}</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-{% endfor %}
+  {% endfor %}
 
-<h2>Education</h2>
+  <h2>Education</h2>
 
-{% for item in site.data.education.list %}
-<div id="#{{item.id}}">
-  <h4> {{ item.degree }} at {{ item.school }}</h4> <span class="it"> From {{ item.start }} to {{ item.end }}</span>
-  <hr>
-  <p>{{ item.blurb }}</p>
-</div>
-{% endfor %}
+  {% for item in site.data.education.list %}
+
+  <div class="accordion accordion-flush mt-3" id="acc-parent-ed-{{item.id}}">
+    <hr>
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc-ed-{{item.id}}" aria-expanded="true" aria-controls="acc-ed-{{item.id}}">
+      {{ item.school }}
+    </button>
+    <div class="accordion-item">
+      <div id="acc-ed-{{item.id}}" class="accordion-collapse collapse" data-bs-parent="#acc-parent-ed-{{item.id}}">
+        <div class=" card accordion-body">
+          <h4 class="panel-title">{{ item.degree }}</h4>
+          <span class="fw-bold"> From {{ item.start }} to {{ item.end }}</span>
+          <p>{{ item.blurb }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
