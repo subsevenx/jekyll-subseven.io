@@ -1,13 +1,6 @@
 #For use in footer.html
-- name: Home
-  link: /
-- name: Portfolio
-  link: /portfolio/
-- name: Resume
-  link: /resume/
-- name: About
-  link: /about/
-- name: Contact
-  link: /contact/
-- name: Writing
-  link: /blog/
+linklist:
+  - name: GitHub
+    url: https://github.com/subsevenx/
+  - name: LinkedIn
+    url: https://linkedin.com/in/subseven
