@@ -2,13 +2,14 @@
 layout: resume
 title: "Resume"
 description: You can see these on my LinkedIn...but here they are for convenience.
+sidebar: false
 ---
 
 <h2>Employment</h2>
 
 <p>{{ page.description }}</p>
 
-{% for item in site.data.exp.list %}
+{% for item in site.data.experience.list %}
 <div>
   <h4>{{ item.title }} at {{ item.job }}</h4>
   <span> From {{ item.start }} to {{ item.end }}</span>
@@ -20,7 +21,7 @@ description: You can see these on my LinkedIn...but here they are for convenienc
 
 <h2>Education</h2>
 
-{% for item in site.data.ed.list %}
+{% for item in site.data.education.list %}
 <div>
   <h4> {{ item.degree }} at {{ item.school }}</h4> <span class="it"> From {{ item.start }} to {{ item.end }}</span>
   <hr/>
