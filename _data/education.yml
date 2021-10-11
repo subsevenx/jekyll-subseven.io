@@ -5,8 +5,10 @@ list:
     start: 2010
     end: 2032
     blurb: Ipsum adipisiciorem consectetur esse mollit. Lorem
+    id: 1
   - degree: More Stupid Degree
     school: Stupid School
     start: 2010
     end: 2032
     blurb: Ipsum adipisiciorem consectetur esse mollit. Lorem
+    id: 2

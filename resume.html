@@ -10,10 +10,10 @@ full: true
 <p>{{ page.description }}</p>
 
 {% for item in site.data.experience.list %}
-<div>
+<div id="#{{item.id}}">
   <h4>{{ item.title }} at {{ item.job }}</h4>
   <span> From {{ item.start }} to {{ item.end }}</span>
-  <hr />
+  <hr>
   <p>{{ item.blurb }}</p>
 </div>
 
@@ -22,9 +22,9 @@ full: true
 <h2>Education</h2>
 
 {% for item in site.data.education.list %}
-<div>
+<div id="#{{item.id}}">
   <h4> {{ item.degree }} at {{ item.school }}</h4> <span class="it"> From {{ item.start }} to {{ item.end }}</span>
-  <hr/>
+  <hr>
   <p>{{ item.blurb }}</p>
 </div>
 {% endfor %}
