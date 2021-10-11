@@ -24,7 +24,10 @@
         
         <!-- Begin sidebar scaffold -->
         <div class="col-md-2">
-          {% include sidebar.html %}
+        {% if page.side == false %}
+        {% else %}
+        {% include sidebar.html %}
+        {% endif %}
         </div>
         <!-- End sidebar scaffold -->
       </div>
