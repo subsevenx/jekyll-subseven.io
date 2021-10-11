@@ -4,9 +4,9 @@ layout: wrapper
     <div>
         <div>
             <div class="post-meta">
-                <h1> {{ page.title }} </h1>
-                <span> Posted: {{ page.date }} </span>
-                <span> By: {{ post.author }} </span>
+                <h1 class="h6"> {{ page.title }}</h1>
+                <span> Posted: <time>{{ page.date | date: "%c" }}</time> | </span>
+                <span> By: {{ page.author }} </span>
             </div>
             <div>
                 {% if page.image %}
