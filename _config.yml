@@ -1,6 +1,6 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "SubSeven >> Full-Stack Web Development" # the name of your site, e.g. ACME Corp.
+title: "SubSeven >> Full-Stack Web Developer" # the name of your site, e.g. ACME Corp.
 email: "info@subseven.io"
 
 
