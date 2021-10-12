@@ -3,7 +3,7 @@ title:  "Test post 1"
 date: 2021-10-10 16:27:33
 tags: test lime life
 category: life
-image: /assets/img/featured/img_2.png
+featured: /assets/img/featured/img_2.png
 ---
 
 We understand that it is better to exploit wirelessly. We believe we know that it is better to engineer easily. Without C2C, you will lack experiences. Is it more important for something to be best-of-breed? The portals factor can be delivered as-a-service to wherever it’s intended to go – mobile. Is it more important for something to be dynamic or to be customer-directed? 

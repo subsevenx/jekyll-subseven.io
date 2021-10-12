@@ -3,7 +3,7 @@ title:  "Test post"
 date: 2021-10-05 16:20:30
 tags: test lime life
 categories: life war
-image: /assets/img/featured/img.png
+featured: /assets/img/featured/img.png
 ---
 
 We believe we know that if you incentivize proactively then you may also mesh iteravely. Is it more important for something to be best-of-breed? The portals factor can be delivered as-a-service to wherever it’s intended to go – mobile. It sounds wonderful, but it's 100 percent accurate! The experiences factor is wireless. If all of this comes off as mixed-up to you, that's because it is! A company that can synthesize courageously will (eventually) be able to transition easily. 

@@ -8,7 +8,13 @@ title: "Blog"
 <ol class="list-unstyled">
   {% for post in site.posts %}
   <li>
-    <a href="{{ post.url }}">{{ post.title}}</a>
+    <img>
+    <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title}}</a></h2>
+    {% if post.featured %}
+    <img src="{{ post.featured | relative_url}}"  class="img-fluid" alt="Featured image for {{ post.title }}" itemprop="image">
+    {% else %}
+    <!-- Fallback image -->
+    <img src="/assets/img/featured/img.png" class="img-fluid" alt="Placeholder for featured images" itemprop="image">{% endif %}</a>
     <span>{{ post.date | date: "%b %-d, %Y" }}</span>
     <p>{{ post.excerpt |strip_html | truncatewords: 30 }}</p>
   </li>
