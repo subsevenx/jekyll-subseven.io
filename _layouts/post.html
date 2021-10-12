@@ -22,7 +22,16 @@ layout: wrapper
             </article>
         
         </div>
-            <button class="btn btn-primary" onclick="history.back();">&laquo; Back</button>
+            
+
+            <div>
+                {% if page.next.url %}
+                <a class="next" href="{{page.next.url}}">&laquo; Previous Post</a>
+                {% endif %}
+                {% if page.previous.url %}
+                <a class="prev" href="{{page.previous.url}}">Next Post &raquo;</a>
+                {% endif %}
+            </div>
     </div>
 
     <div class="post-tags"> 
