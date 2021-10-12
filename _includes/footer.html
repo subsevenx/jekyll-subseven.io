@@ -1,12 +1,12 @@
 <footer class="text-center mt-3" >
   <div class="row pt-3"  style="background-color: #858b9b;">
-    <div class="col-md">  
+    <div class="col">  
       <p>{{page.author}} | &copy;{{ site.time | date: '%Y' }}</p> 
     </div>
-    <div class="col-md"> 
+    <div class="col"> 
       <p><a href="mailto:daniel@subseven.io">Email Me</a></p>
     </div>
-    <div class="col-md">
+    <div class="col">
       {% for item in site.data.footer.linklist %}
       <span><a href="{{ item.url }}">{{ item.name }}</a></span>
       {% endfor %}
