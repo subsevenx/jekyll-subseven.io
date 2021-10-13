@@ -15,3 +15,7 @@ keywords:
 ```
 
 These variables have to be configured on the top-level pages (not _layouts or _includes.)
+
+## TODO
+
+- Remove different layouts in the main wrapper. It's just not maintainable. I'll bite the bullet and just do per page sidebar specification. 
