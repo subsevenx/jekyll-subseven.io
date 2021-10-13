@@ -2,6 +2,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/" # the subpath of your site, e.g. /blog
 title: "SubSeven &#xbb; Full-Stack Web Developer" # the name of your site, e.g. ACME Corp.
 email: "info@subseven.io"
+description: "Daniel Hernandez is a web developer based out of Chicago, IL specializing in PHP, Wordpress, and static sites."
+keywords: web developer near me, wordpress, php developer, monva digital
 
 sass:
     sass_dir: _sass

@@ -1,13 +1,10 @@
----
-layout: html_minifier
----
-
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 
 <head>
   <title> {{ page.title }} | {{ site.title }} </title>
   {% include meta.html %}
+  {% include seo.html %}
   {% include favicon.html %}
   {% include styles.html %}
 
