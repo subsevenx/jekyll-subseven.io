@@ -1,51 +1,55 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <title> {{ page.title }} | {{ site.title }} </title>
-    {% include meta.html %}
-    {% include favicon.html %}
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-  </head>
-  <body id="mainContent">
-  <!-- Begin page scaffold -->
-    <!-- Begin header scaffold -->  
-    <header>
-      {%- include nav.html -%}
-    </header>
-    <!-- End header scaffold -->
+<html lang="{{ site.lang | default: " en-US" }}">
 
-    <!-- Begin main content scaffold -->
-    {% if page.full == true %}
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          {{ content }}
-        </div> 
+<head>
+  <title> {{ page.title }} | {{ site.title }} </title>
+  {% include meta.html %}
+  {% include favicon.html %}
+  <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+
+<body id="mainContent">
+  <!-- Begin page scaffold -->
+  <!-- Begin header scaffold -->
+  <header>
+    {%- include nav.html -%}
+  </header>
+  <!-- End header scaffold -->
+
+  <!-- Begin main content scaffold -->
+  {% if page.full == true %}
+  <main class="container aria-label="Content">
+    <div class="row">
+      <div class="col-md-12">
+        {{ content }}
       </div>
     </div>
-    {%- else -%}
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10">
-          {{ content }}
-        </div> 
-        
-        <!-- Begin sidebar scaffold -->
-        <div class="col-md-2">
-          {% if page.sidebar == false %}
-          {% else %}
-          {% include sidebar.html %}
-          {% endif %}
-        </div>
+  </main>
+  {%- else -%}
+  <main class="container" aria-label="Content">
+    <div class="row">
+      <div class="col-md-10">
+        {{ content }}
       </div>
-    </div>
+
+      <!-- Begin sidebar scaffold -->
+      <div class="col-md-2">
+        {% if page.sidebar == false %}
+        {% else %}
+        {% include sidebar.html %}
         {% endif %}
-        <!-- End sidebar scaffold -->
+      </div>
+    </div>
+  </main>
+  {% endif %}
+  <!-- End sidebar scaffold -->
   <!-- End main content scaffold -->
 
-    {% include footer.html %}
+  {% include footer.html %}
   {% include scripts.html %}
   <!-- End page scaffold -->
-  </body>
+</body>
+
 </html>
