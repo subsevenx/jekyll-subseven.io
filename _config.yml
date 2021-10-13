@@ -3,6 +3,8 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 title: "SubSeven &#xbb; Full-Stack Web Developer" # the name of your site, e.g. ACME Corp.
 email: "info@subseven.io"
 
+sass:
+    sass_dir: _sass
 
 defaults:
   - 
