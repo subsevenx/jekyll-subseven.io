@@ -3,7 +3,7 @@ layout: html_minifier
 ---
 
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: " en-US" }}">
+<html lang="{{ site.lang | default: "en-US" }}">
 
 <head>
   <title> {{ page.title }} | {{ site.title }} </title>
@@ -23,7 +23,7 @@ layout: html_minifier
 
   <!-- Begin main content scaffold -->
   {% if page.full == true %}
-  <main class="container aria-label="Content">
+  <main class="container">
     <div class="row">
       <div class="col-md-12">
         {{ content }}
@@ -31,7 +31,7 @@ layout: html_minifier
     </div>
   </main>
   {%- else -%}
-  <main class="container" aria-label="Content">
+  <main class="container">
     <div class="row">
       <div class="col-md-10">
         {{ content }}
