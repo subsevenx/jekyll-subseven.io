@@ -6,8 +6,11 @@ Site uses a wrapper template and post template to manage structure. There are op
 
 ```
 ---
-sidebar: true
-full: true
+sidebar: true or false
+full: true or false
+seo-title:
+seo-description:
+keywords:
 ---
 ```
 
