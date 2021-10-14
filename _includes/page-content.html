@@ -1,9 +1,25 @@
 {%- comment -%}
 The page content is delivered via an includes. I am not sure whether I'll keep it like this, but for now, it allows me to globally edit headings and content wrappers.
 {%- endcomment -%}
-<main class="container-fluid">
+<main class="container">
     <h1>{{ page.title }}</h1>
+    <hr>
+
+    {% if page.sidebar == true %}
+    <div class="row">
+        <div class="col-lg-10">
+          {{content}}
+        </div>
+        <div class="col-lg-2">
+          {% include sidebar.html %}
+        </div>
+        {{ content }}
+    </div>
+    {% else %}
     {{ content }}
+    {% endif %}
+
+
 </main>
 
         {%- comment -%}        

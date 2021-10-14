@@ -9,18 +9,22 @@ keywords: "blog post archive, live, love laugh"
 
 <p>These are the posts I've made on the site:</p>
 
-<ol class="list-unstyled">
-  {% for post in site.posts %}
-  <li>
-    <img>
-    <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title}}</a></h2>
-    {% if post.featured %}
-    <img src="{{ post.featured | relative_url}}"  class="img-fluid" alt="Featured image for {{ post.title }}" itemprop="image">
-    {% else %}
-    <!-- Fallback image -->
-    <img src="/assets/img/featured/img.png" class="img-fluid" alt="Placeholder for featured images" itemprop="image">{% endif %}</a>
-    <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-    <p>{{ post.excerpt |strip_html | truncatewords: 30 }}</p>
-  </li>
+<div class="row" style="border: 1px solid blue;">
+{% for post in site.posts %}
+<div class="col-6" style="border: 1px solid red;"> 
+  <ol class="list-unstyled article-titles">
+    <li>
+      <h2><a href="{{ site.url }}{{ post.url }}">{{post.title}}</a></h2>
+    </li>
+  </ol>
+  {% if post.featured %}
+  <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="Featured image for {{ post.title }}">
+  {% else %}
+  {%- comment -%} Fallback Image {%- endcomment -%}
+  <img src="/assets/img/featured/img.png" class="img-fluid" alt="Placeholder for featured images">
+  {% endif %}
+  <time class="h6" datetime="{{post.date | date: " %F"}}">{{ post.date | date: "%b %-d, %Y" }}</time>
+  <p>{{ post.excerpt |strip_html | truncatewords: 30 }}</p>
+</div>
   {% endfor %}
-</ol>
+</div>

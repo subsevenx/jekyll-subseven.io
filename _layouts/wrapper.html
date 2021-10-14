@@ -16,31 +16,15 @@ layout: html_minifier
 </head>
 
 <body id="mainContent">
-  <!-- Begin page scaffold -->
-  <!-- Begin header scaffold -->
   <header>
     {%- include nav.html -%}
   </header>
-  <!-- End header scaffold -->
-
-  <!-- Begin main content scaffold -->
-    <div class="row">
-      <div class="col-lg-10">
-      {{ content }}
-      </div>
-      <!-- Begin sidebar scaffold -->
-      <div class="col-lg-2">
-        {% if page.sidebar == true %}
-        {% include sidebar.html %}
-        {% else %}
-        {% endif %}
-      </div>
-    </div>
-  <!-- End sidebar scaffold -->
-  <!-- End main content scaffold -->
-
+  
+  {{content}}
+  
   {% include footer.html %}
   {% include scripts.html %}
-  <!-- End page scaffold -->
+
+
 </body>
 </html>
