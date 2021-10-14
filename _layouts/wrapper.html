@@ -8,12 +8,11 @@ layout: html_minifier
 <html lang="{{ site.lang | default: "en-US" }}">
 
 <head>
-  <title> {{ page.title }} | {{ site.title }} </title>
+  <title>{{ page.title }} | {{ site.title }}</title>
   {% include meta.html %}
   {% include seo.html %}
   {% include favicon.html %}
   {% include styles.html %}
-
 </head>
 
 <body id="mainContent">
@@ -25,21 +24,18 @@ layout: html_minifier
   <!-- End header scaffold -->
 
   <!-- Begin main content scaffold -->
-  <main class="container">
     <div class="row">
-      <div class="col-md-10">
-        {{ content }}
+      <div class="col-lg-10">
+      {{ content }}
       </div>
-
       <!-- Begin sidebar scaffold -->
-      <div class="col-md-2">
+      <div class="col-lg-2">
         {% if page.sidebar == true %}
         {% include sidebar.html %}
         {% else %}
         {% endif %}
       </div>
     </div>
-  </main>
   <!-- End sidebar scaffold -->
   <!-- End main content scaffold -->
 
@@ -47,5 +43,4 @@ layout: html_minifier
   {% include scripts.html %}
   <!-- End page scaffold -->
 </body>
-
 </html>

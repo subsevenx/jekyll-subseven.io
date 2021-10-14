@@ -1,12 +1,13 @@
-<aside class="card text-right">
-<section> 
-    <h3 class="text-center p-3" > Recent posts </h3>
-    <section class="card-body m-3">   
-        <ul class="list-unstyled text-left">
-            {% for post in site.posts limit: 5 %}
-            <li><a href="{{ post.url }}">{{ post.title}}</a></li>
-            {% endfor %}        
-        </ul>    
+<aside class="card p-2 pm-0">
+    <section class="sm-text-center">
+        <h2 class="text-center h6"> Recent posts </h2>
+        <section class="card-body">
+            <p>Read my latest posts.</p>
+            <ul class="list-unstyled text-left">
+                {% for post in site.posts limit: 5 %}
+                <li><a href="{{post.url}}">{{ post.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
     </section>
-</section>
 </aside>
