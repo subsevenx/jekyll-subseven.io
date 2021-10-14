@@ -1,3 +1,6 @@
+{%- comment -%}
+Basic meta tags for seo. Todo: opengraph and schema stuff.
+{%- endcomment -%}
     <metal name="title" content="{% if page.seo-title or post.seo-title %}{{ page.seo-title }} | {{site.title}}{% else %}{{page.title}} | {{site.title}}{% endif %}">    
     <meta name="description" content="{% if page.seo-description or post.seo-description %}{{page.seo-description}}{% else %}{{site.description}} {% endif %}">
     <meta name="keywords" content="{% if page.keywords or post.keywords %}{{page.keywords}}{% else %}{{site.keywords}}{% endif %}">
