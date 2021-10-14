@@ -4,7 +4,6 @@ layout: html_minifier
 ---
 {%- endcomment -%}
 
-
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 
@@ -26,15 +25,6 @@ layout: html_minifier
   <!-- End header scaffold -->
 
   <!-- Begin main content scaffold -->
-  {% if page.full == true %}
-  <main class="container">
-    <div class="row">
-      <div class="col-md-12">
-        {{ content }}
-      </div>
-    </div>
-  </main>
-  {%- else -%}
   <main class="container">
     <div class="row">
       <div class="col-md-10">
@@ -43,14 +33,13 @@ layout: html_minifier
 
       <!-- Begin sidebar scaffold -->
       <div class="col-md-2">
-        {% if page.sidebar == false %}
-        {% else %}
+        {% if page.sidebar != false %}
         {% include sidebar.html %}
+        {% else %}
         {% endif %}
       </div>
     </div>
   </main>
-  {% endif %}
   <!-- End sidebar scaffold -->
   <!-- End main content scaffold -->
 
