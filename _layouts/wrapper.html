@@ -33,7 +33,7 @@ layout: html_minifier
 
       <!-- Begin sidebar scaffold -->
       <div class="col-md-2">
-        {% if page.sidebar != false %}
+        {% if page.sidebar == true %}
         {% include sidebar.html %}
         {% else %}
         {% endif %}
