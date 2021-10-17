@@ -13,15 +13,19 @@ layout: wrapper
     </div>
     <div class="row">
         {% if page.image %}
-        <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="">
+        <div class="container-fluid">
+            <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="">
+        </div>
         {% else %}
         <!-- Fallback image in case of no image declared in the post -->
-        <img src="/assets/img/featured/img.png" class="img-fluid" alt="">
+        <div class="container-fluid">
+            <img src="/assets/img/featured/img.png" class="img-fluid" alt="">
+        </div>
         {% endif %}
     </div>
 </div>
 
-    <article itemscope itemtype="http://schema.org/CreativeWork">
+    <article class="container" itemscope itemtype="http://schema.org/CreativeWork">
         {{ content }}
     </article>
 
