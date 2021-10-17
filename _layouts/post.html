@@ -13,14 +13,10 @@ layout: wrapper
     </div>
     <div class="row">
         {% if page.image %}
-        <div class="container-fluid">
             <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="">
-        </div>
         {% else %}
         <!-- Fallback image in case of no image declared in the post -->
-        <div class="container-fluid">
             <img src="/assets/img/featured/img.png" class="img-fluid" alt="">
-        </div>
         {% endif %}
     </div>
 </div>
@@ -31,16 +27,15 @@ layout: wrapper
 
 
 
-<div class="post-navigation">
+<div class="container post-navigation">
     {% if page.next.url %}
     <a class="next" href="{{page.next.url}}">&laquo; Previous Post</a>
     {% endif %}
     {% if page.previous.url %}
     <a class="prev" href="{{page.previous.url}}">Next Post &raquo;</a>
     {% endif %}
-</div>
-
-<div class="post-tags">
-    <span>Tags: </span>
-    <p><a href="{{ tag.url }}"> {{ page.tags | array_to_sentence_string }} </a></p>
+    <div class="post-tags">
+        <span>Tags: </span>
+        <p><a href="{{ tag.url }}"> {{ page.tags | array_to_sentence_string }} </a></p>
+    </div>
 </div>
