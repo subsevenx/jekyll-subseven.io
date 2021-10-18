@@ -1,20 +1,22 @@
 {%- comment -%}
 Handles the navigation menu of the website. Todo: context to buttons.
 {%- endcomment -%}
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-3">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/"><img width="57" height="57" class="img-fluid rounded-circle" src="/assets/img/favicon/apple-touch-icon-57x57.png" alt="subseven.io"> </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" name="toggle">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class ="collapse navbar-collapse justify-content-center" id="navbarToggle">
-      {% for nav_item in site.data.nav.menu %}
-      <ul class="navbar-nav" role="menubar"> 
-        <li class="nav-item" role="menuitem">
-          <a class="nav-link" href="{{nav_item.link }}"> {{nav_item.name }}</a>
-        </li>
-      </ul>
-      {%- endfor -%}
+<header>
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img width="57" height="57" class="img-fluid rounded-circle" src="/assets/img/favicon/apple-touch-icon-57x57.png" alt="subseven.io"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" name="toggle">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class ="collapse navbar-collapse justify-content-center" id="navbarToggle">
+        {% for nav_item in site.data.nav.menu %}
+        <ul class="navbar-nav" role="menubar"> 
+          <li class="nav-item" role="menuitem">
+            <a class="nav-link" href="{{nav_item.link }}"> {{nav_item.name }}</a>
+          </li>
+        </ul>
+        {%- endfor -%}
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>

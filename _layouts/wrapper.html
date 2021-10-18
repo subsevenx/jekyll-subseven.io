@@ -16,10 +16,8 @@ layout: html_minifier
 </head>
 
 <body id="mainContent">
-  <header>
-    {%- include nav.html -%}
-  </header>
-  
+  {%- include nav.html -%}
+
   {% if page.layout == 'post' %}
   {% include post-content.html %}
   {% else %}

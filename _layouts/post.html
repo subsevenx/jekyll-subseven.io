@@ -1,41 +1,46 @@
 ---
 layout: wrapper
 ---
-<div>
-    <div class="row post-meta">
-        <div class="col"><button class="btn" onclick="history.back();">&laquo; Back</button></div>
-        <div class="col">
-            <h1 class="h6"> {{ page.title }}</h1>
-        </div>
-        <div class="col"> Posted: <time datetime="{{ page.date | date: " %F" }}"> {{ page.date | date: "%m/%d/%Y" }}
-            </time> at <time datetime="{{ page.date | date: " %T" }}"> {{ page.date | date: "%T" }} </time> | </div>
-        <div class="col"> By: {{ page.author }} </div>
-    </div>
-    <div class="row">
-        {% if page.image %}
-            <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
-        {% else %}
-        <!-- Fallback image in case of no image declared in the post -->
-            <img src="/assets/img/featured/img.png" class="img-fluid" alt="Fallback post banner image that says subseven.io">
-        {% endif %}
-    </div>
-</div>
 
-    <article class=" py-3 container" itemscope itemtype="http://schema.org/CreativeWork">
+<main class="container">
+    <div>
+        <div class="post-meta row justify-content-center">
+            <div class="col"> By: {{ page.author }} </div>
+            <div class="col">
+                <h1 class="h6"> {{ page.title }}</h1>
+            </div>
+            <div class="col"> Posted: <time datetime="{{ page.date | date: " %F" }}"> {{ page.date | date: "%m/%d/%Y" }}
+            </time> at <time datetime="{{ page.date | date: " %T" }}"> {{ page.date | date: "%T" }} </time> | </div>
+        </div>
+        <div class="row">
+            {% if page.image %}
+            <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
+            {% else %}
+            <!-- Fallback image in case of no image declared in the post -->
+            <img src="/assets/img/featured/img.png" class="img-fluid" alt="Fallback post banner image that says subseven.io">
+            {% endif %}
+        </div>
+    </div>
+    
+    <article class=" py-3" itemscope itemtype="https://schema.org/CreativeWork">
         {{ content }}
     </article>
-
-
-
-<div class="container post-navigation float-right">
-    {% if page.next.url %}
-    <a class="next" href="{{page.next.url}}">&laquo; Previous Post</a>
-    {% endif %}
-    {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url}}">Next Post &raquo;</a>
-    {% endif %}
-    <div class="post-tags">
-        <span>Tags: </span>
-        <p><a href="{{ tag.url }}"> {{ page.tags | array_to_sentence_string }} </a></p>
+    
+<div class="row">   
+    <div class="post-navigation col align-self-start">
+        {% if page.next.url %}
+        <a class="next" href="{{page.next.url}}">&laquo; Previous Post</a>
+        {% endif %}
+        {% if page.previous.url %}
+        <a class="prev" href="{{page.previous.url}}">Next Post &raquo;</a>
+        {% endif %}
     </div>
+    
+    {% if page.tags %}
+    <div class="post-tags col align-self-end">
+        <span>Tags: </span>
+        <p><a href="{{tag.url}}">{{ page.tags | array_to_sentence_string }}</a></p>
+    </div>
+    {% endif %}
 </div>
+</main>

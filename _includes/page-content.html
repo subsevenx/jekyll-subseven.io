@@ -16,10 +16,11 @@
             <div class="col-lg-2">
             {% include sidebar.html %}
             </div>
-            {{ content }}
         </div>
-        {% else %}
-        {{ content }}
+        {% endif %}
+
+        {% if page.sidebar == false %} 
+        {{ content }} 
         {% endif %}
     </main>
 
