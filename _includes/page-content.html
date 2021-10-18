@@ -17,9 +17,8 @@
             {% include sidebar.html %}
             </div>
         </div>
-        {% endif %}
-
-        {% if page.sidebar == false %} 
+        
+        {% else %} 
         {{ content }} 
         {% endif %}
     </main>
