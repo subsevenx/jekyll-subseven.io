@@ -1,7 +1,7 @@
 ---
 title:  "Test post"
 date: 2021-10-05 16:20:30
-tags: test lime life
+tags: [test4, lime, life]
 categories: life war
 featured: /assets/img/featured/img.png
 ---

@@ -1,7 +1,7 @@
 ---
 title:  "Test post 1"
 date: 2021-10-10 16:27:33
-tags: test lime life
+tags: [test2, lime, life]
 category: life
 featured: /assets/img/featured/img_2.png
 ---

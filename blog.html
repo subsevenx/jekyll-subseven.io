@@ -9,9 +9,9 @@ keywords: "blog post archive, live, love laugh"
 
 <p>These are the posts I've made on the site:</p>
 
-<div class="row" style="border: 1px solid blue;">
+<div class="row">
 {% for post in site.posts %}
-<div class="col-6" style="border: 1px solid red;"> 
+<div class="col-6"> 
   <ol class="list-unstyled article-titles">
     <li>
       <h2><a href="{{ site.url }}{{ post.url }}">{{post.title}}</a></h2>

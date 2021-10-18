@@ -4,10 +4,10 @@ layout: wrapper
 
 <main class="container">
     <div>
-        <div class="post-meta row justify-content-center">
-            <div class="col"> By: {{ page.author }} </div>
+        <div class="post-meta row ">
+            <div class="col"> By: {{page.author}} </div>
             <div class="col">
-                <h1 class="h6"> {{ page.title }}</h1>
+                <h1 class="h6"> {{page.title}}</h1>
             </div>
             <div class="col"> Posted: <time datetime="{{ page.date | date: " %F" }}"> {{ page.date | date: "%m/%d/%Y" }}
             </time> at <time datetime="{{ page.date | date: " %T" }}"> {{ page.date | date: "%T" }} </time></div>
@@ -26,21 +26,26 @@ layout: wrapper
         {{ content }}
     </article>
     
-<div class="row">   
-    <div class="col align-self-start">
-        {% if page.next.url %}
-        <a class="next" href="{{page.next.url}}">&laquo; Previous Post</a>
-        {% endif %}
-        {% if page.previous.url %}
-        <a class="prev" href="{{page.previous.url}}">Next Post &raquo;</a>
+    <div class="row">
+
+        <div class="col-8">
+        {% if page.tags %}
+        <span>Tag{% if page.tags.size > 1 %}s{% endif %}:</span>
+        <p>{{ page.tags | array_to_sentence_string }}</p> 
+        {% else %}
+        <p>This post has no tags :( </p>
         {% endif %}
     </div>
-    
-    {% if post.tags %}
-    <div class="col align-self-end">
-        <span>Tag{% if post.tags.size > 1 %}s{% endif %}:</span>
-        <p>{{ page.tags | array_to_sentence_string }}</p>
+
+    <div class="col-4">
+            {% if page.next.url %}
+            <a class="next" href="{{page.next.url}}">&laquo; Previous Post</a>
+            {% endif %}
+            {% if page.previous.url %}
+            <a class="prev" href="{{page.previous.url}}">Next Post &raquo;</a>
+            {% endif %}
     </div>
-    {% endif %}
+
 </div>
+
 </main>
