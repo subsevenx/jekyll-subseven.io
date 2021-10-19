@@ -1,9 +1,9 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/" # the subpath of your site, e.g. /blog
-title: "SubSeven &#xbb; Full-Stack Web Developer" # the name of your site, e.g. ACME Corp.
 email: "info@subseven.io"
-seo-description: "Daniel Hernandez is a web developer based out of Chicago, IL specializing in PHP, Wordpress, and static sites."
-seo-keywords: web developer near me, wordpress, php developer, monva digital
+global-title: "SubSeven &#xbb; Full-Stack Web Developer" # the name of your site, e.g. ACME Corp.
+global-description: "This is the global site description that will show up when nothing is specified via the seo front matter"
+global-keywords: "globes, planet, interstellar"
 
 sass:
     sass_dir: _sass
