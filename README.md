@@ -6,16 +6,17 @@ Site uses a wrapper template and post template to manage structure. There are op
 
 ```
 ---
-sidebar: true or false
-full: true or false
-seo-title:
-seo-description:
-keywords:
+layout: wrapper #global wrapper
+title: "Test Page"
+sidebar: true #true or false
+seo-title: "This is a test seo title"
+seo-description: "This is a test seo description"
+seo-keywords: "blog, post, archive, live, love laugh" # you don't really need quotation marks
+og-title: This is a test opengraph title
+og-description: This is a test opengraph description
+og-image: /assets/img/placeholder.png
+featured: #relative path of featured image. Can be used anywhere but should be used for posts.
 ---
 ```
 
 These variables have to be configured on the top-level pages (not _layouts or _includes.)
-
-## TODO
-
-- Remove different layouts in the main wrapper. It's just not maintainable. I'll bite the bullet and just do per page sidebar specification. 
