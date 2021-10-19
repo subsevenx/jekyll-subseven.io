@@ -1,7 +1,7 @@
 {%- comment -%}
 The fallback will always be global titles/descriptions/keywords. 
 {%- endcomment -%}
-    <meta name="title" content="{% if page.seo-title %}{{page.seo-title}} | Blog: {{site.global-title}}{% else %}{{page.title}} | Blog: {{site.global-title}}{% endif %}">    
+    <meta name="title" content="{% if page.seo-title %}{{page.seo-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{% endif %}">    
     <meta name="description" content="{% if page.seo-description%}{{page.seo-description}}{% else %}{{site.global-description}} {% endif %}">
     <meta name="keywords" content="{% if page.seo-keywords %}{{page.seo-keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{site.global-keywords}}{% endif %}">
 
