@@ -1,3 +1,9 @@
 home:
   - My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static site generation
   - I've worked in marketing for the past few years but I am looking to make the switch back into web development 
+about:
+  - 
+e404:
+  - The page you were looking for could not be found :( 
+contact:
+  - If you need to get in contact with me, please use the following form. Note that I use <a href="https://formspree.io/" rel="nofollow">Formspree</a> to forward emails. You will be redirected after submission.
