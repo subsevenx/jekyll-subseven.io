@@ -4,7 +4,6 @@ The fallback will always be global titles/descriptions/keywords.
     <meta name="title" content="{% if page.seo-title %}{{page.seo-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{% endif %}">    
     <meta name="description" content="{% if page.seo-description%}{{page.seo-description}}{% else %}{{site.global-description}} {% endif %}">
     <meta name="keywords" content="{% if page.seo-keywords %}{{page.seo-keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{site.global-keywords}}{% endif %}">
-
     <meta property="og:title" content="{% if page.og-title %}{{page.og-title}}{% elsif page.seo-title %}{{page.seo-title}}{% else %}{{site.global-title}}{% endif %}">
     <meta property="og:description" content="{% if page.og-description %}{{page.og-description}}{% elsif page.seo-description %}{{page.seo-description}}{% else %}{{site.global-description}}{% endif %}">
     <meta property="og:image" content="{% if page.og-image %}{{page.og-image | img_url:'1200x627'}}{% elsif page.featured %}{{ page.featured | img_url:'1200x627'}}{% else %}https://via.placeholder.com/1280x627{% endif %}">
