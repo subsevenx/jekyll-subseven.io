@@ -1,0 +1,24 @@
+a.skip-to-content {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+a.skip-to-content:focus, a.skip-to-content:active {
+    left: auto;
+    top: auto;  
+    color: #fff;
+    background-color:#000;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    padding:.5rem;
+    border-radius: 1rem;
+    border:.5em solid red;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
