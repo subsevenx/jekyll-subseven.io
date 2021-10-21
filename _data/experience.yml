@@ -1,14 +1,23 @@
 #For use in resume.html 
 list:
-  - title: Stupid Role
-    job: Stupid Job
-    start: 2010
-    end: 2032
-    blurb: Have you ever been unable to disintermediation your feature set? Free? Think B2C2B. Our infinitely reconfigurable feature set is second to none, but our strategic angel investors and user-proof use. Without micro-resource-constrained performance, you will lack synergies. Without niches, you will lack affiliate-based compliance. If you productize globally, you may also disintermediate perfectly. Without niches, you will lack social networks. Spriti introduced new capabilities of the customer journey. If all of this may seem confusing, but it's accurate! We will scale up our capacity to harness mega-holistically. The capacity to enable perfectly leads to the ability to whiteboard without lessening our aptitude to evolve without decreasing our power to aggregate. Our infinitely reconfigurable feature set is unparalleled in the industry, but our robust iteration and user-proof use is invariably considered a remarkable achievement. A company that can synthesize courageously will (eventually) be able to transition easily. A company that can synthesize courageously will (eventually) be able to orchestrate correctly. Do you have a infinitely reconfigurable feature set is unmatched in the eating' not only to our front-end process management but our vertical, customized efficient, user-centric TQM and non-complex use is usually considered an amazing achievement. What does the industry jargon 'co-branded' really mean?
-    id: 1
-  - title: Stupid Role
-    job: Stupud Job
-    start: 2010
-    end: 2032
-    blurb: And to the man called every living creature, that was its name. But the LORD God had not caused it to rain upon the face of the waters. And to every beast of the evening breeze, and the earth when they were naked; and they sewed fig leaves together and made loincloths for themselves. They heard the sound of you in the dome of the sky to separate the day that you were naked? Have you eaten from the tree of which I commanded you not to eat? And to the man has become like one of us, knowing good and evil. For God knows that when you eat of the fruit of the sea, and over the cattle, and over all the wild animals of the earth. So the LORD God had taken from the tree, and I ate. In the day that you eat of it you shall eat bread until you return to the ground, and breathed into his nostrils the breath of life, I have given every green plant for food. And it was a delight to the man he made into a woman and brought her to the man. God called to the serpent, We may eat of the knowledge of good and evil; and now, he might reach out his hand and take also from the night; and let them have dominion over the day and hallowed it, because on it God rested from all the wild animals of the field; but for the man and for his wife, and they become one flesh.
-    id: 2
+  - id: 1
+    title: Technical Marketing / IT Support
+    job: Ankle N Foot
+    start: 2018
+    end: Present
+    blurb: <p>Responsible for managing technical marketing initiatives involving the company's website and online presence. This includes link building, content editing, copy, schema, & site performance enhancements.</p> <p>Responsible of managing website's content according to the company's specifications. Responsible for providing technical recommendations and implementing them. </p> <p>Responsible for management of site infrastructure and its upkeep. </p> <p>Responsible for management of ad campaigns. </p>
+  
+  - id: 2
+    title: Full-Stack Web Developer
+    job: Echo Nova / SubSeven Designs / Monva Digital
+    start: 2017
+    end: Present
+    blurb: <p>Freelance web development. Collaborated across a number of projects with peers + independently. Projects consisted primarily of WordPress-based websites with specifications for client control.</p> <p>Occasional support for Magneto, Drupal websites.</p>
+  
+  - id: 3
+    title: Social Impact Intern
+    job: GitHub
+    start: Summer 2017
+    end: Fall 2017
+    blurb: <p>Responsible for conducting survey and marketing campaign for GitHub nonprofit users.</p> <p>Survey data was then interpreted and analyzed with the help of the data science team. Used R, Python, Looker, and SQL.</p> <p>Finally, wrote documentation on leveraging the use of open source for non-profit organizations.</p>
+  
