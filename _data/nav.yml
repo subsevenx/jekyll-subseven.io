@@ -2,12 +2,12 @@
 menu: 
 - name: Home
   link: /
+- name: About
+  link: /about/
 - name: Portfolio
   link: /portfolio/
 - name: Resume
   link: /resume/
-- name: About
-  link: /about/
 - name: Contact
   link: /contact/
 - name: Writing
