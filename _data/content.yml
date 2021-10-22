@@ -1,8 +1,8 @@
 home:
-  - headings: 
-      - head: Hi There
-  - blurbs:
-    - text: My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static site generation. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
+  - heading: Hello There 
+  - blurb: My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static site generation. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
+  - blurb: This is my second line of text that will be present in the front page. 
+  - heading: This is another heading
 
 about:
   - Information about this site
@@ -13,7 +13,7 @@ about:
     - li: Digital Ocean&#58; Hosted and built on a droplet I manage.
     - li: <a href="https://github.com/Mendeo/jekyll-minifier" rel="nofollow">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier.
     - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme">Jekyll Bootstrap Theme</a>&#58; While I didn't use the code, I did steal how they structure their folders ( namely the SASS one) and a couple other ideas.
-    - li: <a href "http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/">Building a Better Sitemap XML by Daviden Singer</a>&#58; A great article about implementing a site map with Jekyll and Liquid.
+    - li: <a href="http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/">Building a Better Sitemap XML by Daviden Singer</a>&#58; A great article about implementing a site map with Jekyll and Liquid.
   - headings:
       - head: Information About This site
       - head: Site Structure

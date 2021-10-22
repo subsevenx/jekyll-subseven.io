@@ -13,8 +13,13 @@ og-image: https://via.placeholder.com/420x365
 
 <div class="row">
     <div class="col-md-6 col-sm-12">
-        <p>{{site.data.content.home[0]}}</p>
-        <p>{{site.data.content.home[1]}}</p>
+    {%- for text in site.data.content.home -%}
+        {% if text.heading  %}
+            <h1>{{text.heading}}</h1>
+        {% elsif text.blurb %}
+        <p>{{text.blurb}}</p>
+        {% endif %}
+    {%- endfor -%}
     </div>
     <div class="text-center col-md-6 col-sm-12">
         <img src="/assets/img/daniel_img.png" class="img-fluid">
