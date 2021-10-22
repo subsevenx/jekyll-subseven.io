@@ -1,14 +1,32 @@
 home:
-  - My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static site generation. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
-  - 
+  - headings: 
+      - head: Hi There
+  - blurbs:
+    - text: My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static site generation. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
+
 about:
-  - 
+  - Information about this site
+  - Credit where credit is due. This site was built with the help of&#58;
+  - list: 
+    - li: Jekyll&#58; a static site generator. I used it over something like Hugo and Gatsby since it's the one I'm most familiar with. I really like Front Matter and Liquid, so I decided to make the entire theme from scratch.
+    - li: Bootstrap 5&#58; I tend not to use frameworks but I wanted to crunch out this site. I used it mainly out of convenience since I want my site to Just Work™ so I can start writing. Custom theming via SASS. At some point, this site will transition to custom styles.
+    - li: Digital Ocean&#58; Hosted and built on a droplet I manage.
+    - li: <a href="https://github.com/Mendeo/jekyll-minifier" rel="nofollow">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier.
+    - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme">Jekyll Bootstrap Theme</a>&#58; While I didn't use the code, I did steal how they structure their folders ( namely the SASS one) and a couple other ideas.
+    - li: <a href "http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/">Building a Better Sitemap XML by Daviden Singer</a>&#58; A great article about implementing a site map with Jekyll and Liquid.
+  - headings:
+      - head: Information About This site
+      - head: Site Structure
+
 resume:
   - Here is some of my relevant work experience. You can find more in my <a href="https://www.linkedin.com/in/subseven/" rel="nofollow">LinkedIn account</a>. 
+
 e404:
   - The page you were looking for could not be found :( 
   - Here is a picture of a cat I found
+
 contact:
   - If you need to get in contact with me, please use the following form. Note that I use <a href="https://formspree.io/" rel="nofollow">Formspree</a> to forward emails. You will be redirected after submission.
+
 blog:
-  - This blog will be dedicated to tech-related things.
+  - A blog at the intersection of technology and life. Most of the stuff I write about here will be tech-related or tech-adjacent. 

@@ -7,27 +7,18 @@ seo-description: "This is a test seo description of the about page"
 seo-keywords: "home, live, love laugh"
 ---
 <section>
-    <h2>Information About This Website</h2>
-    <p>Credit where credit is due. This site was built with with: </p>
-    <ul>
-        <li>Jekyll: a static site generator. I used it over something like Hugo and Gatsby since it's the one I'm most
-            familiar with.
-            I really like Front Matter and Liquid, so I decided to make the entire theme from scratch.
-        </li>
-        <li>Bootstrap 5: I tend not to use frameworks but I wanted to crunch out this site. I used it mainly out of convenience since I want my site to Just Work™ so I can start writing.
-            Custom theming via SASS. At some point, this site will transition to custom styles.
-        </li>
-        <li>Digital Ocean: Hosted and built on a droplet I manage.
-        </li>
-        <li> 
-            <a href="https://github.com/Mendeo/jekyll-minifier" rel="nofollow">Mendeo Jekyll Minifier</a>: A
-            liquid-based HTML/JS minifier.
-        </li>
-        <li>
-            <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme">Jekyll Bootstrap Theme</a>:
-            While I didn't use the code, I did steal how they structure their folders ( namely the SASS one) and a couple other ideas. 
-        </li>
-    </ul>
+    <h2>{{site.data.content.about[0]}}</h2>
+    <p>{{site.data.content.about[1]}}</p>
+
+{%- for item in site.data.content.about -%}
+    {% if item.list %}
+        <ul>
+            {%- for subitem in item.list -%}
+            <li>{{subitem.li}}</li>
+            {%- endfor -%}
+        </ul>
+    {% endif %}
+{%- endfor -%}
 </section>
 
 <section>
