@@ -9,7 +9,7 @@ seo-keywords: "home, live, love laugh"
 <section>
     {%- for text in site.data.content.about -%}
     {% if text.heading %}
-    <h2 class="h1">{{text.heading}}</h2>
+    <h2 class="h-1">{{text.heading}}</h2>
     {% elsif text.blurb %}
     <p>{{text.blurb}}</p>
     {% endif %}
@@ -23,7 +23,11 @@ seo-keywords: "home, live, love laugh"
         {%- endfor -%}
     </ul>
     {% endif %}
-    {% endfor %}
+    {%- endfor -%}
     {% endif %}
+
     {% endfor %}
+
+
+
 </section>

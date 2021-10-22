@@ -8,16 +8,19 @@ about:
   - heading: Information About This Site
   - blurb: Credit where credit is due. This site was built with the help of&#58;
   - list: 
-    - li: Jekyll&#58; a static site generator. I used it over something like Hugo and Gatsby since it's the one I'm most familiar with. I really like Front Matter and Liquid, so I decided to make the entire theme from scratch.
-    - li: Bootstrap 5&#58; I tend not to use frameworks but I wanted to crunch out this site. I used it mainly out of convenience since I want my site to Just Work™ so I can start writing. Custom theming via SASS. At some point, this site will transition to custom styles.
-    - li: Digital Ocean&#58; Hosted and built on a droplet I manage.
-    - li: <a href="https://github.com/Mendeo/jekyll-minifier" rel="nofollow">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier.
-    - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme">Jekyll Bootstrap Theme</a>&#58; While I didn't use the code, I did steal how they structure their folders ( namely the SASS one) and a couple other ideas.
-    - li: <a href="http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/">Building a Better Sitemap XML by Daviden Singer</a>&#58; A great article about implementing a site map with Jekyll and Liquid.
+    - li: Jekyll&#58; I am really familiar with Jekyll. I was introduced to it in 2017 and have fallen in love with it ever since. I love all static site generators but it is just so quick and easy to work with Liquid and Front Matter to do what I need. 
+    - li: Bootstrap 5&#58; I am using Bootstrap (via SASS) for time's sake. Since the theme I am using was developed by me, I needed a quick way to style things. Eventually, I will transition to custom styles. I will still probably keep Bootstrap Grid around. 
+    - li: Digital Ocean&#58; Website is hosted and built on a droplet I manage.
+    - li: <a href="https://github.com/Mendeo/jekyll-minifier" rel="nofollow">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier. Only using the HTML minification (in production).
+    - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme" rel="nofollow">Jekyll Bootstrap Theme</a>&#58; No code was used from this repo. I took a lot of inspiration regarding how their folders are structured and modeled my site structure after it.s
+    - li: <a href="http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/" rel="nofollow">Building a Better Sitemap XML by Daviden Singer</a>&#58; A great article about implementing a site map with Jekyll and Liquid.
   - heading: Structure Of The Site 
-  - blurb: Since Jekyll allows me to decouple content from markup, I decided to take a modular approach for most pages this time around. As such, a lot of the structure/content on this site is being delivered via YAML files.
-  - This is particularly useful for sections with repetitive content—particularly with content that use lists and links. For example&#58; the nav menu, blog posts list, resume, home page. Using the front-matter markup, the content is looped from a YAML file, via Liquid, with predefined markup and styles
-
+  - blurb: Until 2019, this domain had a static HTML site (not using Jekyll.) In the fall of 2019 I transitioned it to Jekyll but I wasn't happy with the results. In the last few weeks I got a familiar itch to make something, and this decided to rebuild it from scratch. 
+  - blurb: This time around I took full advantage of the external data files and Liquid templating. Around 90% of the site's content is being delivered via a handful of YAML files&mdash;this page included!
+  - blurb: This allows me to decouple structure from content and makes managing plages much easier. 
+  - heading: Downsides
+  - blurb: The content loop I'm using to deliver the content to the pages is very linear&mdash;thus, I if want to experiment with layouts, I would have to modify it on a per page basis. This isn't an issue so far since most pages on this site <em>are</em> pretty linear. Also, duplicating some of the variables I've made will lead to...unexpected results.
+  - blurb: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io">here</a>
 
 resume:
   - blurb: Here is some of my relevant work experience. You can find more in my <a href="https://www.linkedin.com/in/subseven/" rel="nofollow">LinkedIn account</a>. 
