@@ -7,10 +7,30 @@ seo-description: "This is a test seo description of the resume page"
 seo-keywords: "resume, live, love laugh"
 ---
 
-  <h2 class="mt-3">Employment</h2>
-  
-  <p class="h6">{{site.data.content.resume[0]}}</p>
+<section>
+  {%- for text in site.data.content.resume -%}
+  {% if text.heading %}
+  <h2 class="h1">{{text.heading}}</h2>
+  {% elsif text.blurb %}
+  <p>{{text.blurb}}</p>
+  {% endif %}
+  {% if text.list %}
 
+  {%- for item in site.data.content.resume -%}
+  {% if item.list %}
+  <ul>
+      {%- for subitem in item.list -%}
+      <li>{{subitem.li}}</li>
+      {%- endfor -%}
+  </ul>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+</section>
+  
+
+<section> 
   {% for item in site.data.experience.list %}
   <div class="accordion accordion-flush mt-3" id="acc-parent-exp-{{item.id}}">
     <hr>
@@ -28,7 +48,9 @@ seo-keywords: "resume, live, love laugh"
     </div>
   </div>
   {% endfor %}
+</section>
 
+<section>
   <h2 class="mt-3">Education</h2>
   {% for item in site.data.education.list %}
   <div class="accordion accordion-flush mt-3" id="acc-parent-ed-{{item.id}}">
@@ -47,3 +69,4 @@ seo-keywords: "resume, live, love laugh"
     </div>
   </div>
   {% endfor %}
+</section>

@@ -6,24 +6,41 @@ seo-description: "This is a test seo description of the contact page"
 seo-keywords: "contact, live, love laugh"
 ---
 
-<p>{{site.data.content.contact[0]}}</p>
+<section>
+  
+  {%- for text in site.data.content.contact -%}
+  {% if text.heading %}
+  <h2 class="h1">{{text.heading}}</h2>
+  {% elsif text.blurb %}
+  <p>{{text.blurb}}</p>
+  {% endif %}
+  {% if text.list %}
 
-<h2>Get in Contact</h2>
-
+  {%- for item in site.data.content.contact -%}
+  {% if item.list %}
+  <ul>
+      {%- for subitem in item.list -%}
+      <li>{{subitem.li}}</li>
+      {%- endfor -%}
+  </ul>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+  
   <form action="https://formspree.io/subseven.me@gmail.com" method="POST">
     <div class="form-group">
         <label for="name">Name:</label>
         <input class="form-control sm" type="text" id="name" name="name" placeholder="Rami Malek">
-    </div>
+      </div>
       <label for="email">E-Mail:</label>
       <input class="form-control sm" type="email" id="email" name="user_mail" placeholder="mail@example.com">
-    <div>
-      <label for="msg">Message:</label>
-      <textarea class="form-control sm" name="message" id="msg" placeholder="Let me hire you!"></textarea>
-    </div>
-    <div class="form-button">
-      <button class="btn-sm btn-primary" type="submit" role="button">Send your message</button>
-    </div>
-</form>
-
-
+      <div>
+        <label for="msg">Message:</label>
+        <textarea class="form-control sm" name="message" id="msg" placeholder="Let me hire you!"></textarea>
+      </div>
+      <div class="form-button">
+        <button class="btn-sm btn-primary" type="submit" role="button">Send your message</button>
+      </div>
+    </form>
+  </section>

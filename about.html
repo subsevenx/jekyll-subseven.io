@@ -7,31 +7,23 @@ seo-description: "This is a test seo description of the about page"
 seo-keywords: "home, live, love laugh"
 ---
 <section>
-    <h2>{{site.data.content.about[0]}}</h2>
-    <p>{{site.data.content.about[1]}}</p>
-
-{%- for item in site.data.content.about -%}
-    {% if item.list %}
-        <ul>
-            {%- for subitem in item.list -%}
-            <li>{{subitem.li}}</li>
-            {%- endfor -%}
-        </ul>
+    {%- for text in site.data.content.about -%}
+    {% if text.heading %}
+    <h2 class="h1">{{text.heading}}</h2>
+    {% elsif text.blurb %}
+    <p>{{text.blurb}}</p>
     {% endif %}
-{%- endfor -%}
-</section>
+    {% if text.list %}
 
-<section>
-    <h2> Site Structure</h2>
-    <p> Since Jekyll allows me to decouple content from markup, I decided to take a modular approach for most pages this
-        time around.
-        As such, a lot of the structure/content on this site is being delivered via YAML files. </p>
-    <p> This is particularly useful for sections with repetitive content—particularly with content that use lists and
-        links.
-        For example: the nav menu, blog posts list, resume, home page.
-        Using the front-matter markup, the content is looped from a YAML file, via Liquid, with predefined markup and
-        styles</p>
-    <p> Exceptions to this include this page and other pages with content I deem more "static" or that need special layouts.</p>
-    <p> Source code for this site will be released once I am happy with the structure. At the moment, I am experimenting
-        with more complex layouts. </p>
+    {%- for item in site.data.content.about -%}
+    {% if item.list %}
+    <ul>
+        {%- for subitem in item.list -%}
+        <li>{{subitem.li}}</li>
+        {%- endfor -%}
+    </ul>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
 </section>
