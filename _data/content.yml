@@ -21,6 +21,8 @@ about:
   - heading: Downsides
   - blurb: The content loop I'm using to deliver the content to the pages is very linear&mdash;thus, I if want to experiment with layouts, I would have to modify it on a per page basis. This isn't an issue so far since most pages on this site <em>are</em> pretty linear. Also, duplicating some of the variables I've made will lead to...unexpected results.
   - blurb: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io">here</a>
+  - list:
+    - li: Test second list
 
 resume:
   - blurb: Here is some of my relevant work experience. You can find more in my <a href="https://www.linkedin.com/in/subseven/" rel="nofollow">LinkedIn account</a>. 
