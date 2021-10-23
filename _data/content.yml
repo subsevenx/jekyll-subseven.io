@@ -2,7 +2,8 @@ home:
   - heading: Hello There 
   - blurb: My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static site generation. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
   - blurb: This is my second line of text that will be present in the front page. 
-  - heading: This is another heading
+  - img: /assets/img/daniel_img.png
+    img-alt: A picture of me
 
 about:
   - heading: Information About This Site

@@ -10,15 +10,8 @@ og-title: Open Graph Test Title
 og-description: This is a test description for open graph
 og-image: https://via.placeholder.com/420x365
 ---
-<section> 
-    <div class="row">
-        <div class="col-md-6 col-sm-12">
-            {% for text in site.data.content.home %}
-            {%- include content-loop.html -%}
-            {%- endfor -%}
-        </div>
-        <div class="text-center col-md-6 col-sm-12">
-            <img src="/assets/img/daniel_img.png" class="img-fluid">
-        </div>
-    </div>
+<section>        
+    {% for text in site.data.content.home %}
+    {%- include content-loop.html -%}
+    {%- endfor -%}
 </section>
