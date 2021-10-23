@@ -8,17 +8,6 @@ seo-keywords: "home, live, love laugh"
 ---
 <section>
     {% for text in site.data.content.about %}
-    {% if text.heading %}
-    <h2 class="h-1">{{text.heading}}</h2>
-    {% elsif text.blurb %}
-    <p>{{text.blurb}}</p>
-    {% elsif text.list %}
-    <ul>
-        {%- for subitem in text.list -%}
-        <li>{{subitem.li}}</li>
-        {%- endfor -%}
-    </ul>
-    
-    {% endif %}
+    {%- include content-loop.html -%}
     {%- endfor -%}
 </section>

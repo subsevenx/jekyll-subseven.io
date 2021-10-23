@@ -5,25 +5,9 @@ title: "404"
 
 <section>
     <div class="px-4 text-center">
-        {%- for text in site.data.content.e404 -%}
-        {% if text.heading %}
-        <h2 class="h1">{{text.heading}}</h2>
-        {% elsif text.blurb %}
-        <p>{{text.blurb}}</p>
-        {% endif %}
-        {% if text.list %}
-        
-        {%- for item in site.data.content.e404 -%}
-        {% if item.list %}
-        <ul>
-            {%- for subitem in item.list -%}
-            <li>{{subitem.li}}</li>
-            {%- endfor -%}
-        </ul>
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-        {% endfor %}
+        {% for text in site.data.content.e404 %}
+        {%- include content-loop.html -%}
+        {%- endfor -%}
         <div id="cat-image" class="container"> </div>
     </div>
 </section>
