@@ -12,27 +12,27 @@ about:
     - li: Jekyll&#58; I am really familiar with Jekyll. I was introduced to it in 2017 and have fallen in love with it ever since. I love all static site generators but it is just so quick and easy to work with Liquid and Front Matter to do what I need. 
     - li: Bootstrap 5&#58; I am using Bootstrap (via SASS) for time's sake. Since the theme I am using was developed by me, I needed a quick way to style things. Eventually, I will transition to custom styles. I will still probably keep Bootstrap Grid around. 
     - li: Digital Ocean&#58; Website is hosted and built on a droplet I manage.
-    - li: <a href="https://github.com/Mendeo/jekyll-minifier" rel="nofollow">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier. Only using the HTML minification (in production).
-    - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme" rel="nofollow">Jekyll Bootstrap Theme</a>&#58; No code was used from this repo. I took a lot of inspiration regarding how their folders are structured and modeled my site structure after it.s
-    - li: <a href="http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/" rel="nofollow">Building a Better Sitemap XML by Daviden Singer</a>&#58; A great article about implementing a site map with Jekyll and Liquid.
-    - li: <a href="https://github.com/ArthurGareginyan/privacy-policy-template" rel="nofollow">Arthur Gareninyan's Privacy Policy Boilerplate</a>
+    - li: <a href="https://github.com/Mendeo/jekyll-minifier" target="_blank" rel="nofollow noopener">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier. Only using the HTML minification (in production).
+    - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme" target="_blank" rel="nofollow noopener">Jekyll Bootstrap Theme</a>&#58; No code was used from this repo. I took a lot of inspiration regarding how their folders are structured and modeled my site structure after it.s
+    - li: <a href="http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/" target="_blank" rel="nofollow noopener">Building a Better Sitemap XML by Daviden Singer</a>&#58; A great article about implementing a site map with Jekyll and Liquid.
+    - li: <a href="https://github.com/ArthurGareginyan/privacy-policy-template" target="_blank" rel="nofollow noopener">Arthur Gareninyan's Privacy Policy Boilerplate</a>
   - heading: Structure Of The Site 
   - blurb: Until 2019, this domain had a static HTML site (not using Jekyll.) In the fall of 2019 I transitioned it to Jekyll but I wasn't happy with the results. In the last few weeks I got a familiar itch to make something, and this decided to rebuild it from scratch. 
   - blurb: This time around I took full advantage of the external data files and Liquid templating. Around 90% of the site's content is being delivered via a handful of YAML files&mdash;this page included!
   - blurb: This allows me to decouple structure from content and makes managing plages much easier. 
   - heading: Downsides
   - blurb: The content loop I'm using to deliver the content to the pages is very linear&mdash;thus, I if want to experiment with layouts, I would have to modify it on a per page basis. This isn't an issue so far since most pages on this site <em>are</em> pretty linear. Also, duplicating some of the variables I've made will lead to...unexpected results.
-  - blurb: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io">here</a>
+  - blurb: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">here</a>
 
 resume:
-  - blurb: Here is some of my relevant work experience. You can find more in my <a href="https://www.linkedin.com/in/subseven/" rel="nofollow">LinkedIn account</a>. 
+  - blurb: Here is some of my relevant work experience. You can find more in my <a href="https://www.linkedin.com/in/subseven/" target="_blank" rel="nofollow noopener">LinkedIn account</a>. 
 
 e404:
   - heading: The page you were looking for could not be found :( 
   - blurb: Here is a picture of a cat I found&#58;
 
 contact:
-  - blurb: If you need to get in contact with me, please use the following form. Note that I use <a href="https://formspree.io/" rel="nofollow">Formspree</a> to forward emails. You will be redirected after submission.
+  - blurb: If you need to get in contact with me, please use the following form. Note that I use <a href="https://formcake.com" target="_blank" rel="nofollow noopener">Formcake</a> to forward emails. You will be redirected after submission.
 
 blog:
   - blurb: A blog at the intersection of technology and life. Most of the stuff I write about here will be tech-related or tech-adjacent. 
