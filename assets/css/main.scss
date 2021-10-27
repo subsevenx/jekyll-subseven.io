@@ -1,18 +1,5 @@
 ---
 ---
-
-//Style Overrides
-@import "custom-variables";
-@import "bootstrap/bootstrap";
-
-//Custom
-@import "custom-styles";
-@import "access";
-
-
-/** 
-Temporary 
-
 @import "bootstrap/functions";
 
 //Style Overrides
@@ -20,6 +7,7 @@ Temporary
 
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
+@import "bootstrap/utilities";
 
 //Bootstrap Components
 @import "bootstrap/reboot";
@@ -29,17 +17,17 @@ Temporary
 @import "bootstrap/images";
 @import "bootstrap/containers";
 @import "bootstrap/nav";
+@import "bootstrap/navbar";
 @import "bootstrap/buttons";
 @import "bootstrap/transitions";
 @import "bootstrap/forms";
-@import "bootstrap/navbar";
-@import "bootstrap/utilities";
-@import "bootstrap/buttons";
 @import "bootstrap/card";
 @import "bootstrap/dropdown";
+
+//Bootstrap Extras
 @import "bootstrap/helpers";
+@import "bootstrap/utilities/api";
 
 //Custom
 @import "custom-styles";
 @import "access";
-**/
