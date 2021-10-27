@@ -7,6 +7,7 @@ home:
 
 about:
   - heading: Information About This Site
+  - blurb: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">here</a>
   - blurb: Credit where credit is due. This site was built with the help of&#58;
   - list: 
     - li: Jekyll&#58; I am really familiar with Jekyll. I was introduced to it in 2017 and have fallen in love with it ever since. I love all static site generators but it is just so quick and easy to work with Liquid and Front Matter to do what I need. 
@@ -21,8 +22,9 @@ about:
   - blurb: This time around I took full advantage of the external data files and Liquid templating. Around 90% of the site's content is being delivered via a handful of YAML files&mdash;this page included!
   - blurb: This allows me to decouple structure from content and makes managing plages much easier. 
   - heading: Downsides
-  - blurb: The content loop I'm using to deliver the content to the pages is very linear&mdash;thus, I if want to experiment with layouts, I would have to modify it on a per page basis. This isn't an issue so far since most pages on this site <em>are</em> pretty linear. Also, duplicating some of the variables I've made will lead to...unexpected results.
-  - blurb: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">here</a>
+  - list:
+    - li: The content loop I'm using to deliver the content to the pages is very linear&mdash;thus, I if want to experiment with layouts, I would have to modify it on a per page basis. This isn't an issue so far since most pages on this site <em>are</em> pretty linear. Also, duplicating some of the variables I've made will lead to...unexpected results.
+    - li: 
 
 resume:
   - blurb: Here is some of my relevant work experience. You can find more in my <a href="https://www.linkedin.com/in/subseven/" target="_blank" rel="nofollow noopener">LinkedIn account</a>. 
