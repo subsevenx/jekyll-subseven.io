@@ -12,6 +12,7 @@ layout: wrapper
             <div class="col"> Posted: <time datetime="{{ page.date | date: " %F" }}"> {{ page.date | date: "%m/%d/%Y" }}
                 </time> at <time datetime="{{ page.date | date: " %T" }}"> {{ page.date | date: "%T" }} </time></div>
         </div>
+        <hr>
         <div class="row">
             {% if page.image %}
             <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
@@ -23,7 +24,7 @@ layout: wrapper
         </div>
     </div>
 
-    <article class=" py-3" itemscope itemtype="https://schema.org/CreativeWork">
+    <article class="py-3" itemscope itemtype="https://schema.org/CreativeWork">
         {{ content }}
     </article>
 
