@@ -4,6 +4,7 @@ title: "Contact Me"
 seo-title: "Test seo title of contact"
 seo-description: "This is a test seo description of the contact page"
 seo-keywords: "contact, live, love laugh"
+recaptcha: true
 ---
 
 <section>
@@ -26,6 +27,7 @@ seo-keywords: "contact, live, love laugh"
         <textarea class="form-control sm" name="message" id="msg" placeholder="Let me hire you!"></textarea>
       </div>
       <div class="form-button">
+        {%- include recaptcha.html -%}
         <button class="btn-sm btn-primary" type="submit" role="button">Send your message</button>
       </div>
       <input type="hidden" name="ez-reg" tabindex="-1">
