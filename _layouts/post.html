@@ -1,55 +1,11 @@
 ---
 layout: wrapper
 ---
+<section>
+    <h2>Table of Contents</h2>
+    {% include toc.html html=content h_min=2 ordered=true %}
+</section>
 
-<main class="container">
-    <div>
-        <div class="align-items-center post-meta row ">
-            <div class="col-md-10 col-sm-12">
-                <h1 class="h6"> {{page.title}}</h1>
-            </div>
-            <div class="col-md-2 col-sm-12"> Posted: <time datetime="{{ page.date | date: " %F" }}"> {{ page.date | date: "%m/%d/%Y" }}
-                </time> at <time datetime="{{ page.date | date: " %T" }}"> {{ page.date | date: "%T" }} </time> <br> 
-                By: {{page.author}}</div>
-        </div>
-        <hr>
-        <div class="row">
-            {% if page.image %}
-            <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
-            {% else %}
-            <!-- Fallback image in case of no image declared in the post -->
-            <img src="/assets/img/featured/img.png" class="img-fluid"
-                alt="Fallback post banner image that says subseven.io">
-            {% endif %}
-        </div>
-    </div>
-
-    <section>
-        <h2>Table of Contents</h2>
-            {% include toc.html html=content h_min=2 ordered=true %}
-    </section>
-
-    <article class="py-3" itemscope itemtype="https://schema.org/CreativeWork">
-        {{ content }}
-    </article>
-
-    <div class="row">
-        <div class="col-8">
-            {% if page.tags %}
-            <span>Tag{% if page.tags.size > 1 %}s{% endif %}:</span>
-            <p>{{ page.tags | array_to_sentence_string }}</p>
-            {% else %}
-            <p>This post has no tags :( </p>
-            {% endif %}
-        </div>
-
-        <div class="col-4">
-            {% if page.next.url %}
-            <a class="next" href="{{page.next.url}}">&laquo; Previous Post</a>
-            {% endif %}
-            {% if page.previous.url %}
-            <a class="prev" href="{{page.previous.url}}">Next Post &raquo;</a>
-            {% endif %}
-        </div>
-    </div>
-</main>
+<article class="py-3" itemscope itemtype="https://schema.org/CreativeWork">
+    {{ content }}
+</article>
