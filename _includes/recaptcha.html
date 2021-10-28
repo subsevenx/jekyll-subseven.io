@@ -1,5 +1,5 @@
 {% if recaptcha == true %}
 {% if site.environment == 'production' %}
-<div class="g-recaptcha" data-sitekey="6Lcbpf0cAAAAAHtOgY1tO0_H-JAiDFeYZ32Ca6Au"></div>
+<div class="g-recaptcha" data-sitekey="{{recaptcha-key}}"></div>
 {% endif %}
 {% endif %}

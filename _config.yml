@@ -6,6 +6,7 @@ global-description: "This is the global site description that will show up when 
 global-keywords: "globes, planet, interstellar"
 include: ['.htaccess']
 environment: development
+recaptcha-key: 6Lcbpf0cAAAAAHtOgY1tO0_H-JAiDFeYZ32Ca6Au
 
 sass:
     sass_dir: _sass
