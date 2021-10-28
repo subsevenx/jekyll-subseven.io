@@ -4,13 +4,13 @@ layout: wrapper
 
 <main class="container">
     <div>
-        <div class="post-meta row ">
-            <div class="col"> By: {{page.author}} </div>
-            <div class="col">
+        <div class="align-items-center post-meta row ">
+            <div class="col-md-10 col-sm-12">
                 <h1 class="h6"> {{page.title}}</h1>
             </div>
-            <div class="col"> Posted: <time datetime="{{ page.date | date: " %F" }}"> {{ page.date | date: "%m/%d/%Y" }}
-                </time> at <time datetime="{{ page.date | date: " %T" }}"> {{ page.date | date: "%T" }} </time></div>
+            <div class="col-md-2 col-sm-12"> Posted: <time datetime="{{ page.date | date: " %F" }}"> {{ page.date | date: "%m/%d/%Y" }}
+                </time> at <time datetime="{{ page.date | date: " %T" }}"> {{ page.date | date: "%T" }} </time> <br> 
+                By: {{page.author}}</div>
         </div>
         <hr>
         <div class="row">
