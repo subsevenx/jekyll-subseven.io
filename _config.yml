@@ -4,6 +4,8 @@ email: "info@subseven.io"
 global-title: "SubSeven &#xbb; Full-Stack Web Developer" # the name of your site, e.g. ACME Corp.
 global-description: "This is the global site description that will show up when nothing is specified via the seo front matter"
 global-keywords: "globes, planet, interstellar"
+include: ['.htaccess']
+environment: development
 
 sass:
     sass_dir: _sass
