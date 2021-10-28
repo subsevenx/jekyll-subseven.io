@@ -16,6 +16,7 @@ og-title: This is a test opengraph title
 og-description: This is a test opengraph description
 og-image: /assets/img/placeholder.png # can be absolute or relative link. Will fall back to featured image if not specified. 
 featured: #relative path of featured image. Can be used anywhere but should be used for posts.
+recaptcha: true #the site key can be set in the main config file
 ---
 ```
 
