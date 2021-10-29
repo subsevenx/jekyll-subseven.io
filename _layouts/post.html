@@ -23,12 +23,12 @@ layout: wrapper
             {% endif %}
         </div>
     </div>
-    <section>
+    <section class="py-3">
         <h2>Table of Contents</h2>
         {% include toc.html html=content h_min=2 ordered=true %}
     </section>
     
-    <article class="py-3" itemscope itemtype="https://schema.org/CreativeWork">
+    <article itemscope itemtype="https://schema.org/CreativeWork">
         {{ content }}
     </article>
     <div class="row">
