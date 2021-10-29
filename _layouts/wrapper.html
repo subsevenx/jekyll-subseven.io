@@ -17,10 +17,10 @@ layout: html_minifier
 <body>
   {% include nav.html %}
   <div id="main-content" tabindex="-1">
-    {% if page.layout == 'post' %}
-    {% include post-content.html %}
-    {% else %}
+    {% if page.layout != "post" %}
     {% include page-content.html %}
+    {% else %}
+    {{content}}  
     {% endif %}
 
     {% include footer.html %}
