@@ -3,7 +3,6 @@
 layout: html_minifier
 ---
 {%- endcomment -%}
-
 <!DOCTYPE html>
 <html lang="{{site.lang | default: "en-US"}}">
 
@@ -22,11 +21,8 @@ layout: html_minifier
     {% else %}
     {{content}}  
     {% endif %}
-
     {% include footer.html %}
     {% include scripts.html %}
   </div>
-
 </body>
-
 </html>
