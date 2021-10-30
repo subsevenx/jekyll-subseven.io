@@ -25,8 +25,19 @@ layout: wrapper
         </div>
     </div>
     <section class="py-3 mx-5">
-        <h2>Table of Contents</h2>
-        {% include toc.html html=content h_min=2 ordered=true %}
+        <div class="accordion accordion-flush mt-3" id="acc-parent-toc">
+            <hr>
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc-child-toc" aria-expanded="true" aria-controls="acc-child-toc">
+                <h2>Table of Contents</h2>
+            </button>
+            <div class="accordion-item">
+              <div id="acc-child-toc" class="accordion-collapse collapse" data-bs-parent="#acc-parent-toc">
+                <div class=" card accordion-body">
+                    {% include toc.html html=content h_min=2 ordered=true %}
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
 
     <article itemscope itemtype="https://schema.org/CreativeWork" class="mx-5">
