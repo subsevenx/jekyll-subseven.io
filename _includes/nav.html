@@ -5,22 +5,28 @@ Handles the navigation menu of the website. Todo: context to buttons.
 
   <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top active">
     <div class="container-fluid">
       <a class="navbar-brand" href="/"><img height="32" width="32" class="rounded-circle"
           src="/assets/img/site-logo.svg" alt="subseven.io"> </a>
-      <button aria-label="Menu Toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
-        name="toggle">
+      <button aria-label="Menu Toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarToggle" name="toggle">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
-        {% for nav_item in site.data.nav.menu %}
         <ul class="navbar-nav" role="menubar">
+          {% for nav-item in site.data.nav.menu %} {%- comment -%} This will determine if the page is active {%- endcomment -%}
+          {% if nav-item.link == page.url | split: '/' %}
           <li class="nav-item" role="menuitem">
-            <a class="nav-link" href="{{nav_item.link }}">{{nav_item.name }}</a>
+            <a class="nav-link active" href="{{nav-item.link }}" aria-current="page">{{nav-item.name }}</a>
           </li>
+          {% else %}
+          <li class="nav-item" role="menuitem">
+            <a class="nav-link" href="{{nav-item.link }}">{{nav-item.name }}</a>
+          </li>
+          {% endif %}
+          {%- endfor -%}
         </ul>
-        {%- endfor -%}
       </div>
     </div>
   </nav>

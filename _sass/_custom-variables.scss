@@ -1,14 +1,25 @@
-$red:     #D7263D;
-$dark: #090A48;
 $primary: #0c0f58; 
 $secondary: #474891;
+$dark: #090A48;
 $light: #D9DCD6;
 
+$orange:     #EA4525;
+$white: #eaeaea;
 
+// Typography
 $font-size-base: 1.2rem; 
 $font-family-sans-serif: "Roboto", sans-serif;
 $line-height-base: 1.8;
+// Components
 $body-bg: $primary; 
 $body-color: $light;
-$link-color: $red;
+
+$navbar-dark-color: $white;
+$navbar-dark-active-color: $orange;
+
 $accordion-bg: $dark;
+
+$card-bg: $dark;
+$card-color: $white;
+
+$link-color: $orange;

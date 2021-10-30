@@ -1,14 +1,14 @@
 <footer class="text-center mt-3 container-fluid" >
   <div class="row pt-3 bg-dark">
     <div class="col">  
-      <p class="text-primary">{{page.author}} | &copy;{{ site.time | date: '%Y' }}</p> 
+      <p>{{page.author}} | &copy;{{ site.time | date: '%Y' }}</p> 
     </div>
     <div class="col"> 
       <p><a href="mailto:daniel@subseven.io">Email Me</a></p>
     </div>
     <div class="col">
       {% for item in site.data.nav.footer %}
-      <span><a href="{{ item.url }}">{{ item.name }}</a></span>
+      <span><a href="{{item.url}}">{{item.name}}</a> |</span>
       {% endfor %}
     </div>
   </div>
