@@ -15,16 +15,10 @@ Handles the navigation menu of the website. Todo: context to buttons.
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
         <ul class="navbar-nav" role="menubar">
-          {% for nav-item in site.data.nav.menu %} {%- comment -%} This will determine if the page is active {%- endcomment -%}
-          {% if nav-item.link == page.url | split: '/' %}
+          {% for nav-item in site.data.nav.menu %} {%- comment -%} This will determine if the page is active. This wouldn't work, and I finally figured out that it was because the page.url was not pretty. {%- endcomment -%} 
           <li class="nav-item" role="menuitem">
-            <a class="nav-link active" href="{{nav-item.link }}" aria-current="page">{{nav-item.name }}</a>
+            <a class="nav-link {%if nav-item.link == page.url %}active{%endif%}" href="{{nav-item.link}}" {%if nav-item.link == page.url%}aria-current="page"{%endif%}>{{nav-item.name}}</a>
           </li>
-          {% else %}
-          <li class="nav-item" role="menuitem">
-            <a class="nav-link" href="{{nav-item.link }}">{{nav-item.name }}</a>
-          </li>
-          {% endif %}
           {%- endfor -%}
         </ul>
       </div>
