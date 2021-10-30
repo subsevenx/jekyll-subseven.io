@@ -1,5 +1,6 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/" # the subpath of your site, e.g. /blog
+permalink: pretty
 email: "info@subseven.io"
 global-title: "SubSeven &#xbb; Full-Stack Web Developer" # the name of your site, e.g. ACME Corp.
 global-description: "This is the global site description that will show up when nothing is specified via the seo front matter"
