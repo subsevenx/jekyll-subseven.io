@@ -6,7 +6,6 @@ seo-title: "Test seo title of blog post archive"
 seo-description: "This is a test seo description of the blog post archive"
 seo-keywords: "blog post archive, live, love laugh"
 ---
-
 <section>
   {% for text in site.data.content.blog %}
   {%- include content-loop.html -%}
@@ -16,20 +15,25 @@ seo-keywords: "blog post archive, live, love laugh"
 <section> 
   <div class="row">
     {% for post in site.posts %}
-    <div class="col-sm-12 col-md-6"> 
-      <ol class="list-unstyled article-titles">
-        <li>
-          <h2><a href="{{ site.url }}{{ post.url }}">{{post.title}}</a></h2>
-        </li>
-      </ol>
+    <div class="card col-sm-12 col-md-6 col-lg-4"> 
       {% if post.featured %}
-      <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="Featured image for {{ post.title }}">
+      <img src="{{post.featured | relative_url}}" class="card-img-top" alt="Featured image for post title: {{post.title}}">
       {% else %}
       {%- comment -%} Fallback Image {%- endcomment -%}
-      <img src="/assets/img/featured/img.png" class="img-fluid" alt="Placeholder for featured images">
+      <img src="/assets/img/featured/img.png" class="card-img-top" alt="Placeholder for featured images">
       {% endif %}
-      <time class="h6" datetime="{{post.date | date: " %F"}}">{{ post.date | date: "%b %-d, %Y" }}</time>
-      <p>{{ post.excerpt |strip_html | truncatewords: 30 }}</p>
+      <hr>
+      <ol class="list-unstyled article-titles">
+        <li>
+          <h3 class="card-title text-center"><a href="{{site.url}}{{post.url}}" class="card-link">{{post.title}}</a></h3>
+        </li>
+      </ol>
+      <div class="card-body">
+          <p class="card-text">{{post.excerpt |strip_html | truncatewords: 30}}</p>
+      </div>
+      <div class="card-footer">
+        <time class="h6" datetime="{{post.date | date: "%F"}}">{{post.date | date: "%b %-d, %Y"}}</time>
+      </div>
     </div>
     {% endfor %}
   </div>
