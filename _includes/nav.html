@@ -5,17 +5,17 @@ Handles the navigation menu of the website. Todo: context to buttons.
 
   <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top active shadow">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark active shadow">
     <div class="container-fluid">
       <a class="navbar-brand" href="/"><img height="32" width="32" class="rounded-circle"
-          src="/assets/img/site-logo.svg" alt="subseven.io"> </a>
+          src="/assets/img/site-logo.svg" alt="Logo for subseven.io"> </a>
       <button aria-label="Menu Toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarToggle" name="toggle">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
         <ul class="navbar-nav" role="menubar">
-          {% for nav-item in site.data.nav.menu %} {%- comment -%} This will determine if the page is active. This wouldn't work, and I finally figured out that it was because the page.url was not pretty. {%- endcomment -%} 
+          {% for nav-item in site.data.nav.menu %} {%- comment -%} This will determine if the page is active. This wouldn't work, and I finally figured out that it was because the page.url variable was not set to pretty. {%- endcomment -%} 
           <li class="nav-item" role="menuitem">
             <a class="nav-link {%if nav-item.link == page.url %}active{%endif%}" href="{{nav-item.link}}" {%if nav-item.link == page.url%}aria-current="page"{%endif%}>{{nav-item.name}}</a>
           </li>
