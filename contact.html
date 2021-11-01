@@ -18,7 +18,7 @@ recaptcha: true
     <div class="row form-group">
       <div>
         <label for="name" aria-required="true" required>Name:</label>
-        <input id="name" class="form-control sm" type="text" name="name" placeholder="Rami Malek" aria-required="true" required>
+        <input id="name" class="form-control sm" type="text" name="name" placeholder="Elliot Alderson" aria-required="true" required>
         <label for="email">E-Mail:</label>
         <input id="email" class="form-control sm" type="email" name="user_mail" placeholder="mail@example.com" aria-required="true" required>
       </div>
@@ -29,7 +29,7 @@ recaptcha: true
       </div>
       <div class="form-button">
         {%- include recaptcha.html -%}
-        <input type="submit" value="Send Message!">
+        <input title="Submit form to send message" id="send-message" type="submit" value="Send Message!">
       </div>
     </div>
   </form>

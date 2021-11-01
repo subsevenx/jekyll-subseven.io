@@ -4,10 +4,11 @@ menu:
   link: /
 - name: About
   link: /about/
-- name: Portfolio
-  link: /portfolio/
 - name: Resume
   link: /resume/
+  child:
+    - name: Portfolio
+      link: /portfolio/
 - name: Contact
   link: /contact/
 - name: Blog
