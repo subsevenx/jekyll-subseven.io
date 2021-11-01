@@ -5,10 +5,10 @@
         <hr>
         {% if page.sidebar == true %}
         <div class="row">
-            <div class="col-lg-10">
+            <div class="col-lg-9">
             {{content}}
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
             {% include sidebar.html %}
             </div>
         </div>
@@ -17,12 +17,3 @@
         {{ content }} 
         {% endif %}
     </main>
-
-            {%- comment -%}        
-            <div class="col text-right">
-                {% if page.title != "Home" %}
-                <button class="btn" onclick="history.back();">&laquo; Last Page</button>
-                {% endif %}
-            </div>
-        </div>
-            {%- endcomment -%}
