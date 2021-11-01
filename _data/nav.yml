@@ -8,7 +8,7 @@ menu:
   link: /resume/
   child:
     - name: Portfolio
-      link: /portfolio/
+      link: /portfolio/ 
 - name: Contact
   link: /contact/
 - name: Blog
