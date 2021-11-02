@@ -2,8 +2,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/" # the subpath of your site, e.g. /blog
 permalink: pretty
 email: "info@subseven.io"
-global-title: "SubSeven &#xbb; Full-Stack Web Developer" # the name of your site, e.g. ACME Corp.
-global-description: "This is the global site description that will show up when nothing is specified via the seo front matter"
+global-title: "SubSeven &#xbb; Web Dev, Musician, Writer" # the name of your site, e.g. ACME Corp.
+global-description: "Standing at the intersection of technology and life."
 global-keywords: "globes, planet, interstellar"
 include: ['.htaccess']
 environment: development
@@ -20,7 +20,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: /blog/:title
+      permalink: /blog/:year/:month/:title/
       author: "Daniel Hernandez"
 
   - 
