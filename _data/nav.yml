@@ -4,9 +4,11 @@ menu:
   link: /
 - name: About
   link: /about/
-- name: Resume
-  link: /resume/
+- name: Work
+  link: #
   child:
+    - name: Resume
+      link: /resume/
     - name: Portfolio
       link: /portfolio/ 
 - name: Contact
