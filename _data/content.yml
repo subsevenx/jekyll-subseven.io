@@ -30,6 +30,9 @@ about:
 resume:
   - blurb: Here is some of my relevant work experience. You can find more in my <a href="https://www.linkedin.com/in/subseven/" target="_blank" rel="nofollow noopener">LinkedIn account</a>. 
 
+portfolio:
+  - blurb: Here is a sample of some of my web development work.
+
 e404:
   - heading: The page you were looking for could not be found :( 
   - blurb: Here is a picture of a cat I found&#58;
