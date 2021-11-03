@@ -27,7 +27,7 @@ seo-keywords: "resume, live, love laugh"
         <div class=" card accordion-body">
           <h4 class="panel-title">{{item.title}}</h4>
           <span class="fw-bold"> From {{item.start}} to {{item.end}}</span>
-          <p>{{item.blurb}}</p>
+          {{- item.blurb -}}
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ seo-keywords: "resume, live, love laugh"
         <div class=" card accordion-body">
           <h4 class="panel-title">{{ item.degree }}</h4>
           <span class="fw-bold"> From {{ item.start }} to {{ item.end }}</span>
-          <p>{{ item.blurb }}</p>
+          {{- item.blurb -}}
         </div>
       </div>
     </div>
