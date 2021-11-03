@@ -38,7 +38,9 @@ e404:
   - p: Here is a picture of a cat I found&#58;
 
 contact:
+  - h2: Get In Touch
   - p: If you need to get in contact with me, please use the following form. Note that I use <a href="https://formcake.com" target="_blank" rel="nofollow noopener">Formcake</a> to forward emails. You will be redirected after submission.
 
 blog:
+  - h2: My Writings
   - p: A blog at the intersection of technology and life. Most of the stuff I write about here will be tech-related or tech-adjacent. 

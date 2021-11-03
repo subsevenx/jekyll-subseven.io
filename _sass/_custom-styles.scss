@@ -2,7 +2,7 @@
     margin-top: 1em;
 }
 
-#send-message {
+#send-message-button {
     border-radius: .5em;
     background-color: $primary;
     color: $white;
@@ -11,11 +11,32 @@
     white-space: normal;
 }
 
-#send-message:hover {
+#send-message-button:hover {
     background-color: $dark;
     color: $light;
 }
 
-.article-titles {
-    color: azure;
+.post-card{
+    transition: .2s ease-in;
+}
+
+.post-card:hover {
+    opacity: 0.6;
+    transition: .2s ease-out;
+}
+
+.read-post-button {
+    border-radius: .5em;
+    background-color: $primary;
+    color: $white;
+    margin-top: .5em;
+    max-width: 100%;
+    white-space: normal;
+    transition: .2s ease-in;
+}
+
+.read-post-button:hover {
+    background-color: $dark;
+    color: $light;
+    transition: .2s ease-out;
 }
