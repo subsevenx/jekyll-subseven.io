@@ -2,21 +2,21 @@
 layout: wrapper
 ---
 <main class="container">
-    <div>
-        <div class="align-items-center post-meta row ">
+    <div class="post-meta-container">
+        <div class="flex-row d-flex align-items-center">
             <div class="col-md-10 col-sm-12">
-                <h1 class="h6"> {{page.title}}</h1>
+                <h1 class="h1"> {{page.title}}</h1>
+                <p class="h4">By: {{page.author}}</p> 
             </div>
-            <div class="col-md-2 col-sm-12"> Posted: <time datetime="{{ page.date | date: " %F" }}"> {{ page.date |
-                    date:
-                    "%m/%d/%Y" }}
-                </time> at <time datetime="{{ page.date | date: " %T" }}"> {{ page.date | date: "%T" }} </time> <br>
-                By: {{page.author}}</div>
+            <div class="col-md-2 col-sm-12"> 
+            <p> Posted: <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
+                at <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> </p>
+            </div>
         </div>
         <hr>
         <div class="row">
             {% if page.image %}
-            <img src="{{ post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
+            <img src="{{post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
             {% else %}
             <!-- Fallback image in case of no image declared in the post -->
             <img src="/assets/img/featured/img.png" class="img-fluid"
@@ -24,6 +24,7 @@ layout: wrapper
             {% endif %}
         </div>
     </div>
+
     <section class="py-3 mx-5">
         <div class="accordion accordion-flush mt-3" id="acc-parent-toc">
             <hr>
@@ -40,25 +41,48 @@ layout: wrapper
           </div>
     </section>
 
+    <nav class="px-5 text-center my-2"> 
+        <div class="flex-row d-flex align-items-center">
+            <div class="col-6">
+                {% if page.next.url %}
+                <a class="post-next" href="{{page.next.url}}">&laquo; Previous Post</a>
+                {% endif %}
+            </div>
+            <div class="col-6">
+                {% if page.previous.url %}
+                <a class="post-prev" href="{{page.previous.url}}">Next Post &raquo;</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
     <article itemscope itemtype="https://schema.org/CreativeWork" class="mx-5">
-        {{ content }}
+        {{content}}
     </article>
-    <div class="row">
-        <div class="col-md-8">
-            {% if page.tags %}
-            <span>Tag{% if page.tags.size > 1 %}s{% endif %}:</span>
-            <p>{{ page.tags | array_to_sentence_string }}</p>
+    <div class="flex-row d-flex align-items-center mx-5">
+        <div class="col-md-5 post-categories">
+            {% if page.categories %}
+            <div>
+                {% if page.categories.size <= 1 %}
+                Category
+                {% elsif page.categories.size > 1 %}
+                Categories
+                {% endif %}:
+            </div>
+            <p>{{page.categories | array_to_sentence_string}}</p>
             {% else %}
-            <p>This post has no tags :( </p>
+            <p>This post has no categories :(</p>
             {% endif %}
         </div>
 
-        <div class="col-md-4">
-            {% if page.next.url %}
-            <a class="next" href="{{page.next.url}}">&laquo; Previous Post</a>
-            {% endif %}
-            {% if page.previous.url %}
-            <a class="prev" href="{{page.previous.url}}">Next Post &raquo;</a>
+        <div class="col-md-5 post-tags">
+            {% if page.tags %}
+            <span>
+                Tag{% if page.tags.size > 1 %}s{% endif %}:
+            </span>
+            <p>{{page.tags | array_to_sentence_string}}</p>
+            {% else %}
+            <p>This post has no tags :(</p>
             {% endif %}
         </div>
     </div>

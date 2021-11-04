@@ -1,4 +1,4 @@
-{% if recaptcha == true %}
+{% if page.recaptcha == true %}
 {% if site.environment == 'production' %}
 <div class="g-recaptcha" data-sitekey="{{site.recaptcha-key}}"></div>
 {% endif %}
