@@ -40,3 +40,14 @@
     color: $light;
     transition: .2s ease-out;
 }
+
+.post-back-button {
+    padding: 0;
+    border: none;
+    background: none;
+    color: $light;
+    text-decoration: underline;
+}
+    .post-back-button:hover {
+        color: $orange;
+    }
