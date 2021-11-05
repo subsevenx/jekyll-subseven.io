@@ -7,10 +7,10 @@ home:
 
 about:
   - h2: Information About This Site
-  - p: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">here</a>.
+  - p: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">here</a>. Feel free to use it for whatever you'd like.
   - p: Credit where credit is due. This site was built with the help of&#58;
   - list: 
-    - li: <a href="jekyllrb.com/" target="_blank" rel="nofollow noopener">Jekyll</a>&#58; A static site generator. My favourite one of them all, even if it is Ruby-based.
+    - li: <a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener">Jekyll</a>&#58; A static site generator. My favourite one of them all, even if it is Ruby-based.
     - li: <a href="https://github.com/Mendeo/jekyll-minifier" target="_blank" rel="nofollow noopener">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier.
     - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme" target="_blank" rel="nofollow noopener">Jekyll Bootstrap Theme</a>&#58; No code was used from this repo, instead I took inspiration from their folder structures and loosely modeled this site's structure around it.
     - li: <a href="https://github.com/ArthurGareginyan/privacy-policy-template" target="_blank" rel="nofollow noopener">Arthur Gareninyan's Privacy Policy Boilerplate</a>&#58; Boiler plate for the privacy policy of this site.
