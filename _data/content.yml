@@ -7,25 +7,14 @@ home:
 
 about:
   - h2: Information About This Site
-  - p: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">here</a>
+  - p: You can find the source code for this site <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">here</a>.
   - p: Credit where credit is due. This site was built with the help of&#58;
   - list: 
-    - li: Jekyll&#58; I am really familiar with Jekyll. I was introduced to it in 2017 and have fallen in love with it ever since. I love all static site generators but it is just so quick and easy to work with Liquid and Front Matter to do what I need. 
-    - li: Bootstrap 5&#58; Customized Bootstrap with SASS. Using a handful of components.
-    - li: Digital Ocean&#58; Website is hosted and built on a droplet I manage.
-    - li: <a href="https://github.com/Mendeo/jekyll-minifier" target="_blank" rel="nofollow noopener">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier. Only using the HTML minification (in production).
-    - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme" target="_blank" rel="nofollow noopener">Jekyll Bootstrap Theme</a>&#58; No code was used from this repo. I took a lot of inspiration regarding how their folders are structured and modeled my site structure after it.s
-    - li: <a href="http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/" target="_blank" rel="nofollow noopener">Building a Better Sitemap XML by Daviden Singer</a>&#58; A great article about implementing a site map with Jekyll and Liquid.
+    - li: <a href="jekyllrb.com/" target="_blank" rel="nofollow noopener">Jekyll</a>&#58; A static site generator. My favourite one of them all, even if it is Ruby-based.
+    - li: <a href="https://github.com/Mendeo/jekyll-minifier" target="_blank" rel="nofollow noopener">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier.
+    - li: <a href="https://github.com/jonaharagon/jekyll-bootstrap-theme" target="_blank" rel="nofollow noopener">Jekyll Bootstrap Theme</a>&#58; No code was used from this repo, instead I took inspiration from their folder structures and loosely modeled this site's structure around it.
     - li: <a href="https://github.com/ArthurGareginyan/privacy-policy-template" target="_blank" rel="nofollow noopener">Arthur Gareninyan's Privacy Policy Boilerplate</a>&#58; Boiler plate for the privacy policy of this site.
-    - li: <a href="https://github.com/allejo/jekyll-toc" target="_blank" rel="nofollow noopener">Allejo's Table of Contents</a>&#58; A Liquid-based TOC that I use on my posts.
-  - h2: Structure Of The Site 
-  - p: Until 2019, this domain had a static HTML site (not using Jekyll.) In the fall of 2019 I transitioned it to Jekyll but I wasn't happy with the results. In the last few weeks I got an itch to make something, and thus, decided to rebuild it from scratch. 
-  - p: This time around I took full advantage of the external data files and Liquid templating. Around 90% of the site's content is being delivered via a handful of YAML files&mdash;this page included!
-  - p: This allows me to decouple structure from content and makes managing plages much easier. 
-  - h2: Downsides
-  - list:
-    - li: The content loop I'm using to deliver the content to the pages is very linear&mdash;thus, I if want to experiment with per-page layouts, I would have to modify it on a per-page basis. This isn't an issue so far since most pages on this site <em>are</em> pretty linear but that would make this theme pretty one-dimensional.
-    - li: I am using a <em>lot</em> of components. Build time isn't horrible now but I do expect performance issues if my content grows substantially. 
+    - li: <a href="https://github.com/allejo/jekyll-toc" target="_blank" rel="nofollow noopener">Allejo's Table of Contents</a>&#58; A Liquid-based TOC that I use on my posts. Extremely helpful.
 
 resume:
   - p: Here is some of my relevant work experience. You can find more in my <a href="https://www.linkedin.com/in/subseven/" target="_blank" rel="nofollow noopener">LinkedIn account</a>. 

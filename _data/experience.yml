@@ -5,14 +5,14 @@ list:
     job: Ankle N Foot
     start: 2018
     end: Present
-    blurb: <p>Responsible for managing technical marketing initiatives involving the company's website and online presence. This includes link building, content editing, copy, schema, & site performance enhancements.</p> <p>Responsible of managing website's content according to the company's specifications. Responsible for providing technical recommendations and implementing them. </p> <p>Responsible for management of site infrastructure and its upkeep. </p> <p>Responsible for management of ad campaigns. </p>
+    blurb: <p>Responsible for managing technical marketing initiatives involving the company's website and online presence. This includes link building, content editing, copy, schema, & site performance enhancements.</p> <p>Responsible of managing website's content according to the company's specifications. Responsible for providing technical recommendations and implementing them. </p> <p>Responsible for management of site infrastructure and its upkeep. </p> <p>Responsible for management of paid ad campaigns and email marketing campaigns.</p>
   
   - id: 2
     title: Full-Stack Web Developer
     job: Echo Nova / SubSeven Designs / Monva Digital
     start: 2017
     end: Present
-    blurb: <p>Freelance web development. Collaborated across a number of projects with peers + independently. Projects consisted primarily of WordPress-based websites with specifications for client control.</p> <p>Occasional support for Magneto, Drupal websites.</p>
+    blurb: <p>Freelance web development. Collaborated across a number of projects with peers + independently. Projects primarily consisted of WordPress-based websites with specifications for client control and managed servers. </p> <p>Occasional support for Magneto & Drupal websites.</p>
   
   - id: 3
     title: Social Impact Intern
