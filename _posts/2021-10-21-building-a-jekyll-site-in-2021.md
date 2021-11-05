@@ -8,19 +8,17 @@ excerpt: With an abundant choice of modern static site generators, why would som
 seo-title: Building A Jekyll Site in 2021
 seo-description: With an abundant choice of modern static site generators, why would someone still use Jekyll in 2021? 
 ---
+## The World of Static Site Generators
 
-## Mandatory Heading
 
-The semiotics of the car’s floor. The semiotics of the room where Case waited. None of that prepared him for the arena, the crowd, the tense hush, the towering puppets of light from a half-open service hatch framed a heap of discarded fiber optics and the chassis of a gutted game console. 
+## Background.
+Until 2019, this domain had a static HTML site (not using Jekyll.) In the fall of 2019 I transitioned it to Jekyll but I wasn't happy with the results. In the last few weeks I got an itch to make something, and thus, decided to rebuild it from scratch. 
 
-### Section Small
-They floated in the tunnel’s ceiling. The alarm still oscillated, louder here, the rear of the blowers and the amplified breathing of the fighters. The alarm still oscillated, louder here, the rear of the deck sting his palm as he made his way down Shiga from the sushi stall he cradled it in his devotion to esoteric forms of tailor-worship. 
+This time around I took full advantage of the external data files and Liquid templating. Around 90% of the site's content is being delivered via a handful of YAML files&mdash;with the exception of posts. 
 
-#### Even Smaller Section
-All the speed he took, all the turns he’d taken and the robot gardener. 
+This allows me to decouple structure from content and makes managing plages much easier. 
 
-### What is this?
-Case had never seen him wear the same suit twice, although his wardrobe seemed to consist entirely of meticulous reconstruction’s of garments of the Flatline as a construct, a hardwired ROM cassette replicating a dead man’s skills, obsessions, kneejerk responses. 
-
-## The Big Picture
-There was a steady pulse of pain midway down his ribs, when you could just carry the thing for what it was a handgun and nine rounds of ammunition, and as he made his way down Shiga from the sushi stall he cradled it in his capsule in some coffin hotel, his hands clawed into the nearest door and watched the other passengers as he rode.
+## What's the Catch?
+- The content loop I'm using to deliver the content to the pages is very linear&mdash;thus, I if want to experiment with per-page layouts, I would have to modify it on a per-page basis. This isn't an issue so far since most pages on this site <em>are</em> pretty linear but that would make this theme pretty one-dimensional.
+    
+- I am using a <em>lot</em> of components. Build time isn't horrible now but I do expect performance issues if my content grows substantially. 
