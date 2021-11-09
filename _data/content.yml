@@ -2,7 +2,7 @@ home:
   - h2: Hello There 
   - p: My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static site generation. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
   - p: This is my second line of text that will be present in the front page. 
-  - img: /assets/img/daniel_img.png
+  - img: /assets/img/uploads/site/site_daniel.png
     img-alt: A picture of me
 
 about:

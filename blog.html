@@ -21,7 +21,7 @@ seo-keywords: "blog post archive, live, love laugh"
         <img src="{{post.featured | relative_url}}" class="card-img-top post-card" alt="Featured image for post title: {{post.title}}">
         {% else %}
         {%- comment -%} Fallback Image {%- endcomment -%}
-        <img src="/assets/img/featured/img.png" class="card-img-top post-card" alt="Placeholder for featured images">
+        <img src="/assets/img/uploads/featured/img.png" class="card-img-top post-card" alt="Placeholder for featured images">
         {% endif %}
         <hr>
         <h3 class="px-3 h6 fw-bold">{{post.title | upcase}}</h3>
