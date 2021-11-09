@@ -51,3 +51,10 @@
     .post-back-button:hover {
         color: $orange;
     }
+
+.post-tag {
+    border-radius: .5rem;
+    border-style: dotted;
+    overflow: hidden;
+    display: inline-block;
+}

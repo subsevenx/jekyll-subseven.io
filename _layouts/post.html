@@ -61,15 +61,16 @@ layout: wrapper
     <article itemscope itemtype="https://schema.org/CreativeWork" class="mx-5">
         {{content}}
     </article>
-    <div class="flex-row d-flex align-items-center mx-5">
-        <div class="col-md-5 post-categories">
+    <div class="row">
+        <div class="col-md-6 post-categories">
             {% if page.categories %}
             <div>
                 {% if page.categories.size <= 1 %}
                 Category
                 {% elsif page.categories.size > 1 %}
                 Categories
-                {% endif %}:
+                {% endif %}
+                <hr class="post-hr">
             </div>
             <p>{{page.categories | array_to_sentence_string}}</p>
             {% else %}
@@ -77,12 +78,17 @@ layout: wrapper
             {% endif %}
         </div>
 
-        <div class="col-md-5 post-tags">
+        <div class="col-md-6 post-tags">
             {% if page.tags %}
-            <span>
-                Tag{% if page.tags.size > 1 %}s{% endif %}:
-            </span>
-            <p>{{page.tags | array_to_sentence_string}}</p>
+            <p>
+                Tag{% if page.tags.size > 1 %}s{% endif %}
+                <hr class="post-hr">
+            </p>
+            <div>
+            {% for i in page.tags %}
+                <span class="span text-center post-tag p-1">{{i}}</span>
+                {% endfor %}
+            </div>
             {% else %}
             <p>This post has no tags :(</p>
             {% endif %}
