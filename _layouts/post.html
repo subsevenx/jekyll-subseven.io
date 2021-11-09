@@ -62,7 +62,7 @@ layout: wrapper
         {{content}}
     </article>
     <div class="row">
-        <div class="col-md-6 post-categories">
+        <div class="col-md-6">
             {% if page.categories %}
             <div>
                 {% if page.categories.size <= 1 %}
@@ -72,7 +72,11 @@ layout: wrapper
                 {% endif %}
                 <hr class="post-hr">
             </div>
-            <p>{{page.categories | array_to_sentence_string}}</p>
+            
+            {% for category in page.categories %}  
+            <span class="text-center post-categories p-1">{{category}}</span>
+            {% endfor %}
+
             {% else %}
             <p>This post has no categories :(</p>
             {% endif %}
@@ -80,13 +84,11 @@ layout: wrapper
 
         <div class="col-md-6 post-tags">
             {% if page.tags %}
-            <p>
-                Tag{% if page.tags.size > 1 %}s{% endif %}
+            <p>Tag{% if page.tags.size > 1 %}s{% endif %}</p>
                 <hr class="post-hr">
-            </p>
             <div>
-            {% for i in page.tags %}
-                <span class="span text-center post-tag p-1">{{i}}</span>
+            {%- for tag in page.tags -%}
+                <span class="text-center post-tag p-1">{{tag | capitalize}}</span>
                 {% endfor %}
             </div>
             {% else %}
