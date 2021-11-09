@@ -1,9 +1,9 @@
-<script defer src="{{base}}/assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script async defer src="{{base}}/assets/js/bootstrap/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 {% if page.title == '404' %}
-<script async defer src="{{base}}/assets/js/cat.min.js" crossorigin="anonymous"></script>
+<script async defer src="{{base}}/assets/js/custom/cat.min.js" crossorigin="anonymous"></script>
 {% endif %}
-{% if recaptcha == true %}
 {% if site.environment == 'production' %}
+{% if page.recaptcha == true %}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endif %}
 {% endif %}
