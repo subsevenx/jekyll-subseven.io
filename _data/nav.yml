@@ -17,9 +17,9 @@ menu:
   link: /blog/
 
 footer:
-- name: GitHub
-  link: https://github.com/subsevenx/
-- name: LinkedIn
-  link: https://linkedin.com/in/subseven
+- name: Categories
+  link: /blog/categories/
+- name: Tags
+  link: /blog/tags/
 - name: Privacy Policy
   link: /privacy-policy/

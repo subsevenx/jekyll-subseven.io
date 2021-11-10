@@ -1,10 +1,15 @@
 ---
+title: Tag Archive
 layout: wrapper
+sidebar: true
+permalink: /blog/tags/
 ---
-
 {% for text in site.data.content.tags %}
 {% include content-loop.html %}
 {% endfor %}
+
+{% include components/back-to-blog.html %}
+
 
 {% for tag in site.tags %}
   <h3>{{tag[0] | upcase}}</h3>
