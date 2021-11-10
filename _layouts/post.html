@@ -27,15 +27,16 @@ layout: wrapper
         </div>
     </div>
 
-    <section class="py-3 mx-5">
+    <section class="py-3 mx-md-5">
         <div class="accordion accordion-flush mt-3" id="acc-parent-toc">
             <hr>
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc-child-toc" aria-expanded="true" aria-controls="acc-child-toc">
-                <h2>Table of Contents</h2>
+            <button id="toc" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc-child-toc" aria-expanded="false" aria-controls="acc-child-toc">
+            Table of Contents
             </button>
             <div class="accordion-item">
               <div id="acc-child-toc" class="accordion-collapse collapse" data-bs-parent="#acc-parent-toc">
                 <div class=" card accordion-body">
+                    <h2>Read More</h2>
                     {% include toc.html html=content h_min=2 ordered=true %}
                 </div>
               </div>

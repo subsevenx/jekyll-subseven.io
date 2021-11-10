@@ -17,15 +17,15 @@ recaptcha: true
     action="https://api.formcake.com/api/form/ea83f6d0-c3dc-4293-bb9e-88042c1f2370/submission">
     <div class="row form-group">
       <div>
-        <label for="name" aria-required="true" required>Name:</label>
+        <label for="name">Name:</label>
         <input id="name" class="form-control sm" type="text" name="name" placeholder="Elliot Alderson" aria-required="true" required>
         <label for="email">E-Mail:</label>
         <input id="email" class="form-control sm" type="email" name="user_mail" placeholder="mail@example.com" aria-required="true" required>
       </div>
       <div>
         <label for="msg">Message:</label>
-        <textarea id="msg" class="form-control sm" name="message" placeholder="Let me hire you!"></textarea>
-        <input class="important-submission d-none ez-reg" name="ez-reg" type="checkbox" value="1" autocomplete="off" tabindex="-1">
+        <textarea id="msg" class="form-control sm" name="message" placeholder="Let me hire you!" aria-required="true" required></textarea>
+        <input class="important-submission d-none ez-reg" name="ez-reg" type="checkbox" value="1" tabindex="-1">
       </div>
       <div class="form-button">
         {%- include recaptcha.html -%}
