@@ -12,7 +12,7 @@ layout: wrapper
             <p> Posted: <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
                 at <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> 
             </p>
-            <button name="Previous Page" class="post-back-button" onclick="location.href='/blog/'">&#8592; Back</button>
+            {%- include components/button-b2b.html -%}
             </div>
         </div>
         <hr>

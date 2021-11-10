@@ -8,8 +8,7 @@ permalink: /blog/tags/
 {% include content-loop.html %}
 {% endfor %}
 
-{% include components/back-to-blog.html %}
-
+{%- include components/button-b2b.html -%}
 
 {% for tag in site.tags %}
   <h3>{{tag[0] | upcase}}</h3>
