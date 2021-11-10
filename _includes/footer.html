@@ -1,14 +1,20 @@
 <footer class="text-center mt-3 container-fluid" >
   <div class="row pt-3 bg-dark">
     <div class="col">  
-      <p>{{page.author}} | &copy;{{ site.time | date: '%Y' }}</p> 
+      <p>{{page.author}} | &copy;{{site.time | date: '%Y'}}</p> 
     </div>
     <div class="col"> 
-      <p><a href="mailto:daniel@subseven.io">Email Me</a></p>
+      <p><a href="/contact/">Contact Me</a></p>
     </div>
     <div class="col">
       {% for item in site.data.nav.footer %}
-      <span><a href="{{item.link}}">{{item.name}}</a> |</span>
+      <div class="footer-links">
+        <ul class="">
+          <li> 
+            <a href="{{item.link}}">{{item.name}}</a>
+          </li>
+        </ul>
+      </div>
       {% endfor %}
     </div>
   </div>
