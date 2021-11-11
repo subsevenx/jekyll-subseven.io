@@ -58,16 +58,16 @@
     }
 
 .post-tag {
-    border-radius: .5rem;
-    border-style: dotted;
+    border:  .1rem solid $light; 
     overflow: hidden;
     display: inline-block;
     text-transform: capitalize;
+    z-index: 0;
+    transition: 1s;
 }
 
 .post-categories {
-    border-radius: .5rem;
-    border-style:groove;
+    border:  .1rem solid $light; 
     overflow: hidden;
     display: inline-block;
 }

@@ -1,29 +1,10 @@
-$primary: #0c0f58; 
-$secondary: #474891;
-$dark: #090A48;
-$light: #D9DCD6;
-
-$white: #eaeaea;
-$readable-text: #e1ad01;   
-
-// Typography
-$font-size-base: 1.2rem; 
-$font-family-sans-serif: "Roboto", sans-serif;
-$line-height-base: 1.8;
-// Components
-$body-bg: $primary; 
-$body-color: $light;
-
-// Color for navigation bar text and link highlights    
-$navbar-dark-color: $white;
-$navbar-dark-active-color: $readable-text;
-
-$accordion-bg: $dark;
-
-$card-bg: $dark;
-$card-color: $white;
-
-$link-color: $readable-text;
-
-$dropdown-link-active-color: $white;
-$dropdown-link-active-bg: $primary;
+$theme-colors: (    
+    primary: #0c0f58,
+    secondary: #474891,
+    success: #0d4a0a,
+    info: #1a4262,
+    warning: #444109,
+    danger: #6c292d,
+    light: #D9DCD6,
+    dark: #090A48
+);
