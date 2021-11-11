@@ -62,7 +62,7 @@ layout: wrapper
             </div>
             
             {% for category in page.categories %}  
-            <span class="text-center post-categories p-1">{{category}}</span>
+            <span class="text-center post-categories p-1"><a href="/blog/categories" class="text-decoration-none">{{category}}</a></span>
             {% endfor %}
 
             {% else %}
@@ -70,13 +70,13 @@ layout: wrapper
             {% endif %}
         </div>
 
-        <div class="col-md-6 post-tags">
+        <div class="col-md-6">
             {% if page.tags %}
             <p>Tag{% if page.tags.size > 1 %}s{% endif %}</p>
                 <hr class="post-hr">
             <div>
             {%- for tag in page.tags -%}
-                <span class="text-center post-tag p-1">{{tag}}</span>
+                <span class="post-tag text-center p-1"><a href="/blog/tags" class="text-decoration-none">{{tag}}</a></span>
                 {% endfor %}
             </div>
             {% else %}
