@@ -2,7 +2,7 @@
 <aside class="card mt-sm-3">
 
     {%- if page.url != "/blog/" -%}
-        <section class="sm-text-center id="sidebar-posts-list">
+        <section class="sm-text-center" id="sidebar-posts-list">
         <div class="card">
             <h2 class="text-center h4 card-header">Read Posts</h2>
             <div class="card-body">
@@ -25,12 +25,18 @@
 
     {%- if page.url == "/blog/" -%}        
     <section>
-        <div class="card" id="sidebar-category-list"> 
-            <h3 class="h5 card-header">Explore Categories</h3>
+        <div class="card" id="sidebar-category-card"> 
+            <h2 class="h5 card-header">Explore Categories</h2>
             <div class="card-body">
-                "placeholder": "test"
+                <ul class="list-unstyled text-center">
+                    {%- for categories in site.categories | limit: 5 -%}
+                    <h3 class="h6 text-center"><span class="text-capitalize">{{categories[0]}}</span></h3>
+                    {%- endfor -%}
+                  </ul>
             </div>
-            <a href="#">Show All</a>
+            <div class="card-footer">
+                <a href="/blog/categories/">Show All</a>
+            </div>
         </div>
 
         <div >
