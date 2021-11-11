@@ -4,17 +4,29 @@ layout: wrapper
 sidebar: true
 permalink: /blog/tags/
 ---
-{% for text in site.data.content.tags %}
-{% include content-loop.html %}
-{% endfor %}
+{%- for text in site.data.content.tags -%}
+{%- include content-loop.html -%}
+{%- endfor -%}
 
 {%- include components/button-b2b.html -%}
 
-{% for tag in site.tags %}
-  <h3>{{tag[0] | upcase}}</h3>
-  <ul>
-    {% for post in tag[1] %}
-      <li><a href="{{post.url | relative_url}}">{{ post.title }}</a></li>
+<section id="site-tags">
+  <div class="row">
+    {% for tag in site.tags %}
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card mt-2">
+        <div class="card-heading"> 
+          <h2 class="h4 card-header"><span class="tag-hashtag">#</span><span class="text-capitalize">{{tag[0]}}</span></h2>
+        </div> 
+        <div class="card-body p-2"> 
+          <ul class="list-unstyled">
+            {% for post in tag[1] %}
+            <li><a href="{{post.url | relative_url}}">{{post.title}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div> 
+    </div>
     {% endfor %}
-  </ul>
-{% endfor %}
+  </div>
+</section>
