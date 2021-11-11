@@ -1,17 +1,41 @@
 {%- comment -%} Sidebar. For now, it only displays blog links but will expand as more use cases are needed. {%- endcomment -%}
-<aside class="card p-2 mt-sm-3">
-    <section class="sm-text-center">
-        <h2 class="text-center h4 card-header">Read Posts</h2>
-        <section class="card-body">
-            <h3 class="h5 py-3">Latest Post</h3>
-            <ol class="list-unstyled">{% for post in site.posts | limit: 1 %}<li><a href="{{post.url}}">{{post.title}}</a></li>{% endfor %}</ol>
-            {% if site.posts.size > 1 %}
-            <h3 class="h5 py-3">Recent Posts</h3>
-            <ol class="list-unstyled">{% for post in site.posts | limit: 4 | offset: 1 %}
-                <li><a href="{{post.url}}">{{post.title}}</a></li>
-                {% endfor %}
-            </ol>
-            {% endif %}
+<aside class="card mt-sm-3">
+
+    {%- if page.url != "/blog/" -%}
+        <section class="sm-text-center id="sidebar-posts-list">
+        <div class="card">
+            <h2 class="text-center h4 card-header">Read Posts</h2>
+            <div class="card-body">
+                <h3 class="h5 p-2">Latest Post</h3>
+                <ol class="list-unstyled">{% for post in site.posts | limit: 1 %}<li><a href="{{post.url}}">{{post.title}}</a></li>{% endfor %}</ol>
+                {% if site.posts.size > 1 %}
+                <h3 class="h5 p-2">Recent Posts</h3>
+                <ol class="list-unstyled">
+                    {% for post in site.posts | limit: 4 | offset: 1 %}
+                    <li>
+                        <a href="{{post.url}}">{{post.title}}</a>
+                    </li>
+                    {% endfor %}
+                </ol>
+                {% endif %}
+            </div>
+        </div>
         </section>
+        {%- endif -%}
+
+    {%- if page.url == "/blog/" -%}        
+    <section>
+        <div class="card" id="sidebar-category-list"> 
+            <h3 class="h5 card-header">Explore Categories</h3>
+            <div class="card-body">
+                "placeholder": "test"
+            </div>
+            <a href="#">Show All</a>
+        </div>
+
+        <div >
+
+        </div>
     </section>
+    {%- endif -%}
 </aside>
