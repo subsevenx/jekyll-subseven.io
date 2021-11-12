@@ -12,7 +12,7 @@ layout: wrapper
             <p> Posted: <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
                 at <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> 
             </p>
-            {%- include components/button-b2b.html -%}
+            {%- include /components/button-b2b.html -%}
             </div>
         </div>
         <hr>
@@ -28,7 +28,7 @@ layout: wrapper
     </div>
 
     <section class="py-3 mx-md-5">  
-        {%- include components/widget-toc.html -%}
+        {%- include /components/widget-toc.html -%}
     </section>
 
     <nav class="px-5 text-center my-2"> 

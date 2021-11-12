@@ -8,21 +8,21 @@ layout: html_minifier
 
 <head>
   <title>{{page.title}} | {{site.global-title}}</title>
-  {% include seo.html %}
-  {% include favicon.html %}
-  {% include styles.html %}
+  {% include /patterns/seo.html %}
+  {% include /patterns/favicon.html %}
+  {% include /patterns/styles.html %}
 </head>
 
 <body>
-  {% include components/nav.html %}
+  {% include /components/nav.html %}
   <div id="main-content" tabindex="-1">
     {% if page.layout != "post" %}
-    {% include page-content.html %}
+    {% include /patterns/page-content.html %}
     {% else %}
     {{content}}  
     {% endif %}
-    {% include components/footer.html %}
-    {% include scripts.html %}
+    {% include /components/footer.html %}
+    {% include /patterns/scripts.html %}
   </div>
 </body>
 </html>
