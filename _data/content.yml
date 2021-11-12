@@ -1,7 +1,7 @@
 home:
   - h2: Hello There 
-  - p: My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static site generation. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
-  - p: This is my second line of text that will be present in the front page. 
+  - p: My name is Daniel Hernandez and I am a web developer focusing in WordPress, PHP, and static sites. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
+  - p: I'm an avid writer and I enjoy making music. 
   - img: /assets/img/uploads/site/site_daniel.png
     img-alt: A picture of me
 
@@ -21,6 +21,13 @@ resume:
 
 portfolio:
   - p: Here is a sample of some of my web development work. At the moment, these are the most recent project I've gotten permission to share. Due to the contractual nature of some of my work, this project list may not grow :(
+  - p: The TL;DR on my experience is as follows&#58;
+  - list:
+    - li: I enjoy working with PHP, JavaScript, and Ruby.
+    - li: Infrastructure and sysadmin tasks are very interesting to me. I've been managing Linux-based servers since 2014.
+    - li: Copyediting and copywriting are things I can <em>do</em> but don't particularly enjoy (unless it's my own projects.)
+    - li: Technical SEO is fun and I enjoy the challenge. SEO-based marketing isn't.
+    - li: I &hearts;love&hearts; WordPress. I enjoy tinkering and expanding it. I even enjoy site builders! (Though only the ones that have an API to extend their functionality.)
 
 e404:
   - h2: The page you were looking for could not be found :( 
