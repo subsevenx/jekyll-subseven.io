@@ -9,7 +9,7 @@ title: Now
 
     <div class="row">
         {% assign sorted = site.now | sort: 'date' | reverse %}
-        {% for now-post in sorted %}
+        {%- for now-post in sorted -%}
         <div class="col-12 mb-3"> 
             <div class="card mx-5"> 
                 <div class="card-header">
@@ -26,8 +26,8 @@ title: Now
                             {{now-post.date | date: '%B %d, %Y'}} at {{now-post.date | date: '%r'}}
                         </div>
                         <div class="col-6">
-                            {% assign tags =  site.now | map: 'tags' | uniq %}
-                            {% for tag in tags %}
+                            {%- assign tags =  site.now | map: 'tags' | uniq -%}
+                            {%- for tag in tags -%}
                             <span>#{{tag}}</span>
                             {% endfor %}
                         </div>
