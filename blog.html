@@ -15,7 +15,7 @@ seo-keywords: "blog post archive, live, love laugh"
 <section> 
   <div class="row">
     {% for post in site.posts %}
-    <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="col-sm-12 col-md-6"> 
       <div class="card my-2"> 
         {% if post.featured %}
         <img src="{{post.featured | relative_url}}" class="card-img-top post-card" alt="Featured image for post title: {{post.title}}">
