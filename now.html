@@ -1,3 +1,39 @@
 ---
 layout: wrapper
+title: Now
 ---
+<section> 
+    {% for text in site.data.content.now %}
+    {% include /patterns/content-loop.html %}
+    {% endfor %}
+
+    <div class="row">
+        {% for now-post in site.now %}
+        <div class="col-12 mb-3"> 
+            <div class="card mx-5"> 
+                <div class="card-header">
+                    <span class="h6">{{now-post.title}}</span>
+                </div>
+                <div class="container">
+                    <div class="card-body"> 
+                        {{now-post.content | strip_html}}
+                    </div> 
+                </div>
+                <div class="card-footer">
+                    <div class="row"> 
+                        <div class="col-6">
+                            {{now-post.date | date: '%B %d, %Y'}} at {{now-post.date | date: '%r'}}
+                        </div>
+                        <div class="col-6">
+                            {% assign tags =  site.now | map: 'tags' | uniq %}
+                            {% for tag in tags %}
+                            <span>#{{tag}}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        {% endfor %}
+    </div>
+</section>

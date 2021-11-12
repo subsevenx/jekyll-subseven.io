@@ -8,14 +8,18 @@ global-keywords: "globes, planet, interstellar"
 include: ['.htaccess']
 environment: development
 recaptcha-key: 6Lcbpf0cAAAAAHtOgY1tO0_H-JAiDFeYZ32Ca6Au
+timezone: America/Chicago
+
+collections:
+  now:
+    output: true
 
 sass:
     sass_dir: _sass
     style: compressed
 
 defaults:
-  - 
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
@@ -23,8 +27,7 @@ defaults:
       permalink: /blog/:year/:month/:title/
       author: "Daniel Hernandez"
 
-  - 
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
