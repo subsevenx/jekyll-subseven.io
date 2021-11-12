@@ -11,6 +11,8 @@ menu:
       link: /resume/
     - name: Portfolio
       link: /portfolio/ 
+- name: Now
+  link: /now/
 - name: Contact
   link: /contact/
 - name: Blog
