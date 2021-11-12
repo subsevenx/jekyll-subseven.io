@@ -5,7 +5,7 @@ seo-title: "Test seo title of portfolio"
 seo-description: "This is a test seo description of the portfolio page"
 seo-keywords: "portfolio, live, love laugh"
 ---
-<section>
+<section id="portfolio-container">
 
     {% for text in site.data.content.portfolio %}
     {%- include /patterns/content-loop.html -%}
@@ -14,17 +14,23 @@ seo-keywords: "portfolio, live, love laugh"
     <div class="row d-flex gx-5">
             <div class="col-md-6 col-sm-12">
                 <h2 class="text-center">Ankle N Foot</h2>
-                <img src="/assets/img/uploads/site/site_anf.png" class="img-fluid" alt="Placeholder image for portfolio">
+                <img src="/assets/img/uploads/site/site_anf.png" class="img-fluid" alt="Screenshot of website anklenfoot.com">
                     <div class="portfolio-metadata py-2"> 
-                        <p>The company website has been in my care since 2018. In the time since, the site has undergone a series of changes. Primarily, a transition to Wordpress from a static site and transition between site builders.</p>
-                        <p>The first iteration of the site was WPBakery Builder. However, I had no involvement with the development then.</p>
-                        <p>In 2019 the website was due for another makeover and transitioned the site to Elementor.</p>
+                        <p>The company website has been in my care since 2018. In the time since, the site has undergone a series of changes.</p>
+                        <p>In 2018, The first iteration of the site (now based on WordPress) was built with a combination of WPBakery Builder, a custom theme, and Advanced Custom Fields. While I had no involvement with the development of that iteration, I did maintain it until 2020. Maintenance primarily consisted of visual changes and occasional PHP for adding features to the theme.</p>
+                        <p>In 2020 the website was due for another makeover due to performance issues. I transitioned the website from BlueHost to a DigitalOcean server, implemented a CDN, and rebuilt the site using Elementor.</p>                    
+                        <p>A site builder was requested since the staff needed to be able to make changes on demand.</p>
+                        <p>A new version of the website is currently being planned. Company is still weighing its options in regards to static performance vs. the functionality that WordPress provides. A headless setup is being considered. </p>
                     </div>
             </div>
             <div class="col-md-6 col-sm-12">
-                <h2 class="text-center">Place Holder</h2>
-                <img src="https://via.placeholder.com/1280x720" class="img-fluid" alt="Placeholder image for portfolio">
-                <p>Without efficient, transparent bloatware, you will lack social networks. If all of this comes off as mixed-up to you, that's because it is! If you transition globally, you may also reintermediate magnetically. Helping marketers serve unmatched cross-phase personalized experiences at every step of the pudding is in the eating' not only to our content but our newbie-proof administration and simple configuration. We will scale up our capacity to harness mega-holistically. What does the commonly-accepted buzzword 'long-term' really mean? Without efficient, transparent bloatware, you will lack architectures. That is a remarkable achievement taking into account this month's financial state of things! If all of this comes off as mixed-up to you, that's because it is! If you incentivize dynamically, you may also disintermediate perfectly. Our functionality is unparalleled, but our C2C2C paradigms and easy operation is invariably considered a remarkable achievement taking into account this month's financial state of things! If all of this sounds astonishing to you, that's because it is! A company that can streamline elegantly will (at some undefined point of time in the future) be able to orchestrate correctly. Our infinitely reconfigurable feature set is second to none, but our strategic angel investors and user-proof use. Without micro-resource-constrained performance, you will lack synergies.
+                <h2 class="text-center">CAUSE Chicago</h2>
+                <img src="/assets/img/uploads/site/site_cause-chicago.png" alt="Screenshot of website causechicago.org" class="img-fluid">
+                <div class="portfolio-metadata py-2"> 
+                    <p>This project built in collaboration with CAUSE (a student-led organization) and NUSA (a non-profit.) I was approached the project after the organizations had met with various web developers.</p>
+                    <p>The design and copy was wire-framed and written by the students. My partner and I were simply in charge of placing the infrastructure and translating the students' vision into a digital version they could maintain.</p>
+                    <p>Site theme was built with Elementor and functionality via Metabox custom fields.</p>
+                </div>
 
             </div>
     </div>
