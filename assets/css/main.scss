@@ -9,6 +9,10 @@
 @import "bootstrap/variables";
 @import "bootstrap/utilities";
 
+@import "custom-styles";
+@import "blog-styles";
+@import "access";
+
 //Bootstrap Components
 @import "bootstrap/root";
 @import "bootstrap/reboot";
@@ -27,8 +31,3 @@
 //Bootstrap Extras
 @import "bootstrap/helpers";
 @import "bootstrap/utilities/api";
-
-//Custom
-@import "custom-styles";
-@import "blog-styles";
-@import "access";
