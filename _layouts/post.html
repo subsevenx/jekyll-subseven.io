@@ -76,8 +76,8 @@ layout: wrapper
                 <hr class="post-hr">
             <div>
             {%- for tag in page.tags -%}
-                <span class="post-tag text-center p-1"><a href="/blog/tags" class="text-decoration-none">{{tag}}</a></span>
-                {% endfor %}
+                <span class="post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag}}</a></span>
+            {% endfor %}
             </div>
             {% else %}
             <p>This post has no tags :(</p>
