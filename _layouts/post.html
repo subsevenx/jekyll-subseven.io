@@ -62,7 +62,7 @@ layout: wrapper
             </div>
             
             {% for category in page.categories %}  
-            <span class="text-center post-categories p-1"><a href="/blog/categories" class="text-decoration-none">{{category}}</a></span>
+            <span class="text-center post-categories p-1" id="{{category | replace: ' ', '-' | downcase}}"><a href="/blog/categories/#{{category | replace: ' ', '-' | downcase}}" class="text-decoration-none">{{category}}</a></span>
             {% endfor %}
 
             {% else %}
