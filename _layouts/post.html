@@ -64,11 +64,11 @@ layout: wrapper
             {% for category in page.categories %}  
             <span class="text-center post-categories p-1" id="{{category | replace: ' ', '-' | downcase}}"><a href="/blog/categories/#{{category | replace: ' ', '-' | downcase}}" class="text-decoration-none">{{category}}</a></span>
             {% endfor %}
+        </div>
 
             {% else %}
             <p>This post has no categories :(</p>
             {% endif %}
-        </div>
 
         <div class="col-md-6">
             {% if page.tags %}
@@ -77,7 +77,7 @@ layout: wrapper
             <div>
             {%- for tag in page.tags -%}
                 <span class="post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag}}</a></span>
-            {% endfor %}
+                {% endfor %}
             </div>
             {% else %}
             <p>This post has no tags :(</p>
