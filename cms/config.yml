@@ -1,0 +1,4 @@
+backend:
+  name: git-gateway
+  branch: subsevenx/jekyll-subseven.io 
+media_folder: 'assets/uploads'
