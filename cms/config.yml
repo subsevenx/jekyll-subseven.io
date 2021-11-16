@@ -1,4 +1,16 @@
 backend:
-  name: git-gateway
-  branch: subsevenx/jekyll-subseven.io 
+  name: github
+  repo: subsevenx/jekyll-subseven.io 
 media_folder: 'assets/uploads'
+
+collections:  
+  - name: "navigation"
+    label: "Navigation Items"
+    files: 
+      - label: "Navigation Settings"
+        name: "nav"
+        file: "data/nav.yml"  
+        fields:
+          - label: "name"
+            name: "name"
+            widget: "string"
