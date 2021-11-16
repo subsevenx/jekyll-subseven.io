@@ -17,19 +17,19 @@ title: Now
                 </div>
                 <div class="container">
                     <div class="card-body"> 
-                        {{now-post.content | strip_html}}
+                        {{now-post.content}}
                     </div> 
                 </div>
                 <div class="card-footer">
                     <div class="row"> 
                         <div class="col-6">
-                            {{now-post.date | date: '%B %d, %Y'}} at {{now-post.date | date: '%r'}}
+                            <time datetime="{{now-post.date | date: "%T"}}">{{now-post.date | date: '%B %d, %Y'}} at {{now-post.date | date: '%r'}}</time> 
                         </div>
                         <div class="col-6">
                             {%- assign tags =  site.now | map: 'tags' | uniq -%}
                             {%- for tag in tags -%}
-                            <span>#{{tag}}</span>
-                            {% endfor %}
+                            <span>#{{-tag-}}</span>
+                            {%- endfor -%}
                         </div>
                     </div>
                 </div>
