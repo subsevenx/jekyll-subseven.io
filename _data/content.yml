@@ -27,7 +27,7 @@ portfolio:
     - li: Infrastructure and sysadmin tasks are very interesting to me. I've been managing Linux-based servers since 2014.
     - li: Copyediting and copywriting are things I can <em>do</em> but don't particularly enjoy (unless it's my own projects.)
     - li: Technical SEO is fun and I enjoy the challenge. SEO-based marketing isn't.
-    - li: I &hearts;love&hearts; WordPress. I enjoy tinkering and expanding it. I even enjoy site builders! (Though only the ones that have an API to extend their functionality.)
+    - li: I <em>love</em> WordPress. I enjoy tinkering and expanding it. I even enjoy site builders! (Though only the ones that have an API to extend their functionality.)
 
 e404:
   - h2: The page you were looking for could not be found :( 
@@ -40,3 +40,7 @@ contact:
 blog:
   - h2: My Writings
   - p: A blog at the intersection of technology and life. Most of the stuff I write about here will be tech-related or tech-adjacent. 
+
+now:
+  - p: Now is a page dedicated to things happening on in my life right now. Think of it like micro-blogging.
+  - p: To learn more about Now pages and they're cool, read about them <a href="https://nownownow.com/about" <a href="https://formcake.com" target="_blank" rel="nofollow noopener">here</a>
