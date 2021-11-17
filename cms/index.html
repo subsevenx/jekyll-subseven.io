@@ -4,13 +4,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">     
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#5271ff">
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/assets/img/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="/assets/img/favicon/browserconfig.xml">
+    <meta name="title" content="{% if page.seo-title %}{{page.seo-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{% endif %}">    
+    <meta name="description" content="{% if page.seo-description%}{{page.seo-description}}{% else %}{{site.global-description}} {% endif %}">
+    <meta name="keywords" content="{% if page.seo-keywords %}{{page.seo-keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{site.global-keywords}}{% endif %}">
+    <meta property="og:title" content="{% if page.og-title %}{{page.og-title}}{% elsif page.seo-title %}{{page.seo-title}}{% else %}{{site.global-title}}{% endif %}">
+    <meta property="og:description" content="{% if page.og-description %}{{page.og-description}}{% elsif page.seo-description %}{{page.seo-description}}{% else %}{{site.global-description}}{% endif %}">
+    <meta property="og:image" content="{% if page.og-image %}{{page.og-image | img_url:'1200x627'}}{% elsif page.featured %}{{ page.featured | img_url:'1200x627'}}{% else %}https://via.placeholder.com/1200x627{% endif %}">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="WordPress 3.5.1"> {%- comment -%}For future honeypot{%- endcomment -%}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="{{page.author}}">
+    <meta name="theme-color" content="#000">
+
+    <link rel="stylesheet" href="{{'/assets/css/main.css' | relative_url}}" crossorigin="anonymous">
     <title>CMS</title>
 </head>
 <body>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-
-    <button onclick="history.back()">Back to Site</button>
+    <div class="container text-center"> 
+        <a href="/" class="btn py-5">Back to Site</a>
+    </div>
 </body>
 </html>
