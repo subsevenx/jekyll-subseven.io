@@ -15,6 +15,14 @@ collections:
         name: "layout"
         widget: "hidden"
         default: "post"
+      - label: "Date Posted"
+        name: "date"
+        widget: "datetime"
+        default: ""
+        date_format: "YYYY-MM-DD" 
+        time_format: "HH:mm:ss --600" 
+        format: "YYYY-MM-DD HH:mm:ss --600"
+        picker_utc: false
       - label: "Title"
         name: "title"
         widget: "string"
@@ -59,7 +67,7 @@ collections:
         default: ""
         date_format: "YYYY-MM-DD" 
         time_format: "HH:mm:ss --600" 
-        format: "LLL"
+        format: "YYYY-MM-DD HH:mm:ss --600"
         picker_utc: false
       - label: "Body"
         name: "body"
