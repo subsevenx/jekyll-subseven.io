@@ -1,16 +1,26 @@
 backend:
   name: github
-  repo: subsevenx/jekyll-subseven.io 
+  repo: subsevenx/jekyll-subseven.io
+  branch: main
 media_folder: 'assets/uploads'
 
 collections:  
-  - name: "navigation"
-    label: "Navigation Items"
-    files: 
-      - label: "Navigation Settings"
-        name: "nav"
-        file: "data/nav.yml"  
-        fields:
-          - label: "name"
-            name: "name"
-            widget: "string"
+  - label: "Blog Posts" 
+    name: "blog-posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: 
+      - label: "layout"
+        name: "layout"
+        widget: "hidden"
+        default: "post"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Description"
+        name: "description"
+        widget: "string" 
+      - label: "Body"
+        name: "body"
+        widget: "markdown" 
