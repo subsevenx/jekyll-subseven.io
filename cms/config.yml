@@ -53,7 +53,15 @@ collections:
       - label: "Hashtags"
         name: "tags"
         widget: "list"
-        allow_add: true
+      - label: "Date Posted"
+        name: "date"
+        widget: "datetime"
+        default: ""
+        date_format: "YYYY-MM-DD" 
+        time_format: "HH:mm:ss --600" 
+        format: "LLL"
+        picker_utc: false
       - label: "Body"
         name: "body"
         widget: "markdown"
+
