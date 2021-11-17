@@ -2,14 +2,16 @@
 title: Building A Jekyll Site In 2021
 date: 2021-11-12 17:39:15
 category: Web Development
-tags: [Jekyll, JAMStack]
-excerpt: With an abundant choice of modern static site generators, why would someone still use Jekyll in 2021?
-
+tags:
+  - Jekyll
+  - JAMStack
+excerpt: With an abundant choice of modern static site generators, why would
+  someone still use Jekyll in 2021?
 seo-title: Building A Jekyll Site in 2021
-seo-description: With an abundant choice of modern static site generators, why would someone still use Jekyll in 2021? 
+seo-description: With an abundant choice of modern static site generators, why
+  would someone still use Jekyll in 2021?
 ---
 ## The World of Static Site Generators
-
 
 ## Background.
 Until 2019, this domain had a static HTML site (not using Jekyll.) In the fall of 2019 I transitioned it to Jekyll but I wasn't happy with the results. In the last few weeks I got an itch to make something, and thus, decided to rebuild it from scratch. 
