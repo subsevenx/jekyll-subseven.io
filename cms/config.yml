@@ -3,6 +3,7 @@ backend:
   repo: subsevenx/jekyll-subseven.io
   branch: main
 media_folder: "assets/img/uploads/"
+publish_mode: "editorial_workflow"
 
 collections:  
   
@@ -16,10 +17,10 @@ collections:
       - {label: "layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Date Posted", name: "date", widget: "datetime", default: "", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss --600", format: "YYYY-MM-DD HH:mm:ss --600", picker_utc: false}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"} 
-      - {label: "Featured Image", name: "featured-image", media_folder: assets/img/uploads/featured, widget: image}
-      - {label: "Tags", name: "tags", widget: "list", allow_add: true}
-      - {label: "Category", name: "category", widget: "list", max: 1, allow_add: true}
+      - {label: "Excerpt", name: "excerpt", widget: "string",required: false} 
+      - {label: "Featured Image", name: "featured-image", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
+      - {label: "Category", name: "category", widget: "list", max: 1, allow_add: true, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   
   #Now Collection
