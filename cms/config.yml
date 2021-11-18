@@ -72,4 +72,20 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
-
+  - label: "Navigation Settings" 
+    name: "navigation-settings"
+    files:
+    - label: "Navbar"
+      name: "navbar"
+      file: "_data/nav.yml"  
+      fields: 
+        - label: Menu Items
+          name: menu
+          widget: object
+          fields: 
+            - label: Item Name
+              name: name
+              widget: list
+              allow_add: true
+            - label: Item Link
+              name: link
