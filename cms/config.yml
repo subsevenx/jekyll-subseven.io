@@ -3,7 +3,6 @@ backend:
   repo: subsevenx/jekyll-subseven.io
   branch: main
 media_folder: "assets/img/uploads/"
-publish_mode: "editorial_workflow"
 
 collections:  
   
@@ -13,16 +12,24 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
     fields: 
       - {label: "layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Permalink", name: "permalink", widget: "string"}
-      - {label: "Date Posted", name: "date", widget: "datetime", default: "", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss --600", format: "YYYY-MM-DD HH:mm:ss --600", picker_utc: false}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "featured", widget: "image", required: false}
+      - {label: "Date Posted", name: "date", widget: "datetime", default: "", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss --600", format: "YYYY-MM-DD HH:mm:ss --600", picker_utc: false}
       - {label: "Excerpt", name: "excerpt", widget: "string",required: false} 
-      - {label: "Featured Image", name: "featured-image", widget: "image", required: false}
-      - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
-      - {label: "Category", name: "category", widget: "list", max: 1, allow_add: true, required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Permalink", name: "permalink", default: "/blog/", widget: "string"}
+      - {label: "Category", name: "category", widget: "list", max: 1, allow_add: true, required: false}
+      - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
+      - {label: "SEO Title", name: "seo-title", widget: "string", required: false}
+      - {label: "SEO Description", name: "seo-description", widget: "string", required: false}
+      - {label: "SEO Keywords", name: "seo-keywords", widget: "string", required: false}
+      - {label: "OpenGraph Title", name: "og-title", widget: "string", required: false}
+      - {label: "OpenGraph Description", name: "og-description", widget: "string", required: false}
+      - {label: "OpenGraph Image", name: "og-image", widget: "string", required: false}       
 
   #Now Collection
   - label: "Now Posts" 
