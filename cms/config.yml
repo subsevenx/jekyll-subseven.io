@@ -5,6 +5,8 @@ backend:
 media_folder: "assets/img/uploads/"
 
 collections:  
+  
+  #Blog Posts
   - label: "Blog Posts" 
     name: "blog-posts"
     folder: "_posts"
@@ -19,6 +21,8 @@ collections:
       - {label: "Tags", name: "tags", widget: "list", allow_add: true}
       - {label: "Category", name: "category", widget: "list", max: 1, allow_add: true}
       - {label: "Body", name: "body", widget: "markdown"}
+  
+  #Now Collection
   - label: "Now Posts" 
     name: "now-posts"
     folder: "_now"
@@ -30,3 +34,36 @@ collections:
       - {label: "Hashtags", name: "tags", widget: "list"}
       - {label: "Date Posted", name: "date", widget: "datetime", default: "", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss --600", format: "YYYY-MM-DD HH:mm:ss --600", picker_utc: false}
       - {label: "Body", name: "body", widget: "markdown"}
+    
+  # Navigation
+  - label: "Navigation Settings"
+    name: "nav-settings"
+    editor:
+      preview: false
+    files:
+      - label: "Menu Bar"
+        name: "nav"
+        file: "_data/nav.yml"
+        fields:
+          - label: "Navigation Items"
+            name: "menu"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+              - label: "Child" 
+                name: "child" 
+                widget: "list"
+                fields: 
+                - {label: "Name", name: "name", widget: "string"}
+                - {label: "Link", name: "link", widget: "string"} 
+      - label: "Footer"
+        name: "foot"
+        file: "_data/nav.yml"
+        fields: 
+          - label: "Footer Items"
+            name: "footer"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
