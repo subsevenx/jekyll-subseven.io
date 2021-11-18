@@ -12,7 +12,7 @@ collections:
     name: "blog-posts"
     folder: "_posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
       - {label: "layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Date Posted", name: "date", widget: "datetime", default: "", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss --600", format: "YYYY-MM-DD HH:mm:ss --600", picker_utc: false}
@@ -30,7 +30,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
-      - {label: "layout", name: "layout", default: "null", widget: "hidden"}
+      - {label: "layout", name: "layout", default: null, widget: "hidden"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Hashtags", name: "tags", widget: "list"}
       - {label: "Date Posted", name: "date", widget: "datetime", default: "", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss --600", format: "YYYY-MM-DD HH:mm:ss --600", picker_utc: false}

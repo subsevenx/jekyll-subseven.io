@@ -1,5 +1,5 @@
 ---
-layout: "null"
+layout: null
 title: Test About The Time
 tags:
   - i
