@@ -43,9 +43,10 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Menu Editor"
-        name: "nav"
+      - label: "Nav & Footer Editor"
+        name: "nav-footer-editor"
         file: "_data/nav.yml"
+        widget: object
         fields:
           - label: "Navigation Menu Items"
             name: "menu"
@@ -59,10 +60,6 @@ collections:
                 fields: 
                 - {label: "Name", name: "name", widget: "string"}
                 - {label: "Link", name: "link", widget: "string"} 
-      - label: "Footer Editor"
-        name: "foot"
-        file: "_data/nav.yml"
-        fields: 
           - label: "Footer Menu Items"
             name: "footer"
             widget: "list"
