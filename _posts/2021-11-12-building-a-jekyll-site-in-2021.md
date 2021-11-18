@@ -1,15 +1,16 @@
 ---
-title: Building A Jekyll Site In 2021
-date: 2021-11-12 17:39:15
-category: Web Development
-tags:
-  - Jekyll
-  - JAMStack
 excerpt: With an abundant choice of modern static site generators, why would
   someone still use Jekyll in 2021?
 seo-title: Building A Jekyll Site in 2021
+permalink: /building-a-jekyll-site-in-2021
 seo-description: With an abundant choice of modern static site generators, why
   would someone still use Jekyll in 2021?
+date: 2021-11-12 17:39:15
+title: Building A Jekyll Site In 2021
+tags:
+  - Jekyll
+  - JAMStack
+category: Web Development
 ---
 ## The World of Static Site Generators
 
