@@ -26,25 +26,25 @@ layout: wrapper
             {% endif %}
         </div>
     </div>
+    <div class="flex-row d-flex align-items-center my-3">
+            <div class="col-6 text-center">
+                {% if page.next.url %}
+                <a class="post-next" href="{{page.next.url}}">&laquo; Previous Post</a>
+                {% endif %}
+            </div>
+            <div class="col-6 text-center">
+                {% if page.previous.url %}
+                <a class="post-prev" href="{{page.previous.url}}">Next Post &raquo;</a>
+                {% endif %}
+            </div>
+    </div>
+</nav>
 
     <section class="py-3 mx-md-5">  
         {%- include /components/toc.html -%}
     </section>
 
-    <nav class="px-5 text-center my-2"> 
-        <div class="flex-row d-flex align-items-center">
-            <div class="col-6">
-                {% if page.next.url %}
-                <a class="post-next" href="{{page.next.url}}">&laquo; Previous Post</a>
-                {% endif %}
-            </div>
-            <div class="col-6">
-                {% if page.previous.url %}
-                <a class="post-prev" href="{{page.previous.url}}">Next Post &raquo;</a>
-                {% endif %}
-            </div>
-        </div>
-    </nav>
+    <nav class="px-5 my-2"> 
 
     <article itemscope itemtype="https://schema.org/CreativeWork" class="mx-5">
         {{content}}
