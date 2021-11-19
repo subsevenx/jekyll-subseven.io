@@ -1,31 +1,28 @@
-#Menu links
-brand: 
-- logo: /assets/img/site-logo.svg
-  logo-alt: Logo for subseven.io
-
-menu: 
-- name: Home
-  link: /
-- name: About
-  link: /about/
-- name: Work
-  link: #
-  child:
-    - name: Resume
-      link: /resume/
-    - name: Portfolio
-      link: /portfolio/ 
-- name: Now
-  link: /now/
-- name: Contact
-  link: /contact/
-- name: Blog
-  link: /blog/
-
+brand:
+  - logo: /assets/img/site-logo.svg
+    logo-alt: Logo for subseven.io
+menu:
+  - name: Home
+    link: /
+  - name: About
+    link: /about/
+  - name: Work
+    link: "#"
+    child:
+      - name: Resume
+        link: /resume/
+      - name: Portfolio
+        link: /portfolio/
+  - name: Now
+    link: /now/
+  - name: Contact
+    link: /contact/
+  - name: Blog
+    link: /blog/
 footer:
-- name: Categories
-  link: /blog/categories/
-- name: Tags
-  link: /blog/tags/
-- name: Privacy Policy
-  link: /privacy-policy/
+  - name: Categories
+    link: /blog/categories/
+  - name: Tags
+    link: /blog/tags/
+  - name: Privacy Policy
+    link: /privacy-policy/
