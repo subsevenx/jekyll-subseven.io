@@ -4,7 +4,6 @@ brand:
   logo-alt: Logo for subseven.io
 
 menu: 
-- logo: 
 - name: Home
   link: /
 - name: About
