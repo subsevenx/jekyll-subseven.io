@@ -5,8 +5,12 @@ Handles the navigation menu of the website. Todo: context to buttons.
 <header>
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark active shadow">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img height="32" width="32" class="rounded-circle"
-          src="/assets/img/site-logo.svg" alt="Logo for subseven.io"> </a>
+      
+      <a class="navbar-brand" href="/">
+        {%- for branding in site.data.nav.brand -%}
+        <img height="32" width="32" class="rounded-circle" src="{{branding.logo}}" alt="{{branding.logo-alt}}"> 
+        {%- endfor -%}
+      </a>
       <button aria-label="Menu Toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarToggle" name="toggle">
         <span class="navbar-toggler-icon"></span>

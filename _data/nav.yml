@@ -1,5 +1,10 @@
 #Menu links
+brand: 
+- logo: /assets/img/site-logo.svg
+  logo-alt: Logo for subseven.io
+
 menu: 
+- logo: 
 - name: Home
   link: /
 - name: About
