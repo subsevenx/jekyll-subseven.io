@@ -3,10 +3,11 @@ layout: wrapper
 title: "Privacy Policy"
 sidebar: false
 
-seo-title: "Privacy Policy"
-seo-description: "Policy regarding privacy practices for subseven.io"
-seo-keywords: "privacy policy, info handling"
-og-image: https://via.placeholder.com/420x369
+seo: 
+    - seo-title: "Privacy Policy"
+      seo-description: "Policy regarding privacy practices for subseven.io"
+      seo-keywords: "privacy policy, info handling"
+    - og-image: https://via.placeholder.com/420x369
 ---
 <section id="privacy-policy" markdown="1">
 ## Privacy Policy Statement
