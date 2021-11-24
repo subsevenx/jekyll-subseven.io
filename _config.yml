@@ -6,7 +6,7 @@ global-title: "SubSeven &#xbb; Web Dev, Musician, Writer" # the name of your sit
 global-description: "Standing at the intersection of technology and life."
 global-keywords: "globes, planet, interstellar"
 include: ['.htaccess']
-environment: development
+environment: production
 recaptcha-key: 6Lcbpf0cAAAAAHtOgY1tO0_H-JAiDFeYZ32Ca6Au
 timezone: America/Chicago
 
