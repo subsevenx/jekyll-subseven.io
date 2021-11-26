@@ -9,8 +9,6 @@ menu:
   - name: Work
     link: "#"
     child:
-      - name: Resume
-        link: /resume/
       - name: Portfolio
         link: /portfolio/
   - name: Now
