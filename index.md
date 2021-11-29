@@ -9,11 +9,5 @@ title: Home
 seo-keywords: home, live, love laugh
 sidebar: true
 ---
-<section>        
-</section>
 
-Test
-
-*Test*
-
-## Heading
+More test content

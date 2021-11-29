@@ -78,15 +78,15 @@ collections:
     editor:
       preview: false
     files:
-      - label: "About Page"
-        name: "about"
-        file: "about.md"
+      - label: "Home Page"
+        name: "index"
+        file: "index.md"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Home Page"
-        name: "home"
-        file: "index.md"
+      - label: "About Page"
+        name: "about"
+        file: "about.md"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
