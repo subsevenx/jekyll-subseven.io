@@ -8,11 +8,6 @@ recaptcha: true
 ---
 
 <section>
-
-  {% for text in site.data.content.contact %}
-  {%- include /patterns/content-loop.html -%}
-  {%- endfor -%}
-
   <form id="contact-form" method="post"
     action="https://api.formcake.com/api/form/ea83f6d0-c3dc-4293-bb9e-88042c1f2370/submission">
     <div class="row form-group">
