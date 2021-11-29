@@ -9,7 +9,7 @@ seo:
       seo-keywords: "privacy policy, info handling"
     - og-image: https://via.placeholder.com/420x369
 ---
-<section id="privacy-policy" markdown="1">
+<section id="privacy-policy">
 ## Privacy Policy Statement
 
 I take your privacy seriously. To better protect your privacy, I provide this privacy policy notice explaining the way your personal information is collected and used.

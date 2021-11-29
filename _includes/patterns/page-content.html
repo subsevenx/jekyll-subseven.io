@@ -4,16 +4,20 @@
         </div>
         <hr>
         {% if page.sidebar == true %}
-        <div class="row">
-            <div class="col-lg-9">
-            {{content}}
+        <section markdown="1"> 
+            <div class="row">
+                <div class="col-lg-9">
+                    {{content}}
+                </div>
+                <div class="col-lg-3">
+                    {% include components/sidebar.html %}
+                </div>
             </div>
-            <div class="col-lg-3">
-            {% include components/sidebar.html %}
-            </div>
-        </div>
+        </section> 
         
         {% else %} 
-        {{ content }} 
+        <section markdown="1"> 
+            {{content}} 
+        </section>
         {% endif %}
     </main>
