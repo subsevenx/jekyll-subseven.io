@@ -90,3 +90,9 @@ collections:
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Blog Page"
+        name: "blog"
+        file: "blog.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "string" }
