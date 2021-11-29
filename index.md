@@ -5,9 +5,15 @@ og-description: This is a test description for open graph
 seo-title: Test seo title of home
 layout: wrapper
 seo-description: This is a test seo description of the home page
-title: Test Home
+title: Home
 seo-keywords: home, live, love laugh
 sidebar: true
 ---
 <section>        
 </section>
+
+Test
+
+*Test*
+
+## Heading
