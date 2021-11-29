@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: subsevenx/jekyll-subseven.io
-  branch: main
+  branch: lab-experiment
 
 media_folder: "assets/img/uploads/"
 
@@ -82,6 +82,9 @@ collections:
         name: "about"
         file: "about.md"
         fields: 
+          - label: "Title"
+            name: "title"
+            widget: "string"
           - label: "Body"
             name: "body"
             widget: "markdown" 
