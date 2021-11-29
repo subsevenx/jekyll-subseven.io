@@ -96,3 +96,14 @@ collections:
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "string" }
+      - label: "Portfolio Editor"
+        name: "nav-footer-editor"
+        file: "_data/portfolio.yml"
+        widget: object
+        fields:
+          - label: "Portfolio Items"
+            name: "Item"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
