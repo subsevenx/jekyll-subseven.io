@@ -137,12 +137,6 @@ collections:
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Now Page"
-        name: "now"
-        file: "now.html"
-        fields: 
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Page Blurb", name: "blurb", widget: "text", required: false} 
       - label: "Resume Page"
         name: "resume"
         file: "resume.html"
@@ -162,9 +156,27 @@ collections:
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false}     
+      - label: "Now Page"
+        name: "now"
+        file: "now.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false} 
       - label: "Blog Page"
         name: "blog"
         file: "blog.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
+      - label: "Privacy Policy Page"
+        name: "privacy"
+        file: "privacy-policy.md"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown"}
+      - label: "404 Page"
+        name: "404"
+        file: "404.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text"}
