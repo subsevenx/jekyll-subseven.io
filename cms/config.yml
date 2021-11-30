@@ -96,12 +96,6 @@ collections:
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false} 
-      - label: "Contact Page"
-        name: "contact"
-        file: "contact.html"
-        fields: 
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}     
       - label: "Resume Page"
         name: "resume"
         file: "resume.html"
@@ -121,6 +115,12 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Image", name: "img", widget: "image" }
               - { label: "Description", name: "blurb", widget: "text" }
+      - label: "Contact Page"
+        name: "contact"
+        file: "contact.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}     
       - label: "Blog Page"
         name: "blog"
         file: "blog.html"
