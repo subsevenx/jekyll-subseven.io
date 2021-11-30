@@ -108,12 +108,18 @@ collections:
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text" }
-      - label: "Portfolio Editor"
+      - label: "Resume Page"
+        name: "resume"
+        file: "html.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text" }
+      - label: "Portfolio Page"
         name: "nav-footer-editor"
         file: "_data/portfolio.yml"
         widget: object
         fields:
-          - label: "Portfolio Items"
+          - label: "Portfolio Item"
             name: "list"
             widget: "list"
             fields:
