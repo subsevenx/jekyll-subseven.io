@@ -9,20 +9,16 @@
                     {%- if page.blurb -%}
                         {{page.blurb}}
                     {%- endif -%}
-
                     {{content}}
                 </div>
                 <div class="col-lg-3">
                     {% include components/sidebar.html %}
                 </div>
-            </div>
-        
+            </div>   
         {% else %} 
-            
         {%- if page.blurb -%}
         {{page.blurb}}
         {%endif%}
-            {{content}} 
-
+            {{- content -}} 
         {% endif %}
     </main>
