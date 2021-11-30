@@ -2,7 +2,7 @@ blurb: why is this not working test debug
 list:
   - title: Ankle N Foot
     img: /assets/img/uploads/site/site_anf.png
-    blurb: <p>The company website has been in my care since 2018. In the time since,
+    text: <p>The company website has been in my care since 2018. In the time since,
       the site has undergone a series of changes.</p> <p>In 2018, The first
       iteration of the site (now based on WordPress) was built with a
       combination of WPBakery Builder, a custom theme, and Advanced Custom
@@ -19,7 +19,7 @@ list:
       considered. </p>
   - title: CAUSE Chicago
     img: /assets/img/uploads/site/site_cause-chicago.png
-    blurb: <p>This project built in collaboration with CAUSE (a student-led
+    text: <p>This project built in collaboration with CAUSE (a student-led
       organization) and NUSA (a non-profit.) I was approached the project after
       the organizations had met with various web developers.</p> <p>The design
       and copy was wire-framed and written by the students. My partner and I
