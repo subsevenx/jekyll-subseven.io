@@ -6,6 +6,10 @@
         {% if page.sidebar == true %}
             <div class="row">
                 <div class="col-lg-9">
+                    {%- if page.blurb -%}
+                        {{page.blurb}}
+                    {%- endif -%}
+
                     {{content}}
                 </div>
                 <div class="col-lg-3">
@@ -14,6 +18,10 @@
             </div>
         
         {% else %} 
+            
+        {%- if page.blurb -%}
+        {{page.blurb}}
+        {%endif%}
             {{content}} 
 
         {% endif %}
