@@ -64,8 +64,8 @@ collections:
                 name: "child" 
                 widget: "list"
                 fields: 
-                - {label: "Name", name: "name", widget: "string"}
-                - {label: "Link", name: "link", widget: "string"} 
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Link", name: "link", widget: "string" } 
           - label: "Footer Menu Items"
             name: "footer"
             widget: "list"
@@ -95,30 +95,25 @@ collections:
         file: "now.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Page Blurb", name: "blurb", widget: "text" } 
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false} 
       - label: "Contact Page"
         name: "contact"
         file: "contact.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Page Blurb", name: "blurb", widget: "text" }     
-      - label: "Blog Page"
-        name: "blog"
-        file: "blog.html"
-        fields: 
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Page Blurb", name: "blurb", widget: "text" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}     
       - label: "Resume Page"
         name: "resume"
         file: "resume.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Page Blurb", name: "blurb", widget: "text" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
       - label: "Portfolio Page"
-        name: "nav-footer-editor"
+        name: "portfolio-page-editor"
         file: "_data/portfolio.yml"
         widget: object
         fields:
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
           - label: "Portfolio Item"
             name: "list"
             widget: "list"
@@ -126,3 +121,9 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Image", name: "img", widget: "image" }
               - { label: "Description", name: "blurb", widget: "text" }
+      - label: "Blog Page"
+        name: "blog"
+        file: "blog.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
