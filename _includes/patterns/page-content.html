@@ -4,7 +4,6 @@
         </div>
         <hr>
         {% if page.sidebar == true %}
-        <div markdown="1"> 
             <div class="row">
                 <div class="col-lg-9">
                     {{content}}
@@ -13,11 +12,9 @@
                     {% include components/sidebar.html %}
                 </div>
             </div>
-        </div> 
         
         {% else %} 
-        <div markdown="1"> 
             {{content}} 
-        </div>
+
         {% endif %}
     </main>
