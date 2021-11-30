@@ -90,20 +90,33 @@ collections:
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Now Page"
+        name: "now"
+        file: "now.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text" } 
+      - label: "Contact Page"
+        name: "contact"
+        file: "contact.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text" }     
       - label: "Blog Page"
         name: "blog"
         file: "blog.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Page Blurb", name: "blurb", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text" }
       - label: "Portfolio Editor"
         name: "nav-footer-editor"
         file: "_data/portfolio.yml"
         widget: object
         fields:
           - label: "Portfolio Items"
-            name: "Item"
+            name: "list"
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "img", widget: "image" }
+              - { label: "Description", name: "blurb", widget: "text" }
