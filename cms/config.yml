@@ -72,6 +72,53 @@ collections:
             fields: 
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
+  
+  - label: "Professional Content Editor"
+    name: "prof-editor"
+    editor: 
+      preview: false
+    files:
+      - label: "Portfolio Content Editor"
+        name: "portfolio-content-editor"
+        file: "_data/portfolio.yml"
+        widget: object
+        fields:
+          - label: "Portfolio Items"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "img", widget: "image" }
+      - label: "Resume Content Editor"
+        name: "resume-content-editor"
+        file: "_data/experience.yml"
+        widget: object
+        fields:
+          - label: "Portfolio Items"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Job", name: "job", widget: "string" }
+              - { label: "Start Date", name: "start", widget: "string" }
+              - { label: "End Date", name: "end", widget: "string" }
+              - { label: "Description", name: "blurb", widget: "text" }
+              - { label: "ID", name: "id", widget: "string" }
+      - label: "Education Content Editor"
+        name: "education-content-editor"
+        file: "_data/education.yml"
+        widget: object
+        fields:
+          - label: "Education Items"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Degree", name: "degree", widget: "string" }
+              - { label: "School", name: "school", widget: "string" }
+              - { label: "Start Date", name: "start", widget: "string" }
+              - { label: "End Date", name: "end", widget: "string" }
+              - { label: "Description", name: "blurb", widget: "text" }
+              - { label: "ID", name: "id", widget: "string" }
 
   - label: "Page Content Editor" 
     name: "page-content-editor"
@@ -104,17 +151,11 @@ collections:
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
       - label: "Portfolio Page"
         name: "portfolio-page-editor"
-        file: "_data/portfolio.yml"
+        file: "portfolio.html"
         widget: object
         fields:
+          - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
-          - label: "Portfolio Item"
-            name: "list"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "img", widget: "image" }
-              - { label: "Description", name: "blurb", widget: "text" }
       - label: "Contact Page"
         name: "contact"
         file: "contact.html"
