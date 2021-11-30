@@ -1,8 +1,7 @@
 backend:
   name: github
   repo: subsevenx/jekyll-subseven.io
-  branch: main
-  base_url: https://auth.subseven.io/
+  branch: lab-experiment
 
 media_folder: "assets/img/uploads/"
 
@@ -50,7 +49,7 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Nav & Footer Editor"
+      - label: "Menu Editor"
         name: "nav-footer-editor"
         file: "_data/nav.yml"
         widget: object
@@ -65,11 +64,107 @@ collections:
                 name: "child" 
                 widget: "list"
                 fields: 
-                - {label: "Name", name: "name", widget: "string"}
-                - {label: "Link", name: "link", widget: "string"} 
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Link", name: "link", widget: "string" } 
           - label: "Footer Menu Items"
             name: "footer"
             widget: "list"
             fields: 
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
+  
+  - label: "Professional Content Editor"
+    name: "prof-editor"
+    editor: 
+      preview: false
+    files:
+      - label: "Portfolio Content Editor"
+        name: "portfolio-content-editor"
+        file: "_data/portfolio.yml"
+        widget: object
+        fields:
+          - label: "Portfolio Items"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "img", widget: "image" }
+      - label: "Resume Content Editor"
+        name: "resume-content-editor"
+        file: "_data/experience.yml"
+        widget: object
+        fields:
+          - label: "Portfolio Items"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Job", name: "job", widget: "string" }
+              - { label: "Start Date", name: "start", widget: "string" }
+              - { label: "End Date", name: "end", widget: "string" }
+              - { label: "Description", name: "blurb", widget: "text" }
+              - { label: "ID", name: "id", widget: "string" }
+      - label: "Education Content Editor"
+        name: "education-content-editor"
+        file: "_data/education.yml"
+        widget: object
+        fields:
+          - label: "Education Items"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Degree", name: "degree", widget: "string" }
+              - { label: "School", name: "school", widget: "string" }
+              - { label: "Start Date", name: "start", widget: "string" }
+              - { label: "End Date", name: "end", widget: "string" }
+              - { label: "Description", name: "blurb", widget: "text" }
+              - { label: "ID", name: "id", widget: "string" }
+
+  - label: "Page Content Editor" 
+    name: "page-content-editor"
+    editor:
+      preview: false
+    files:
+      - label: "Home Page"
+        name: "index"
+        file: "index.md"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "About Page"
+        name: "about"
+        file: "about.md"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Now Page"
+        name: "now"
+        file: "now.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false} 
+      - label: "Resume Page"
+        name: "resume"
+        file: "resume.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
+      - label: "Portfolio Page"
+        name: "portfolio-page-editor"
+        file: "portfolio.html"
+        widget: object
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
+      - label: "Contact Page"
+        name: "contact"
+        file: "contact.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}     
+      - label: "Blog Page"
+        name: "blog"
+        file: "blog.html"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}

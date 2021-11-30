@@ -4,16 +4,25 @@
         </div>
         <hr>
         {% if page.sidebar == true %}
-        <div class="row">
-            <div class="col-lg-9">
-            {{content}}
+            <div class="row">
+                <div class="col-lg-9">
+                    {%- if page.blurb -%}
+                        {{page.blurb}}
+                    {%- endif -%}
+
+                    {{content}}
+                </div>
+                <div class="col-lg-3">
+                    {% include components/sidebar.html %}
+                </div>
             </div>
-            <div class="col-lg-3">
-            {% include components/sidebar.html %}
-            </div>
-        </div>
         
         {% else %} 
-        {{ content }} 
+            
+        {%- if page.blurb -%}
+        {{page.blurb}}
+        {%endif%}
+            {{content}} 
+
         {% endif %}
     </main>

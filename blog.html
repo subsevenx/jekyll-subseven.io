@@ -1,17 +1,12 @@
 ---
 layout: wrapper
-title: "Blog"
+title: Blog
 sidebar: true
-seo-title: "Test seo title of blog post archive"
-seo-description: "This is a test seo description of the blog post archive"
-seo-keywords: "blog post archive, live, love laugh"
+seo-title: Test seo title of blog post archive
+seo-description: This is a test seo description of the blog post archive
+seo-keywords: blog post archive, live, love laugh
+blurb: Yay this is working now.
 ---
-<section>
-  {% for text in site.data.content.blog %}
-  {% include /patterns/content-loop.html %}
-  {% endfor %}
-</section>
-
 <section> 
   <div class="row">
     {% for post in site.posts %}

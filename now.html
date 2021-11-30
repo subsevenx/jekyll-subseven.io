@@ -3,10 +3,6 @@ layout: wrapper
 title: Now
 ---
 <section> 
-    {% for text in site.data.content.now %}
-    {% include /patterns/content-loop.html %}
-    {% endfor %}
-
     <div class="row">
         {% assign sorted = site.now | sort: 'date' | reverse %}
         {%- for now-post in sorted -%}

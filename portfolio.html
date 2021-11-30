@@ -5,34 +5,14 @@ seo-title: "Test seo title of portfolio"
 seo-description: "This is a test seo description of the portfolio page"
 seo-keywords: "portfolio, live, love laugh"
 ---
-<section id="portfolio-container">
-
-    {% for text in site.data.content.portfolio %}
-    {%- include /patterns/content-loop.html -%}
-    {%- endfor -%}
-
-    <div class="row d-flex gx-5">
-            <div class="col-md-6 col-sm-12">
-                <h2 class="text-center">Ankle N Foot</h2>
-                <img src="/assets/img/uploads/site/site_anf.png" class="img-fluid" alt="Screenshot of website anklenfoot.com">
-                    <div class="portfolio-metadata py-2"> 
-                        <p>The company website has been in my care since 2018. In the time since, the site has undergone a series of changes.</p>
-                        <p>In 2018, The first iteration of the site (now based on WordPress) was built with a combination of WPBakery Builder, a custom theme, and Advanced Custom Fields. While I had no involvement with the development of that iteration, I did maintain it until 2020. Maintenance primarily consisted of visual changes and occasional PHP for adding features to the theme.</p>
-                        <p>In 2020 the website was due for another makeover due to performance issues. I transitioned the website from BlueHost to a DigitalOcean server, implemented a CDN, and rebuilt the site using Elementor.</p>                    
-                        <p>A site builder was requested since the staff needed to be able to make changes on demand.</p>
-                        <p>A new version of the website is currently being planned. Company is still weighing its options in regards to static performance vs. the functionality that WordPress provides. A headless setup is being considered. </p>
-                    </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <h2 class="text-center">CAUSE Chicago</h2>
-                <img src="/assets/img/uploads/site/site_cause-chicago.png" alt="Screenshot of website causechicago.org" class="img-fluid">
-                <div class="portfolio-metadata py-2"> 
-                    <p>This project built in collaboration with CAUSE (a student-led organization) and NUSA (a non-profit.) I was approached the project after the organizations had met with various web developers.</p>
-                    <p>The design and copy was wire-framed and written by the students. My partner and I were simply in charge of placing the infrastructure and translating the students' vision into a digital version they could maintain.</p>
-                    <p>Site theme was built with Elementor, in-house Elementor widgets, and functionality/editability  via Metabox custom fields.</p>
+<div class="row d-flex gx-5">
+    {%- for item in site.data.portfolio.list -%}
+        <div class="col-md-6 col-sm-12">
+            <h2 class="text-center">{{item.title}}</h2>
+            <img src="{{item.img}}" class="img-fluid" alt="Screenshot of website {{item.title}}">
+                <div class="portfolio-metadata py-2">
+                {{item.text}}
                 </div>
-
-            </div>
-    </div>
-
-</section>
+        </div>
+    {% endfor %}
+</div>
