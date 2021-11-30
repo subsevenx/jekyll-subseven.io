@@ -110,7 +110,7 @@ collections:
           - { label: "Page Blurb", name: "blurb", widget: "text" }
       - label: "Resume Page"
         name: "resume"
-        file: "html.html"
+        file: "resume.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text" }
