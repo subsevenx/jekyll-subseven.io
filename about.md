@@ -12,7 +12,9 @@ seo-keywords: home, live, love laugh
 
 You can find the <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">source code for this site here</a>.
 
-This website's theme and (most of) its features were made by me. My goal was to make a Jekyll site with almost no plugins. However, no building gets built alone and I wanna thank the following people and projects that helped make my life so much easier&#58; 
+This website's theme and (most of) its features were made by me. My goal was to make a Jekyll site with almost no plugins. There's nothing wrong with plugins, I just wanted to see how I'd handle the solutions.
+
+However, no building gets built alone and I wanna thank the following people and projects that helped make my life so much easier&#58; 
     
 - <a href="https://jekyllrb.com/" target="_blank" rel="nofollow noopener">Jekyll</a>&#58; A static site generator. My favourite one of them all, even if it is Ruby-based.
 - <a href="https://github.com/Mendeo/jekyll-minifier" target="_blank" rel="nofollow noopener">Mendeo Jekyll Minifier</a>&#58; A liquid-based HTML/JS minifier.
@@ -29,16 +31,16 @@ So this site is now live in order to pressure me to not sit on it and "wait unti
 
 So...I decided to publish it while it still is in development. There's a bunch of features/things I want to implement/test that I haven't done so. I'll use this little section to keep track of them: 
 
-- [ ] SEO management from within the Netlify CMS
-- [ ] Honeypot
-- [ ] Date archives
-- [ ] Better tag and category archives
-- [ ] RSS feed
-- [ ] Implement icons in a resource conscious way
-- [ ] More accesibility testing
-- [ ] Non-proprietary comment solutions
-- [ ] WebP and image management
+- [ ]  SEO management from within the Netlify CMS
+- [ ]  Honeypot
+- [ ]  Date archives
+- [ ]  Better tag and category archives
+- [ ]  RSS feed
+- [ ]  Implement icons in a resource conscious way
+- [ ]  More accesibility testing
+- [ ]  Non-proprietary comment solutions
+- [ ]  WebP and image management
 
-If you have any resources, please <a href="/contact/">contact me</a>.
+If you have any resources that can help me accomplish any of these, please <a href="/contact/">contact me</a>.
 
 </section>
