@@ -4,6 +4,10 @@
 {% endif %}
 {% if site.environment == 'production' %}
 {% if page.recaptcha == true %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-{% endif %}
+<script>
+    function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+    }
+</script>
+<script src="https://www.google.com/recaptcha/api.js"></script>{% endif %}
 {% endif %}

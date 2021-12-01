@@ -17,12 +17,10 @@ blurb: <p> If you need to get in contact with me, please use the following form.
     action="https://api.formcake.com/api/form/ea83f6d0-c3dc-4293-bb9e-88042c1f2370/submission">
     <div class="row form-group">
       <div>
-        <label for="fakename">Name:</label>
-        <input id="fakename" class="form-control sm hide" type="text" name="name" placeholder="Elliot Alderson" aria-required="true" required>
-        <label for="fakeemail">E-Mail:</label>
-        <input id="fakeemail" class="form-control sm hide" type="email" name="user_mail" placeholder="mail@example.com" aria-required="true" required>
-        <label class="ez-reg" for="name" tabindex="-1"></label>
-        <input class="important-submission ez-reg" id="ez-x" name="ez-reg" type="checkbox" value="1" tabindex="-1">
+        <label for="name">Name:</label>
+        <input id="name" class="form-control sm hide" type="text" name="name" placeholder="Elliot Alderson" aria-required="true" required>
+        <label for="email">E-Mail:</label>
+        <input id="email" class="form-control sm hide" type="email" name="user_mail" placeholder="mail@example.com" aria-required="true" required>
       </div>
       <div>
         <label for="msg">Message:</label>
@@ -30,7 +28,6 @@ blurb: <p> If you need to get in contact with me, please use the following form.
       </div>
       <div class="form-button">
         {%- include /components/recaptcha.html -%}
-        <input title="Submit form to send message" id="send-message-button" type="submit" value="Send Message!">
       </div>
     </div>
   </form>
