@@ -1,16 +1,17 @@
 {%- comment -%}
 The fallback will always be global titles/descriptions/keywords. 
 {%- endcomment -%}
-    <meta name="title" content="{% if page.seo-title %}{{page.seo-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{% endif %}">    
-    <meta name="description" content="{% if page.seo-description%}{{page.seo-description}}{% else %}{{site.global-description}} {% endif %}">
-    <meta name="keywords" content="{% if page.seo-keywords %}{{page.seo-keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{site.global-keywords}}{% endif %}">
-    <meta property="og:title" content="{% if page.og-title %}{{page.og-title}}{% elsif page.seo-title %}{{page.seo-title}}{% else %}{{site.global-title}}{% endif %}">
-    <meta property="og:description" content="{% if page.og-description %}{{page.og-description}}{% elsif page.seo-description %}{{page.seo-description}}{% else %}{{site.global-description}}{% endif %}">
-    <meta property="og:image" content="{% if page.og-image %}{{page.og-image | img_url:'1200x627'}}{% elsif page.featured %}{{ page.featured | img_url:'1200x627'}}{% else %}https://via.placeholder.com/1200x627{% endif %}">
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="author" content="{{page.author}}">
     <meta name="theme-color" content="#000">
+    
+    <meta name="title" content="{% if page.seo-title %}{{page.seo-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{% endif %}">    
+    <meta name="description" content="{% if page.seo-description%}{{page.seo-description}}{% else %}{{site.global-description}} {% endif %}">
+    <meta name="keywords" content="{% if page.seo-keywords %}{{page.seo-keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{site.global-keywords}}{% endif %}">
+    
+    <meta property="og:title" content="{% if page.og-title %}{{page.og-title}}{% elsif page.seo-title %}{{page.seo-title}}{% else %}{{site.global-title}}{% endif %}">
+    <meta property="og:description" content="{% if page.og-description %}{{page.og-description}}{% elsif page.seo-description %}{{page.seo-description}}{% else %}{{site.global-description}}{% endif %}">
+    <meta property="og:image" content="{% if page.og-image %}{{page.og-image | img_url:'1200x627'}}{% elsif page.featured %}{{ page.featured | img_url:'1200x627'}}{% else %}https://via.placeholder.com/1200x627{% endif %}">
