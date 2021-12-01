@@ -23,7 +23,7 @@ However, no building gets built alone and I wanna thank the following people and
 - <a href="https://github.com/allejo/jekyll-toc" target="_blank" rel="nofollow noopener">Allejo's Table of Contents</a>&#58; A Liquid-based TOC that I use on my posts. Extremely helpful.
 - <a href="https://www.van-porten.de/blog/2021/01/netlify-auth-provider/" target="_blank" rel="dofollow noopener">Oliver van Porten's OAuth PHP Solution</a>&#58; I was in the middle of writing my own PHP implementation when I thought "hmm... I wonder if anyone has done this." I cannot stress the (additional) headaches this saved me.
 </section>
-
+<hr>
 <section markdown="1">
 ## Roadmap
 
@@ -41,6 +41,7 @@ So...I decided to publish it while it still is in development. There's a bunch o
 - [ ] Non-proprietary comment solutions
 - [ ] WebP and image management
 - [ ] Night mode without a framework
+- [ ] "Last Edited." At the moment that only date that pops up is the last time the website was compiled
 
 If you have any resources that can help me accomplish any of these, please <a href="/contact/">contact me</a>.
 
