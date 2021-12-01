@@ -1,7 +1,6 @@
 {% if page.recaptcha == true %}
 {% if site.environment == 'production' %}
-<div class="form-button"> 
-    <button class="g-recaptcha" data-sitekey="6Lf6IyUaAAAAAPTTe__sC4052VzvGcwFlBHeajA0" data-callback='onSubmit' data-action='submit' title="Submit form to send message" id="send-message-button" type="submit" value="Send Message!">Submit</button>
-</div>
+        <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lf6IyUaAAAAAPTTe__sC4052VzvGcwFlBHeajA0" data-callback="onCompleted" data-size="invisible">
+        </div>
 {% endif %}
 {% endif %}

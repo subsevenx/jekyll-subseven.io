@@ -4,10 +4,6 @@
 {% endif %}
 {% if site.environment == 'production' %}
 {% if page.recaptcha == true %}
-<script>
-    function onSubmit(token) {
-        document.getElementById("contact-form").submit();
-    }
-</script>
+<script src="{{base}}/assets/js/custom/recaptcha.min.js" crossorigin="anonymous"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>{% endif %}
 {% endif %}
