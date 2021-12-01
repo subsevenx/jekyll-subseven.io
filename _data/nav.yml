@@ -2,20 +2,20 @@ brand:
   - logo: /assets/img/site-logo.svg
     logo-alt: Logo for subseven.io
 menu:
-  - name: Home
+  - name: Home 🏠
     link: /
-  - name: About
+  - name: About 🧑🏽
     link: /about/
-  - name: Work
+  - name: Work 💼
     link: "#"
     child:
       - name: Portfolio
         link: /portfolio/
-  - name: Now
+  - name: Now ⏱
     link: /now/
-  - name: Contact
+  - name: Contact 💌
     link: /contact/
-  - name: Blog
+  - name: Blog ✍🏽
     link: /blog/
 footer:
   - name: Categories
