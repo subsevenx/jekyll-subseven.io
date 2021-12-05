@@ -5,8 +5,8 @@ layout: wrapper
     <div class="post-meta-container">
         <div class="flex-row d-flex align-items-center">
             <div class="col-md-10 col-sm-12">
-                <h1 class="h1">{{page.title}}</h1>
-                <p class="h4">By: {{page.author}}</p> 
+                <h1 class="h3 text-uppercase">{{page.title}}</h1>
+                <p class="h5">By: {{page.author}}</p> 
             </div>
             <div class="col-md-2 col-sm-12">
             <p> Posted: <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
@@ -38,16 +38,13 @@ layout: wrapper
                 {% endif %}
             </div>
     </div>
-</nav>
 
-    <section class="py-3 mx-md-5">  
+    <section class="py-3 mx-sm-0">  
         {%- include /components/toc.html -%}
     </section>
 
-    <nav class="px-5 my-2"> 
-
-    <article itemscope itemtype="https://schema.org/CreativeWork" class="mx-sm-0 mx-lg-5">
-        {{content}}
+    <article class="mx-lg-5 mx-sm-0 " itemscope itemtype="https://schema.org/CreativeWork">
+        {{- content -}}
     </article>
     <div class="row">
         <div class="col-md-6">
