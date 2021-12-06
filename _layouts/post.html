@@ -3,20 +3,7 @@ layout: wrapper
 ---
 <main class="container">
     <div class="post-meta-container">
-        <div class="flex-row d-flex align-items-center">
-            <div class="col-md-10 col-sm-12">
-                <h1 class="h3">{{page.title}}</h1>
-                <p class="h5">By: {{page.author}}</p> 
-            </div>
-            <div class="col-md-2 col-sm-12">
-            <p> Posted 🕒 
-                <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
-                 <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> 
-            </p>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
+        <div class="row mb-3 mt-0">
             {% if page.image %}
             <img src="{{post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
             {% else %}
@@ -25,11 +12,24 @@ layout: wrapper
                 alt="Fallback post banner image that says subseven.io">
             {% endif %}
         </div>
+        
+        <div class="row">
+            <div class="col-lg-10 col-sm-12 col-xs-12">
+                <h1 class="h3 fw-bold">{{page.title}}</h1>
+                <p class="h6 fw-light">{{page.author}}</p> 
+            </div>
+            <div class="col-lg-2 col-sm-12 col-xs-12">
+            <p class="h6"><span class="fw-bold">Posted 🕒</span> 
+                <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
+                <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> 
+            </p>
+            </div>
+        </div>
+        <section class="my-3">  
+            {%- include /components/toc.html -%}
+        </section>
     </div>
 
-    <section class="my-3">  
-        {%- include /components/toc.html -%}
-    </section>
 
     <article itemscope itemtype="https://schema.org/CreativeWork">
         {{- content -}}
@@ -38,13 +38,13 @@ layout: wrapper
     {%- comment -%} Categories {%- endcomment -%}
     <div class="row">
         
-        <div class="col-md-6">
+        <div class="col-md-6 fst-italic">
             {% if page.categories %}
             <div>
                 {% if page.categories.size < 2  %}
-                Category
+                <p class="text-center h6">Category</p>
                 {% elsif page.categories.size >= 2 %}
-                Categories
+                <p class="text-center h6">Categories</p>
                 {% endif %}
                 <hr class="post-hr">
             </div>
@@ -53,29 +53,32 @@ layout: wrapper
             <span class="text-center post-categories p-1" id="{{category | replace: ' ', '-' | downcase}}"><a href="/blog/categories/#{{category | replace: ' ', '-' | downcase}}" class="text-decoration-none">{{category}}</a></span>
             {% endfor %}
             {% if page.categories.size < 1  %}
-            <p>This post has no categories :(</p>
+            <p class="text-center">This post has no categories :(</p>
             {% endif %}
             {% endif %}
         </div>            
     </div>
 
     {%- comment -%} Tags {%- endcomment -%}
-        <div class="col-md-6">
+        <div class="col-md-6 fst-italic">
             <div> 
                 {% if page.tags %}
-                <p>Tag{% if page.tags.size > 1 %}s{% endif %}</p>
+                <p class="text-center h6">Tag{% if page.tags.size > 1 %}s{% endif %}</p>
                 <hr class="post-hr">
             </div>
-            
-            {%- for tag in page.tags -%}
-            <span class="post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag}}</a></span>
-            {% endfor %}
-            {% if page.tags.size < 1  %}
-            <p>This post has no tags :(</p>
-            {% endif %}
-            {% endif %}
+
+            <div> 
+                {%- for tag in page.tags -%}
+                <span class="post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag}}</a></span>
+                {% endfor %}
+                {% if page.tags.size < 1  %}
+                <p class="text-center h6">This post has no tags :(</p>
+                {% endif %}
+                {% endif %}
+            </div>
         </div>
 
+    {%- comment -%} Prev/Next {%- endcomment -%}
         <div class="col-md-12">
             <div class="flex-row d-flex align-items-center">
                 <div class="col-6 text-center">
