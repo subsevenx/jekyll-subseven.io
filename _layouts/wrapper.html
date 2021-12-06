@@ -31,15 +31,15 @@ layout: html_minifier
 </head>
 
 <body>
-  {% include /components/nav.html %}
+  {%- include /components/nav.html -%}
   <div id="main-content" tabindex="-1">
-    {% if page.layout != "post" %}
-    {% include /patterns/page-content.html %}
-    {% else %}
-    {{content}}  
-    {% endif %}
-    {% include /components/footer.html %}
-    {% include /patterns/scripts.html %}
+    {%- if page.layout != "post" -%}
+    {%- include /patterns/page-content.html -%}
+    {%- else -%}
+    {{- content -}}  
+    {%- endif -%}
+    {%- include /components/footer.html -%}
+    {%- include /patterns/scripts.html -%}
   </div>
 </body>
 </html>
