@@ -5,14 +5,14 @@ layout: wrapper
     <div class="post-meta-container">
         <div class="flex-row d-flex align-items-center">
             <div class="col-md-10 col-sm-12">
-                <h1 class="h3 text-uppercase">{{page.title}}</h1>
+                <h1 class="h3">{{page.title}}</h1>
                 <p class="h5">By: {{page.author}}</p> 
             </div>
             <div class="col-md-2 col-sm-12">
-            <p> Posted: <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
-                at <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> 
+            <p> Posted 🕒 
+                <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
+                 <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> 
             </p>
-            {%- include /components/back-to-blog.html -%}
             </div>
         </div>
         <hr>
@@ -26,59 +26,69 @@ layout: wrapper
             {% endif %}
         </div>
     </div>
-    <div class="flex-row d-flex align-items-center">
-            <div class="col-6 text-center">
-                {% if page.next.url %}
-                <a class="post-next" href="{{page.next.url}}">&laquo; Previous Post</a>
-                {% endif %}
-            </div> 
-            <div class="col-6 text-center">
-                {% if page.previous.url %}
-                <a class="post-prev" href="{{page.previous.url}}">Next Post &raquo;</a>
-                {% endif %}
-            </div>
-    </div>
 
-    <section>  
+    <section class="my-3">  
         {%- include /components/toc.html -%}
     </section>
 
     <article itemscope itemtype="https://schema.org/CreativeWork">
         {{- content -}}
     </article>
+    
+    {%- comment -%} Categories {%- endcomment -%}
     <div class="row">
+        
         <div class="col-md-6">
             {% if page.categories %}
             <div>
-                {% if page.categories.size <= 1 %}
+                {% if page.categories.size < 2  %}
                 Category
-                {% elsif page.categories.size > 1 %}
+                {% elsif page.categories.size >= 2 %}
                 Categories
                 {% endif %}
                 <hr class="post-hr">
             </div>
-            
+        <div> 
             {% for category in page.categories %}  
             <span class="text-center post-categories p-1" id="{{category | replace: ' ', '-' | downcase}}"><a href="/blog/categories/#{{category | replace: ' ', '-' | downcase}}" class="text-decoration-none">{{category}}</a></span>
             {% endfor %}
-        </div>
-
-            {% else %}
+            {% if page.categories.size < 1  %}
             <p>This post has no categories :(</p>
             {% endif %}
+            {% endif %}
+        </div>            
+    </div>
 
+    {%- comment -%} Tags {%- endcomment -%}
         <div class="col-md-6">
-            {% if page.tags %}
-            <p>Tag{% if page.tags.size > 1 %}s{% endif %}</p>
+            <div> 
+                {% if page.tags %}
+                <p>Tag{% if page.tags.size > 1 %}s{% endif %}</p>
                 <hr class="post-hr">
-            <div>
-            {%- for tag in page.tags -%}
-                <span class="post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag}}</a></span>
-                {% endfor %}
             </div>
-            {% else %}
+            
+            {%- for tag in page.tags -%}
+            <span class="post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag}}</a></span>
+            {% endfor %}
+            {% if page.tags.size < 1  %}
             <p>This post has no tags :(</p>
             {% endif %}
+            {% endif %}
+        </div>
+
+        <div class="col-md-12">
+            <div class="flex-row d-flex align-items-center">
+                <div class="col-6 text-center">
+                    {% if page.next.url %}
+                    <a class="post-next" href="{{page.next.url}}">&laquo; Previous Post</a>
+                    {% endif %}
+                </div> 
+                <div class="col-6 text-center">
+                    {% if page.previous.url %}
+                    <a class="post-prev" href="{{page.previous.url}}">Next Post &raquo;</a>
+                    {% endif %}
+                </div>
+        </div>
         </div>
     </div>
 </main>
