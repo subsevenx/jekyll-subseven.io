@@ -6,8 +6,13 @@
         <div class="card">
             <h2 class="text-center h4 card-header bg-dark text-white">Read Posts</h2>
             <div class="card-body">
+                {% if site.posts.size < 1 %}
+                    <p class="text-center">No posts to show :(</p>
+                {% endif %}
+                {% if site.posts.size >= 1 %}
                 <h3 class="h5 p-2">Latest Post</h3>
                 <ol class="list-unstyled">{% for post in site.posts | limit: 1 %}<li><a href="{{post.url}}">{{post.title}}</a></li>{% endfor %}</ol>
+                {% endif %}
                 {% if site.posts.size > 1 %}
                 <h3 class="h5 p-2">Recent Posts</h3>
                 <ol class="list-unstyled">
@@ -21,7 +26,8 @@
             </div>
         </div>
         </section>
-        {%- endif -%}
+    {%- endif -%}
+
 {%- comment -%}This will only show up in the blog section{%- endcomment -%}
     {%- if page.url == "/blog/" -%}        
     <section>
