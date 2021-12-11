@@ -1,14 +1,16 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/" # the subpath of your site, e.g. /blog
+url: https://subseven.io # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: / # the subpath of your site, e.g. /blog
 permalink: pretty
 email: "info@subseven.io"
 global-title: "SubSeven &#xbb; Web Dev, Musician, Writer" # the name of your site, e.g. ACME Corp.
 global-description: "Standing at the intersection of technology and life."
 global-keywords: "globes, planet, interstellar"
-include: ['.htaccess']
+
 environment: production
-recaptcha-key: 6Lcbpf0cAAAAAHtOgY1tO0_H-JAiDFeYZ32Ca6Au
 timezone: America/Chicago
+
+include: 
+  ['.htaccess']
 
 collections:
   now:
