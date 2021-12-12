@@ -3,7 +3,6 @@
 @import "bootstrap/functions";
 
 //Style Overrides
-@import "custom-fonts";
 @import "custom-variables";
 
 @import "bootstrap/mixins";
@@ -11,6 +10,7 @@
 @import "bootstrap/utilities";
 
 @import "custom-styles";
+@import "custom-fonts";
 @import "blog-styles";
 @import "access";
 
