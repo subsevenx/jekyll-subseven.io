@@ -2,6 +2,7 @@ backend:
   name: github
   repo: subsevenx/jekyll-subseven.io
   branch: main
+  base_url: https://auth.subseven.io/
 
 media_folder: "assets/img/uploads/"
 
