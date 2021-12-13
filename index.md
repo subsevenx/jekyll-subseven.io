@@ -1,11 +1,11 @@
 ---
 seo:
-    meta-title: "SubSeven: Web Dev, Musician, Writer"
-    meta-description: "I am a web developer and technical marketer based out of the midwest."
-    meta-keywords: "subseven, subseven.io, sub7.dev, subseven.me"
-    og-title: "SubSeven: Web Dev, Musician, Writer"
-    og-image: "https://via.placeholder.com/420x365"
-    og-description: "I am web dev and technical marketer based out of the midwest."
+  meta-title: "SubSeven: Web Dev, Musician, Writer"
+  meta-description: I am a web developer and technical marketer based out of the midwest.
+  meta-keywords: subseven, subseven.io, sub7.dev, subseven.me
+  og-title: "SubSeven: Web Dev, Musician, Writer"
+  og-image: ""
+  og-description: I am web dev and technical marketer based out of the midwest.
 layout: wrapper
 title: Home
 sidebar: true
