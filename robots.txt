@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: {{site.ur}}/sitemap.xml
+Sitemap: https://subseven.io/sitemap.xml
