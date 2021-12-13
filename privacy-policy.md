@@ -4,10 +4,9 @@ title: "Privacy Policy"
 sidebar: false
 
 seo: 
-    - seo-title: "Privacy Policy"
-      seo-description: "Policy regarding privacy practices for subseven.io"
-      seo-keywords: "privacy policy, info handling"
-    - og-image: https://via.placeholder.com/420x369
+    meta-title: "Privacy Policy"
+    meta-description: "Policy regarding privacy practices for subseven.io"
+    meta-keywords: "privacy policy, info handling"
 ---
 <section id="privacy-policy" markdown="1">
 
