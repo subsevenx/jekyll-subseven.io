@@ -2,13 +2,12 @@
 The fallback will always be global titles/descriptions/keywords. 
 {%- endcomment -%}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="robots" content="{%-if page.seo.index-%} {{page.seo.index}}{%- else -%}{{site.index}}{%- endif -%}">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="{%-if page.seo.index-%} {{page.seo.index}}{%- else -%}{{site.index}}{%- endif -%}">
     <meta name="language" content="{%- if page.language -%}{{page.language}}{%- else -%}{{site.language}}{%- endif -%}">
     <meta name="author" content="{%- if page.author -%}{{page.author}}{%- else -%}{{-site.author-}}{%-endif-%}">
     <meta name="theme-color" content="#000">
     <meta name="revisit-after" content="7 days">
-
     
     <meta name="title" content="{% if page.seo.meta-title %}{{page.seo.meta-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{% endif %}">    
     <meta name="description" content="{% if page.seo.meta-description%}{{page.seo.meta-description}}{% else %}{{site.global-description}} {% endif %}">
