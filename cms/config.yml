@@ -23,6 +23,20 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Category", name: "category", widget: "list", max: 1, allow_add: true, required: false}
       - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
+      - label: "SEO & Indexing"
+        name: "seo"
+        required: false
+        widget: object
+        fields:
+            - { label: "Author", name: "author", widget: "string" }
+            - { label: "Meta Title", name: "meta-title", widget: "string" }
+            - { label: "Meta Description", name: "meta-description", widget: "string" }
+            - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+            - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+            - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+            - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+            - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+            - { label: "Language", name: "language", widget: "string"}
 
   #Now Collection
   - label: "Now Posts" 
@@ -139,21 +153,49 @@ collections:
                 - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
                 - { label: "OpenGraph Title", name: "og-title", widget: "string" }
                 - { label: "OpenGraph Description", name: "og-description", widget: "string" }
-                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/uploads/chocolate-dogecoin.jpg" }                
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
                 - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
-                - { label: "Language", name: "language", widget: "string", default: "English" }
+                - { label: "Language", name: "language", widget: "string"}
       - label: "About Page"
         name: "about"
         file: "about.md"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string"}
       - label: "Resume Page"
         name: "resume"
         file: "resume.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string"}
       - label: "Portfolio Page"
         name: "portfolio-page-editor"
         file: "portfolio.html"
@@ -161,33 +203,117 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string"}
       - label: "Contact Page"
         name: "contact"
         file: "contact.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}     
+          - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string"}
       - label: "Now Page"
         name: "now"
         file: "now.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false} 
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string"}
       - label: "Blog Page"
         name: "blog"
         file: "blog.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text", required: false}
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string"}
       - label: "Privacy Policy Page"
         name: "privacy"
         file: "privacy-policy.md"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown"}
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string"}
       - label: "404 Page"
         name: "404"
         file: "404.html"
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Blurb", name: "blurb", widget: "text"}
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/assets/img/sub7_def.png" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string"}
