@@ -5,8 +5,10 @@ The fallback will always be global titles/descriptions/keywords.
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
-    <meta name="author" content="{{page.author}}">
+    <meta name="author" content="{%- if page.author -%}{{page.author}}{%- else -%}{{-site.author-}}{%-endif-%}">
     <meta name="theme-color" content="#000">
+    <meta name="revisit-after" content="3 days">
+
     
     <meta name="title" content="{% if page.seo-title %}{{page.seo-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{% endif %}">    
     <meta name="description" content="{% if page.seo-description%}{{page.seo-description}}{% else %}{{site.global-description}} {% endif %}">
