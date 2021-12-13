@@ -4,7 +4,7 @@ seo:
   meta-description: I am a web developer and technical marketer based out of the midwest.
   meta-keywords: subseven, subseven.io, sub7.dev, subseven.me
   og-title: "SubSeven: Web Dev, Musician, Writer"
-  og-image: ""
+  og-image: /assets/img/sub7_def.png
   og-description: I am web dev and technical marketer based out of the midwest.
 layout: wrapper
 title: Home
