@@ -5,6 +5,7 @@ email: "info@subseven.io"
 global-title: "SubSeven &#xbb; Web Dev, Musician, Writer" # the name of your site, e.g. ACME Corp.
 global-description: "I am a web developer and technical marketer based out of the midwest."
 global-keywords: "subseven, subseven.io, sub7.dev, subseven.me"
+global-image: /assets/img/sub7_def.png
 
 language: "English"
 index: "index, follow"
