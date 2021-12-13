@@ -128,6 +128,20 @@ collections:
         fields: 
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+          - label: "SEO & Indexing"
+            name: "seo"
+            required: false
+            widget: object
+            fields:
+                - { label: "Author", name: "author", widget: "string" }
+                - { label: "Meta Title", name: "meta-title", widget: "string" }
+                - { label: "Meta Description", name: "meta-description", widget: "string" }
+                - { label: "Meta Keywords", name: "meta-keywords", widget: "string" } 
+                - { label: "OpenGraph Title", name: "og-title", widget: "string" }
+                - { label: "OpenGraph Description", name: "og-description", widget: "string" }
+                - { label: "OpenGraph Image (URL)", name: "og-image", widget: "image", choose_url: true, default: "/uploads/chocolate-dogecoin.jpg" }                
+                - { label: "Indexing", name: "index", widget: "select", options: ["index, follow", "noindex, nofollow"] } 
+                - { label: "Language", name: "language", widget: "string", default: "English" }
       - label: "About Page"
         name: "about"
         file: "about.md"
