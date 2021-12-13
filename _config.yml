@@ -6,6 +6,10 @@ global-title: "SubSeven &#xbb; Web Dev, Musician, Writer" # the name of your sit
 global-description: "Standing at the intersection of technology and life."
 global-keywords: "globes, planet, interstellar"
 
+language: English
+index: index, follow
+author: Daniel Hernandez
+
 environment: production
 timezone: America/Chicago
 
