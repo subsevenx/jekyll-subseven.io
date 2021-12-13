@@ -15,4 +15,4 @@ The fallback will always be global titles/descriptions/keywords.
     
     <meta property="og:title" content="{% if page.seo.og-title %}{{page.seo.og-title}}{% elsif page.seo.meta-title %}{{page.seo.meta-title}}{% else %}{{site.global-title}}{% endif %}">
     <meta property="og:description" content="{% if page.seo.og-description %}{{page.seo.og-description}}{% elsif page.seo.meta-description %}{{page.seo.meta-description}}{% else %}{{site.global-description}}{% endif %}">
-    <meta property="og:image" content="{% if page.seo.og-image %}{{page.seo.og-image | img_url:'1200x627'}}{% elsif page.featured %}{{page.featured | img_url:'1200x627'}}{% else %}https://via.placeholder.com/1200x627{% endif %}">
+    <meta property="og:image" content="{% if page.seo.og-image %}{{page.seo.og-image}}{% elsif page.featured %}{{page.featured}}{% else %}/assets/img/sub7_def.png{% endif %}">
