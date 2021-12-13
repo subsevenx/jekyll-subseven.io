@@ -23,12 +23,6 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Category", name: "category", widget: "list", max: 1, allow_add: true, required: false}
       - {label: "Tags", name: "tags", widget: "list", allow_add: true, required: false}
-      - {label: "SEO Title", name: "seo-title", widget: "string", required: false}
-      - {label: "SEO Description", name: "seo-description", widget: "string", required: false}
-      - {label: "SEO Keywords", name: "seo-keywords", widget: "string", required: false}
-      - {label: "OpenGraph Title", name: "og-title", widget: "string", required: false}
-      - {label: "OpenGraph Description", name: "og-description", widget: "string", required: false}
-      - {label: "OpenGraph Image", name: "og-image", widget: "image", required: false}       
 
   #Now Collection
   - label: "Now Posts" 
