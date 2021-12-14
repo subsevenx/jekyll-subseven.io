@@ -8,7 +8,7 @@ The fallback will always be global titles/descriptions/keywords.
     <meta name="author" content="{%- if page.author -%}{{page.author}}{%- else -%}{{-site.author-}}{%-endif-%}">
     <meta name="theme-color" content="#000">
     <meta name="revisit-after" content="7 days">
-    
+     
     <meta name="title" content="{% if page.seo.meta-title %}{{page.seo.meta-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{% endif %}">    
     <meta name="description" content="{% if page.seo.meta-description%}{{page.seo.meta-description}}{% else %}{{site.global-description}} {% endif %}">
     <meta name="keywords" content="{% if page.seo.meta-keywords %}{{page.seo.meta-keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{site.global-keywords}}{% endif %}">
