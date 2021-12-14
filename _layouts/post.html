@@ -52,7 +52,7 @@ layout: wrapper
             <span class="text-center post-categories p-1" id="{{category | replace: ' ', '-' | downcase}}"><a href="/blog/categories/#{{category | replace: ' ', '-' | downcase}}" class="text-decoration-none">{{category}}</a></span>
             {% endfor %}
             {% if page.categories.size < 1  %}
-            <p class="text-center">This post has no categories :(</p>
+            <p class="text-center h6 text-muted pb-2">This post has no categories :(</p>
             {% endif %}
             {% endif %}
         </div>            
@@ -71,7 +71,7 @@ layout: wrapper
                 <span class="post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag}}</a></span>
                 {% endfor %}
                 {% if page.tags.size < 1  %}
-                <p class="text-center h6">This post has no tags :(</p>
+                <p class="text-center h6 text-muted pb-2">This post has no tags :(</p>
                 {% endif %}
                 {% endif %}
             </div>
