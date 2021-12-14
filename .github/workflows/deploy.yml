@@ -1,2 +1,22 @@
-- name: SSH Remote Commands
-  uses: appleboy/ssh-action@v0.1.4
+name: Remote Deploy
+  on:
+    push:
+      branches [ main ]
+  
+  jobs: 
+    step-one: 
+      name: Deploy
+      runs-on: ubuntu-latest
+      steps:
+        - name: SSH Remote Commands
+          uses: appleboy/ssh-action@v0.1.4
+          with:
+            host: ssh.ssio.dev
+            username: subseven
+            key: $ {{ secret. GREEKTOWN }}
+            port: 22
+            script: | 
+              cd /home/subseven/
+              git pull origin main
+              git status
+
