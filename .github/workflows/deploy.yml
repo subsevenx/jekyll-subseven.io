@@ -10,10 +10,9 @@ jobs:
         with:
           host: ssh.ssio.dev
           username: subseven
-          key: $ {{ secret.GREEKTOWN }}
+          key: ${{ secret.GREEKTOWN }}
           port: 22
           script: | 
-            cd /home/subseven/
-            git pull origin main
+            cd /home/subseven/deploy.git/hooks
+            bash post-receive
             git status
-
