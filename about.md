@@ -37,6 +37,7 @@ So...I decided to publish it while it still is in development. There's a bunch o
 * WebP and image management
 * Night mode without a framework
 * "Last Edited." At the moment that only date that pops up is the last time the website was compiled
+* <s>Automated Deploy</s> | Done, 12.14.21 | I love GH actions 
 
 If you have any resources that can help me accomplish any of these, please <a href="/contact/">contact me</a>.
 
