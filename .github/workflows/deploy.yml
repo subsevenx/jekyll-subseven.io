@@ -13,4 +13,5 @@ jobs:
           key: ${{ secrets.GREEKTOWN }}
           port: ${{ secrets.PORT }}
           script: | 
-            whoami
+            cd /home/subseven/scripts
+            bash post-receive
