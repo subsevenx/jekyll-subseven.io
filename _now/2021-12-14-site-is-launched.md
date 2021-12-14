@@ -4,6 +4,8 @@ tags:
   - update
 date: 2021-12-13 19:05:15 --600
 ---
+## Production
+
 I finally have pushed some of the first "production ready" changes to this website! 
 
 Officially, 90% of the content on the site is now being delivered via YAML and NetlifyCMS. The whole website took around 1 month total time to develop. The most time consuming part was writing the CMS config file. 
