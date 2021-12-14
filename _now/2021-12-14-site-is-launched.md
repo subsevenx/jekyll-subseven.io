@@ -1,7 +1,7 @@
 ---
 title: Site is "Launched"
 tags:
-  - "#update"
+  - update
 date: 2021-12-13 19:05:15 --600
 ---
 I finally have pushed some of the first "production ready" changes to this website! 
