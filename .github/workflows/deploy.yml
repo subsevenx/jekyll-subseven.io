@@ -13,6 +13,4 @@ jobs:
           key: ${{ secrets.GREEKTOWN }}
           port: ${{ secrets.PORT }}
           script: | 
-            cd /home/subseven/deploy.git/hooks
-            bash post-receive
-            git status
+            whoami
