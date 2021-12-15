@@ -1,0 +1,46 @@
+{%- if page.url == "/blog/" -%}        
+<section>
+    <div class="card mt-3" id="sidebar-category-card"> 
+        <h2 class="h5 card-header bg-dark text-white">Explore Categories</h2>
+        {% if site.categories.size < 1 %}
+        <p class="text-center text-muted">No categories...yet</p>
+        {% endif %}
+
+        {% if site.categories > 1 %}
+        <div class="card-body">
+            <ul class="list-unstyled">
+                {%- for categories in site.categories | limit: 5 -%}
+                <li class="h6 text-capitalize">
+                    <a href="/blog/categories/#{{categories[0] | replace: ' ', '-' | downcase}}">{{categories[0]}}</a>
+                </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+        <div class="card-footer">
+            <a href="/blog/categories/">Show All</a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="card mt-3" id="sidebar-tags-card"> 
+        <h2 class="h5 card-header bg-dark text-white">Explore Tags</h2>
+        {% if site.tags.size < 1 %}
+        <p class="text-center text-muted">No tags...yet</p>
+        {% endif %}
+        
+        {% if site.tags > 1 %}  
+        <div class="card-body">
+            <ul class="list-unstyled">
+                {%- for tags in site.tags | limit: 5 -%}
+                <li class="h6 text-capitalize">
+                    <a href="/blog/tags/#{{tags[0] | replace: ' ', '-' | downcase}}">{{tags[0]}}</a>
+                </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+        <div class="card-footer">
+            <a href="/blog/tags/">Show All</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{%- endif -%}
