@@ -9,7 +9,7 @@ sidebar: true
 
 You can find the <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">source code for this site here</a>.
 
-This website's theme and (most of) its features were made by me. My goal was to make a Jekyll site with almost no plugins. There's nothing wrong with plugins, I just wanted to see how I'd handle the solutions.
+This website's theme and (most of) its features were made by me. My goal was to make a Jekyll site with almost no plugins. I like plugins, and I like spinning up my own solutions where possible. 
 
 However, no building gets built alone and I wanna thank the following people and projects that helped make my life so much easier&#58; 
 
