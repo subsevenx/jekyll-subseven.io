@@ -12,7 +12,7 @@ sidebar: true
 ---
 <section markdown="1"> 
 
-## Hello There TEST TEST
+## Hello There
 
 My name is Dan and I am a web developer focusing in WordPress, PHP, and static sites. I've worked in marketing for the past few years but I am looking to make the switch back into web development.
 
