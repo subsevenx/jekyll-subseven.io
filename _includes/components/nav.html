@@ -15,26 +15,27 @@ Handles the navigation menu of the website. Todo: context to buttons.
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
-        <ul class="navbar-nav" role="menubar">
-          {% for nav-item in site.data.nav.menu %}
-          {%- comment -%} Checks to see if there's nested items {%- endcomment -%} 
-          {% if nav-item.child[0] %}
-          <li class="nav-item dropdown">
-            <img height="28" width="28" src="{{nav-item.icon}}" alt=""> <a class="nav-link dropdown-toggle" href="{{nav-item.link}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-expanded="{%if nav-item.link == page.url %}true{%else%}false{%endif%}">{{nav-item.name}}</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            {% for child in nav-item.child %}
-            <li><a class="dropdown-item {%if child.link == page.url %}active{%endif%}" href="{{child.link}}" {%if child.link == page.url%}aria-current="page"{%endif%}>{{child.name}}</a></li>
-            {%- endfor -%}  
-          </ul>
-          </li>
-          {%- comment -%} Normal iteration, if item with child exists already, it won't render {%- endcomment -%}
-          {% elsif nav-item != nav-item.child %}
-          <li class="nav-item" role="menuitem">
+
+          <ul class="navbar-nav" role="menubar">
+            {% for nav-item in site.data.nav.menu %}
+            {%- comment -%} Checks to see if there's nested items {%- endcomment -%} 
+            {% if nav-item.child[0] %}
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="{{nav-item.link}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-expanded="{%if nav-item.link == page.url %}true{%else%}false{%endif%}"><img class="img-fluid" height="28" width="28" src="{{nav-item.icon}}" alt="">{{nav-item.name}}</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% for child in nav-item.child %}
+                <li><a class="dropdown-item {%if child.link == page.url %}active{%endif%}" href="{{child.link}}" {%if child.link == page.url%}aria-current="page"{%endif%}>{{child.name}}</a></li>
+                {%- endfor -%}  
+              </ul>
+            </li>
+            {%- comment -%} Normal iteration, if item with child exists already, it won't render {%- endcomment -%}
+            {% elsif nav-item != nav-item.child %}
+            <li class="nav-item" role="menuitem">
               <a class="nav-link {%if nav-item.link == page.url %}active{%endif%}" href="{{nav-item.link}}" {%if nav-item.link == page.url%}aria-current="page"{%endif%}><img class="img-fluid" height="28" width="28" src="{{nav-item.icon}}" alt="">{{nav-item.name}}</a> 
-          </li>
-          {% endif %}
-          {%- endfor -%}
-        </ul>
+            </li>
+            {% endif %}
+            {%- endfor -%}
+          </ul>
       </div>
     </div>
   </nav>
