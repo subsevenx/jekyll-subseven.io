@@ -12,11 +12,16 @@ layout: null
     </url>
     {% endfor %}
 
+    
     {% for page in site.pages %}
+    {% if page.url contains '.xml' or page.url contains 'assets' or page.seo.index == "noindex, nofollow" %} 
+
+    {% else %} 
     <url>
         <loc>{{site.url}}{{page.url | remove: 'index.html'}}</loc>
         <lastmod>{{site.time | date_to_xmlschema}}</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
     </url>    
+    {% endif %}
     {% endfor %}
 </urlset>
