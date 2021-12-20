@@ -1,7 +1,6 @@
 ---
 layout: null
----
- 
+--- 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
@@ -11,11 +10,9 @@ layout: null
         <changefreq>monthly</changefreq>
     </url>
     {% endfor %}
-
     
     {% for page in site.pages %}
     {% if page.url contains '.xml' or page.url contains 'assets' or page.seo.index == "noindex, nofollow" %} 
-
     {% else %} 
     <url>
         <loc>{{site.url}}{{page.url | remove: 'index.html'}}</loc>
