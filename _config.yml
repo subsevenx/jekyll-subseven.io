@@ -10,8 +10,6 @@ global-image: /assets/img/sub7_def.png
 language: "English"
 index: "index, follow"
 author: "Daniel Hernandez"
-
-environment: production
 timezone: America/Chicago
 
 include: 
