@@ -2,6 +2,10 @@
 <aside class="mt-sm-3 mb-3">
 
     {% include /components/sidebar/_general-comp.html %}
-    {% include /components/sidebar/_blog-comp.html %}
+
+    {%- if page.url == "/blog/" -%}        
+    {% include /components/sidebar/_blog-sb-category.html %}
+    {% include /components/sidebar/_blog-sb-tags.html %}    
+    {% endif %}
 
 </aside>
