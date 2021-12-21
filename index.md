@@ -18,6 +18,6 @@ My name is Dan and I am a web developer focusing in WordPress, PHP, and static s
 
 I'm an avid writer and I enjoy making music. 
 
-<img src="/assets/img/uploads/site/site_daniel.png" alt="A picture of me" class="img-fluid">
+<img src="https://blue.subseven.io/assets/img/uploads/site/site_daniel.png" alt="A picture of me" class="img-fluid">
 
 </section>
