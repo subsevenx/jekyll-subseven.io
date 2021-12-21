@@ -15,7 +15,7 @@ This repo isn't set up to work with as a "theme", although you are more than fre
 
 ## Quirks
 
-This site is built around my workflows: PHP, Apache, Millennial irony, and CDNs. I'm still actively developing the site and things will change as I continue to learn. 
+This site is built around my workflows: PHP, Apache, Millennial irony, and CDNs. I'm still actively developing the site and things will change as I continue to learn and implement new things. If you plan on using, please note that there's a lot of cleanup needed. Namely: analytics code, images, recaptcha, etc.
 
 ## Features
 * Easily extensible sidebar that features latest posts, tags, and categories. Can be dis/enabled via front matter. Supports conditional checks if no blog posts/tags/categories exist. 
