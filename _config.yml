@@ -17,6 +17,9 @@ timezone: America/Chicago
 include: 
   ['.htaccess']
 
+exclude: 
+  ['README.md', 'Gemfile.lock', 'Gemfile']  
+
 collections:
   now:
     output: true
