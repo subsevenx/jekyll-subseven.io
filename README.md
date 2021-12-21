@@ -27,7 +27,8 @@ This site is built around my workflows: PHP, Apache, Millennial irony, and CDNs.
 * Repeatable content loops for consistent structure.
 * Navigation menu with active selection, menu items,  (Powered by Bootstrap).
 * [Now Page](https://nownownow.com/about), sorted by most recent post.
-* Semantic structuring and accesibility as a foundation, not an afterthought.
+* Semantic structuring and accessibility as a foundation, not an afterthought.
+* 404/403 error pages OTB via .htaccess
 
 ## Future Plans
 A lot, will document later.
