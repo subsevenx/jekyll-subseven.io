@@ -22,7 +22,7 @@ This site is built around my workflows: PHP, Apache, Millennial irony, and CDNs.
 * Tags/Archive explorer page in Liquid.
 * Self-updating sitemap. Respects indexability.
 * Full NetlifyCMS integration
-    - "SEO" management via CMS, ala Yoast (but without charging you hundreds a year for fancy meta tags). Including: OpenGraph, Meta Tags, Indexability.
+    - "SEO" management via CMS, ala Yoast (but without charging you hundreds a year for fancy meta tags). Including: OpenGraph, Meta Tags, Indexability. A lot of fallbacks if you don't want to bother with it.
     - Edit all the **content** from the CMS. No need too update via FrontMatter.
 * Repeatable content loops for consistent structure.
 * Navigation menu with active selection, menu items,  (Powered by Bootstrap).
