@@ -3,6 +3,8 @@
 <script async defer src="{{base}}/assets/js/custom/cat.min.js" crossorigin="anonymous"></script>
 {% endif %}
 {% if jekyll.environment == "production" %}
+{% if page.url == "/contact/" %} 
 <script src="{{base}}/assets/js/custom/recaptcha.min.js" crossorigin="anonymous"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
+{% endif %}
 {% endif %}
