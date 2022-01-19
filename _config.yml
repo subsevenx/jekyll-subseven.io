@@ -13,7 +13,7 @@ author: "Daniel Hernandez"
 timezone: America/Chicago
 
 include: 
-  ['.htaccess', '_pages']
+  ['.htaccess', '_pages', '_cms']
 
 exclude: 
   ['README.md', 'Gemfile.lock', 'Gemfile']  
