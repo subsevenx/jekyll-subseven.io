@@ -1,6 +1,7 @@
 ---
 layout: wrapper
 title: About
+permalink: /about/
 sidebar: true
 ---
 <section markdown="1">

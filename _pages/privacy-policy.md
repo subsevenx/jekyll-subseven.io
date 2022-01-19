@@ -1,6 +1,7 @@
 ---
 layout: wrapper
 title: Privacy Policy
+permalink: /privacy-policy/
 sidebar: false
 seo:
   meta-title: Privacy Policy
