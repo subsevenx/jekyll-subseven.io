@@ -16,7 +16,7 @@ include:
   ['.htaccess', '_pages', '_cms']
 
 exclude: 
-  ['README.md', 'Gemfile.lock', 'Gemfile']  
+  ['README.md', 'DOCUMENTATION.md', 'Gemfile.lock', 'Gemfile']  
 
 collections:
   now:
