@@ -47,7 +47,7 @@ So far we have only covered converting local images. However, you can also use i
 
 ### Additional Parameters
 
-For brevity, here is a complete table that the filter accepts (when use for images)
+For brevity, here is a complete table that the filter accepts (when used for images).
 
 | Parameter |              Accepted Values             |                                                                             Description                                                                             |
 |-----------|:----------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
