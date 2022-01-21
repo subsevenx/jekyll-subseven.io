@@ -19,7 +19,7 @@ The filter uses the following structure:
 
 ### Where...
 
-- `/patterns/assetLoop.liquid` refers to the location of this filter. Mine the `_includes` folder under an additional subfolder called `/patterns/`. Replace this with whatever sub-folder you want it in. **Just make sure it's under `/_includes/`** 
+- `/patterns/assetLoop.liquid` refers to the location of this filter. Mine is located in the `_includes` folder under an additional subfolder called `/patterns/`. Replace this with whatever subfolder you want it in. **Just make sure it's under `/_includes/`** 
 
 - `img=true` tells the filter to use the logic for images instead of the one for CSS or JS. You **must** use this! Don't use quotes around true or it won't work.
 
@@ -43,14 +43,14 @@ For our use case, however, all you need to know is that this automates the synta
 
 ### Remote Images
 
-So far we have only covered converting local images. However, you can also use it to resize images images in other locations (maybe like a CDN or other server.) To do so, simply omit the `folder` and `file` parameters and use `url`. **The value of `url` must be in wrapper in quotation marks**. 
+So far we have only covered converting local images. However, you can also use it to resize images images in other locations (maybe like a CDN or other server.) To do so, simply omit the `folder` and `file` parameters and use `url`. **The value of `url` must be wrapped in quotation marks**. 
 
 ### Additional Parameters
 
-For brevity, here is a complete table that the filter accepts (when used for images).
+For brevity, here is a complete table that the filter accepts (when used for images). If you have any more ideas or use case features, please contact me!
 
 | Parameter |              Accepted Values             |                                                                             Description                                                                             |
-|-----------|:----------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|:---------:|:----------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |   `img`   |                  `true`                  | Lets filter know to process images.                                                                                                                                 |
 |  `resize` | `true`, nil (when parameter is omitted.) | Lets the filter know this image will be processed by weserv.nl.                                                                                                     |
 |    `w`    |           Whole integer values           | Lets the filter know to request image at this width value (in pixels.) Automatically sets `width` attribute of image to input value.                                |
@@ -59,3 +59,5 @@ For brevity, here is a complete table that the filter accepts (when used for ima
 |  `folder` |                  String                  | Defines folder where image/s will be called from. Used only with *local* resources. Must be wrapped in double quotation marks. Ommit when using `url`.              |
 |   `url`   |          URL of remote resource.         | Used only with *remote* resources. Must be wrapped in double quotation marks. When using, do not use define `file` or `folder`.                                     |
 |   `cdnP`  |                  String                  | Used to define additional parameters for the weserv.nl service. Must be wrapped in double quotation marks. Must begin with the `&` character and include no spaces. |
+|  `class`  |                  String                  | Defines HTML class of image.                                                                                                                                        |
+|    `id`   |                  String                  | Defines HTML ID of image.                                                                                                                                           |
