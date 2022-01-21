@@ -33,6 +33,7 @@ Set the base location of your asset folders here.
 {%- comment -%} Local Images {%- endcomment -%}
 {% if include.img == true and include.file and include.folder %}
     {% assign cdn = "//images.weserv.nl" %}
+    {% assign cdnParameters = {{include.cdnP}} %} 
     
     {% if include.resize == true %}
     <img src="{{cdn}}?url={{site.url}}{{baseImg}}/{{include.file}}&{{include.w}}&{{include.h}}{% if cdnParameters %}{{cdnParameters}}{% endif %}" alt="{{include.alt}}" {% if include.class %}{{include.class}}{% endif %} {% if include.id %}{{include.id}}{% endif %} {% if include.w %} width="{{include.w}}" {% endif %} {% if include.h %} height="{{include.h}}" {% endif %}>
