@@ -18,6 +18,7 @@ This repo isn't set up to work with as a "theme", although you are more than fre
 This site is built around my workflows: PHP, Apache, Millennial irony, and CDNs. I'm still actively developing the site and things will change as I continue to learn and implement new things. If you plan on using, please note that there's a lot of cleanup needed. Namely: analytics code, images, recaptcha, etc.
 
 ## Features
+* Custom import filter to link CSS/JS assets and resize images on-the-fly via [weserv.nl](https://images.weserv.nl/). This was written from an e-commerce site I was working on where image sizes vary quite a bit. Documentation [here](DOCUMENTATION.MD)   
 * Easily extensible sidebar that features latest posts, tags, and categories. Can be dis/enabled via front matter. Supports conditional checks if no blog posts/tags/categories exist. 
 * Tags/Archive explorer page in Liquid.
 * Self-updating sitemap. Respects indexability of pages.
