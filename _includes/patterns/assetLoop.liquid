@@ -1,0 +1,56 @@
+{%- comment -%} CSS {%- endcomment -%}
+{% if include.css == true %}
+    {% assign dataFolder = site.data.layout.siteAssets %}
+    {% for location in dataFolder.css %} {% assign assetBase = location.base %} {% endfor %}
+    {% assign assetFolder = {{include.folder}} %}
+    {% assign assetFile = {{include.file}} %}
+    
+    {% if include.url %}
+        <link rel="stylesheet" href="{{include.url}}" crossorigin="anonymous">
+    {% else %}
+        <link rel="stylesheet" href="{{assetBase}}/{{assetFolder}}/{{assetFile}}" crossorigin="anonymous">
+    {% endif %}
+{% endif %}
+
+{%- comment -%} JS {%- endcomment -%}
+{% if include.js == true %}
+    {% assign dataFolder = site.data.layout.siteAssets %}
+    {% for location in dataFolder.js %} {% assign assetBase = location.base %} {% endfor %}
+    {% assign assetFolder = {{include.folder}} %}
+    {% assign assetFile = {{include.file}} %}
+    
+    {% if include.url %}
+        <script src="{{include.url}}" {% if include.integrity %} integrity="{{include.integrity}}" {% endif %} async defer></script>
+    {% else %}
+        <script src="{{assetBase}}/{{assetFolder}}/{{assetFile}}" async defer></script>
+    {% endif %}
+{% endif %}
+
+{%- comment -%} Local Images {%- endcomment -%}
+{% if include.img == true and include.file and include.folder %}
+    {% assign dataFolder = site.data.layout.siteAssets %}
+    {% assign cdn = "//images.weserv.nl" %}
+    {% for location in dataFolder.img %} {% assign imgbaseDir = location.base %} {% endfor %}
+
+    {% if include.resize == true %}
+        <img src="{{cdn}}?url={{site.url}}{{imgbaseDir}}/{{include.file}}&{{include.w}}&{{include.h}}" alt="{{include.alt}}" {% if include.w %} width="{{include.w}}" {% endif %} {% if include.h %} height="{{include.h}}" {% endif %}>
+    {% endif %}
+
+    {% if include.resize == nil %}
+        <img src="{{imgbaseDir}}/{{include.folder}}/{{include.file}}" alt="{{include.alt}}" {% if include.w %} width="{{include.w}}" {% endif %} {% if include.h %} height="{{include.h}}" {% endif %}>
+    {% endif %}
+
+{% endif %}
+
+{%- comment -%} Remote Images {%- endcomment -%}
+{% if include.img == true and include.url %}
+    {% assign cdn = "//images.weserv.nl" %}
+
+    {% if include.resize == true %}
+        <img src="{{cdn}}?url={{include.url}}&{{include.w}}&{{include.h}}" alt="{{include.alt}}" {% if include.class %}{{include.class}}{% endif %} {% if include.id %}{{include.id}}{% endif %} {% if include.w %} width="{{include.w}}" {% endif %} {% if include.h %} height="{{include.h}}" {% endif %}>
+    {% endif %}
+
+    {% if include.resize == nil %}
+        <img src="{{include.url}}" alt="{{include.alt}}" {% if include.class %}{{include.class}}{% endif %} {% if include.id %}{{include.id}}{% endif %} {% if include.w %} width="{{include.w}}" {% endif %} {% if include.h %} height="{{include.h}}" {% endif %}>
+    {% endif %}
+{% endif %}
