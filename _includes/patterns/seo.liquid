@@ -1,15 +1,15 @@
 {% assign og = page.seo.og %}
 {% assign tw = page.seo.tw %}
-{% assign meta = page.seo.meta %}
-{% assign ind = page.seo.index %}
+{% assign mt = page.seo.meta %}
+{% assign ix = page.seo.index %}
 
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#000">
 
 {%- comment -%} Indexing {%- endcomment -%}
-<meta name="revisit-after" content="7 days">
-<meta name="robots" content="{%-if page.seo.index-%} {{page.seo.index}}{%- else -%}{{site.index}}{%- endif -%}">
+<meta name="revisit-after" content="{%- if ix.revisit -%}{{ix.revisit}}{%- else -%}{{site.revisit}}{%- endif -%}">
+<meta name="robots" content="{%- if ix.robots -%}{{ix.robots}}{%- else -%}{{site.robots}}{%- endif -%} ">
 
 {%- comment -%} Meta SEO {%- endcomment -%}
 <meta name="title" content="{%- if page.seo.meta-title -%}{{page.seo.meta-title}} | {{site.global-title}}{% else %}{{page.title}} | {{site.global-title}}{%- endif -%}">    
