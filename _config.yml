@@ -1,11 +1,15 @@
 url: https://subseven.io # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: / # the subpath of your site, e.g. /blog
+baseurl: / 
 permalink: pretty
 email: "info@subseven.io"
-global-title: "SubSeven &#xbb; Web Dev, Musician, Writer" # the name of your site, e.g. ACME Corp.
-global-description: "I am a web developer and technical marketer based out of the midwest."
-global-keywords: "subseven, subseven.io, sub7.dev, subseven.me"
-global-image: /assets/img/sub7_def.png
+
+### Global SEO Settings ### 
+### This information will be used as a fallback for all pages in your site if you do not set
+### it on a per page basis.
+title: "SubSeven &#xbb; Web Dev, Musician, Writer"
+description: "I am a web developer and technical marketer based out of the midwest."
+keywords: "subseven, subseven.io, sub7.dev, subseven.me"
+image: /assets/img/sub7_def.png
 
 language: "English"
 index: "index, follow"
