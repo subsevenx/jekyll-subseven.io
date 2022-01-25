@@ -15,7 +15,7 @@ author: "Daniel Hernandez"
 language: "English"
 
 ### Indexing Settings ###
-index: "index, follow"
+robots: "index, follow"
 revisit: "7 days"
 
 
