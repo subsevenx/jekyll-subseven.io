@@ -1,5 +1,5 @@
 {% assign og = page.seo.og %}
-{% assign tw = page.seo.tw %}
+{% assign tw = page.seo.twitter %}
 {% assign mt = page.seo.meta %}
 {% assign ix = page.seo.index %}
 
@@ -21,11 +21,11 @@
 {%- comment -%} OG SEO {%- endcomment -%}
 <meta property="og:title" content="{%- if og.title -%}{{- og.title -}} | {{site.title}}{% else %}{{page.title}} | {{site.title}}{%- endif -%}">
 <meta property="og:description" content="{% if og.description %}{{og.description}}{% else %}{{site.description}}{% endif %}">
+<meta property="og:type" content="{%- if og.type == nil -%}{%- if site.post -%}article{%- else -%}website{%- endif -%}{%- else -%}{{og.type}}{% endif %}">
 <meta property="og:url" content="{%- if page.url != / -%}{{site.url}}{{page.url}}" {% elsif page.url == / %}{{site.url}}{%- endif -%}> 
 <meta property="og:image" content="{% if og.image %}{{og.image}}{% elsif page.featured %}{{page.featured}}{% else %}{{site.image}}{% endif %}">
 <meta property="og:site_name" content="{%- if og.site_name -%}{{og.site_name}} {% else %}{{site.title}}{%- endif -%}">
 <meta property="og:locale" content="{%- if og.locale -%}{{og.locale}}{% else %}{{site.og_locale | default: "en_US"}}{%- endif -%}">
-<meta property="og:type" content="{%- if og.type == nil -%}{%- if site.post -%}article{%- else -%}website{%- endif -%}{%- else -%}{{og.type}}{% endif %}">
 
 {%- comment -%} Twitter Cards {%- endcomment -%}
 
