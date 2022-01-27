@@ -14,6 +14,12 @@ image: /assets/img/sub7_def.png
 author: "Daniel Hernandez"
 language: "English"
 
+## Optional SEO Settings ##
+
+og_locale: "en_US"
+twitter_card: true
+twitter_username: 
+
 ### Indexing Settings ###
 robots: "index, follow"
 revisit: "7 days"

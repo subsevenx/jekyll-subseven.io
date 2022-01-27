@@ -13,7 +13,7 @@
 
 {%- comment -%} Meta SEO {%- endcomment -%}
 <meta name="title" content="{%- if mt.title -%}{{mt.title}} | {{site.title}}{% else %}{{page.title}} | {{site.title}}{%- endif -%}">    
-<meta name="description" content="{%- if mt.description -%}{{mt.description}}{% else %}{{site.description}} {% endif %}">
+<meta name="description" content="{%- if mt.description -%}{{mt.description}}{% else %}{{site.description}}{% endif %}">
 <meta name="keywords" content="{%- if mt.keywords -%}{{mt.keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{site.keywords}}{% endif %}">
 <meta name="author" content="{%- if mt.author -%}{{mt.author}}{%- elsif page.author -%}{{page.author}}{%- else -%}{{site.author}}{%- endif -%}">
 <meta name="language" content="{%- if mt.language -%}{{mt.language}}{%- elsif page.language -%}{{page.language}}{%- else -%}{{- site.language -}}{%- endif -%}">
@@ -26,3 +26,14 @@
 <meta property="og:site_name" content="{%- if og.site_name -%}{{og.site_name}} {% else %}{{site.title}}{%- endif -%}">
 <meta property="og:locale" content="{%- if og.locale -%}{{og.locale}}{% else %}{{site.og_locale | default: "en_US"}}{%- endif -%}">
 <meta property="og:type" content="{%- if og.type == nil -%}{%- if site.post -%}article{%- else -%}website{%- endif -%}{%- else -%}{{og.type}}{% endif %}">
+
+{%- comment -%} Twitter Cards {%- endcomment -%}
+
+{% if site.twitter_card == true %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{%- if tw.title -%}{{- tw.title -}} | {{site.title}}{% else %}{{page.title}} | {{site.title}}{%- endif -%}">
+<meta name="twitter:description" content="{%- if tw.description -%}{{tw.description}}{% else %}{{site.description}}{% endif %}">
+<meta name="twitter:site" content="{{site.url}}">
+<meta name="twitter:image" content="{%- if tw.image -%}{{tw.image}}{%- else -%}{{site.image}}{%- endif -%}">
+<meta name="twitter:creator" content="{{site.twitter_username}}">
+{% endif %}
