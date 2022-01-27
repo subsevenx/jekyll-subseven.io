@@ -17,7 +17,7 @@ language: "English"
 ## Optional SEO Settings ##
 
 og_locale: "en_US"
-twitter_card: true
+twitter_card: false
 twitter_username: 
 
 ### Indexing Settings ###
