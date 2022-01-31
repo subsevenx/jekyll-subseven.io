@@ -4,7 +4,7 @@
 This import filter allows you to import assets and images. Using it for assets might seem a little weird since it's literally just filling in the blanks for the `<script>` and `<link>` tags. However, I value readability. A project with lots of scripts can get messy to parse when something needs to be replaced. Importing my styles and scripts like this just makes it easier for my eyes. As mentioned, this was written for an e-commerce site and those sites can get *messy*.
 
 ## Installation For Your Own Project
-Download `assetLoop.liquid` from my [_includes/patterns/](https://github.com/subsevenx/jekyll-subseven.io/tree/main/_includes/patterns) directory and place it in your own `_includes` folder.
+Download `assetLoop.liquid` from my [_includes/filters/](https://github.com/subsevenx/jekyll-subseven.io/tree/main/_includes/filters) directory and place it in your own `_includes` folder.
 
 ## Usage: Images
 The main event and original reason why I wrote the filter is to help with images...so let's talk about them.
@@ -31,7 +31,7 @@ The filter uses the following structure:
 
 Right now this might still seem like a clunkier way of doing what the image tag basically does. While that's true, you can also pass additional values to resize images. Consider the following example:
 
-```html
+```liquid
 {% include /patterns/assetLoop.liquid img=true resize=true folder="general" file="cat.png" alt="Cat 3" w=100 h=100 %}
 ```
 
