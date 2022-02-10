@@ -6,11 +6,15 @@ layout: wrapper
         <div class="row mb-3 mt-0">
             {% if page.image %}
             <img src="{{post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
-            {% else %}
-            <!-- Fallback image in case of no image declared in the post -->
-            <img src="/assets/img/uploads/featured/img.png" class="img-fluid" alt="Fallback post banner image that says S7">
             {% endif %}
         </div>
+            
+            {%- comment -%}
+            <!-- Fallback image in case of no image declared in the post 
+                {% else %}
+                <img src="/assets/img/uploads/featured/img.png" class="img-fluid" alt="Fallback post banner image that says S7"> 
+            -->
+            {%- endcomment -%}
         
         <div class="row">
             <div class="col-lg-10 col-sm-12 col-xs-12">
@@ -31,7 +35,9 @@ layout: wrapper
 
 
     <article itemscope itemtype="https://schema.org/CreativeWork">
-        {{- content -}}
+        <section markdown="1"> 
+            {{- content -}}
+        </section>
     </article>
     
     {%- comment -%} Categories {%- endcomment -%}
