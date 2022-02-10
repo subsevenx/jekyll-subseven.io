@@ -10,7 +10,7 @@ blurb: >-
 ---
 <section> 
     <div class="row">
-        {% assign sorted = site.now | sort: 'date' | reverse %}
+        {% assign sorted = site.now | sort: 'date' | reverse | uniq %}
         {%- for now-post in sorted -%}
         <div class="col-12 mb-3"> 
             <div class="card mx-lg-5 mx-sm-0"> 
@@ -27,11 +27,11 @@ blurb: >-
                         <div class="col-6">
                             <time datetime="{{now-post.date | date: "%T"}}">{{now-post.date | date: '%B %d, %Y'}} at {{now-post.date | date: '%r'}}</time> 
                         </div>
-                        <div class="col-6">
-                            {%- assign tags =  site.now | map: 'tags' | uniq -%}
-                            {%- for tag in tags -%}
-                            <span>#{{-tag-}}</span>
-                            {%- endfor -%}
+                        <div class="col-4">
+                            <span>#{{now-post.tags}}</a></span>
+                        </div>
+                        <div class="col-2">
+                            <p><a href="{{now-post.url}}">Permalink</a></p>
                         </div>
                     </div>
                 </div>
