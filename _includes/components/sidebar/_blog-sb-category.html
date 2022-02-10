@@ -5,19 +5,8 @@
         <p class="text-center text-muted">No categories...yet</p>
         {% endif %}
         
-        {% if site.categories > 1 %}
-        <div class="card-body">
-            <ul class="list-unstyled">
-                {%- for categories in site.categories | limit: 5 -%}
-                <li class="h6 text-capitalize">
-                    <a href="/blog/categories/#{{categories[0] | replace: ' ', '-' | downcase}}">{{categories[0]}}</a>
-                </li>
-                {%- endfor -%}
-            </ul>
-        </div>
-        <div class="card-footer">
-            <a href="/blog/categories/">Show All</a>
-        </div>
-        {% endif %}
+        {% for categories in site.categories %}
+              <p class="h6 card-header text-center" id="{{categories[0] | replace: ' ', '-' | downcase }}"><span class="text-capitalize"><a href="categories/#{{categories[0]  | remove: ',' | limit: 5}}">{{categories[0] | limit: 5}}</a> </span></p>
+        {% endfor %}
     </div>
 </section>

@@ -5,19 +5,10 @@
         <p class="text-center text-muted">No tags...yet</p>
         {% endif %}
         
-        {% if site.tags > 1 %}  
-        <div class="card-body">
-            <ul class="list-unstyled">
-                {%- for tags in site.tags | limit: 5 -%}
-                <li class="h6 text-capitalize">
-                    <a href="/blog/tags/#{{tags[0] | replace: ' ', '-' | downcase}}">{{tags[0]}}</a>
-                </li>
-                {%- endfor -%}
-            </ul>
-        </div>
-        <div class="card-footer">
-            <a href="/blog/tags/">Show All</a>
-        </div>
+        {% if site.tags.size > 1 %}
+        {% for tag in site.tags %}
+            <p class="h6 card-header text-center" id="{{tag[0] | replace: ' ', '-' | downcase}}"><a href="tags/#{{tag[0] | remove: ',' | limit: 5}}"><span class="tag-hashtag">#</span><span class="text-capitalize">{{tag[0] | remove: ',' | limit: 5}}</span></a></p>
+        {% endfor %}
         {% endif %}
     </div>
 </section>
