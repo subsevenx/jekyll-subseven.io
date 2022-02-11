@@ -10,7 +10,6 @@ blurb: >-
 ---
 
 <section> 
-    
     <div class="row">
         {% assign sorted = site.now | sort: 'date' | reverse | uniq | limit: 10 %}
         {%- for now-post in sorted -%}
@@ -41,7 +40,6 @@ blurb: >-
                     </div>
                 </div> 
             </div>
-
             {% endfor %}
         </div>
 </section>
