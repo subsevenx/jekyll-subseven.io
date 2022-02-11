@@ -11,30 +11,30 @@ blurb: >-
 
 <section> 
     <div class="row">
-        {% assign sorted = site.now | sort: 'date' | reverse | uniq | limit: 10 %}
-        {%- for now-post in sorted -%}
+        {% assign sortedCollection = site.now | sort: 'date' | reverse | uniq | limit: 10 %}
+        {%- for nowPost in sortedCollection -%}
             <div class="col-12 mb-3"> 
                 <div class="card mx-lg-5 mx-sm-0"> 
                     <div class="container">
                         <div class="card-body"> 
                         <details>
                             <summary>
-                                <span class="card-title">{{now-post.title}}</span>
+                                <span class="card-title">{{nowPost.title}}</span>
                             </summary>   
-                            {{now-post.content}}
+                            {{nowPost.content}}
                         </details>
                         </div> 
                     </div>
                     <div class="card-footer">
                         <div class="row"> 
                             <div class="col-6">
-                                <time datetime="{{now-post.date | date: "%T"}}">{{now-post.date | date: '%B %d, %Y'}} at {{now-post.date | date: '%r'}}</time> 
+                                <time datetime="{{nowPost.date | date: "%T"}}">{{nowPost.date | date: '%B %d, %Y'}} at {{nowPost.date | date: '%r'}}</time> 
                             </div>
                             <div class="col-4">
-                                <span>#{{now-post.tags}}</span>
+                                <span>#{{nowPost.tags}}</span>
                             </div>
                             <div class="col-2">
-                                <p><a href="{{now-post.url}}">Permalink</a></p>
+                                <p><a href="{{nowPost.url}}">Permalink</a></p>
                             </div>
                         </div>
                     </div>
