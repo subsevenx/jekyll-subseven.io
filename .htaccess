@@ -1,8 +1,8 @@
 ---
 ---
 
-ErrorDocument 404 https://{{site.url}}/404 
-ErrorDocument 403 https://{{site.url}}/403 
+ErrorDocument 404 {{site.url}}/404 
+ErrorDocument 403 {{site.url}}/403 
 
 ExpiresActive On
 ExpiresByType image/jpg "access plus 4 months"
