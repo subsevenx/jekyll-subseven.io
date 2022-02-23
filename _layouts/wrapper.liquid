@@ -9,22 +9,21 @@ layout: html_minifier
 
 <head>
   {%- include /patterns/seo.liquid -%}
-  {%- include /patterns/honeypot.html -%}
-  {%- include /patterns/favicon.html -%}
-  {%- include /patterns/styles.html -%}
-  {%- include /patterns/analytics.min.html -%}
+  {%- include /patterns/favicon.liquid -%}
+  {%- include /patterns/styles.liquid -%}
+  {%- include /patterns/analytics.liquid -%}
 </head>
 
 <body>
-  {%- include /components/nav.html -%}
+  {%- include /components/nav.liquid -%}
   <div id="main-content" tabindex="-1">
     {%- if page.layout != "post" -%}
-    {%- include /patterns/page-content.html -%}
+    {%- include /patterns/page-content.liquid -%}
     {%- else -%}
     {{- content -}}  
     {%- endif -%}
-    {%- include /components/footer.html -%}
-    {%- include /patterns/scripts.html -%}
+    {%- include /components/footer.liquid -%}
+    {%- include /patterns/scripts.liquid -%}
   </div>
 </body>
 </html>
