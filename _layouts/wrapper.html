@@ -1,12 +1,13 @@
+{%- comment -%}
 ---
 layout: html_minifier
 ---
+{%- endcomment -%}
 
 <!DOCTYPE html>
 <html lang="{{site.lang | default: "en-US"}}">
 
 <head>
-  <title>{{page.title}} | {{site.title}}</title>
   {%- include /patterns/seo.liquid -%}
   {%- include /patterns/honeypot.html -%}
   {%- include /patterns/favicon.html -%}
