@@ -36,7 +36,7 @@ Jekyll is an opinionated static site generator that treats blogging as a first-c
 
 It was released in 2008, written in Ruby, and initially authored by GitHub co-founder Tom Preseton-Werner. For a long time, it was *the* premier static site generator; sparking a passionate community of enthusiasts, evangelists, and developers. For many, it was their introduction to static site generators.
 
-Since 2008, the landscape around static site generators has changed significantly in the last few years. For one, there are now *hundreds* of them! [jamstack.org](jamstack.org) currently lists 333, while [staticsitegenerators.com](staticsitegenerators.com) lists 460. Jekyll, I’d argue, was the catalyst as to why there are so many. So while it may not enjoy the *shiny new toy* treatments other generators receive as of lately, its importance cannot be understated
+Since 2008, the landscape around static site generators has changed significantly in the last few years. For one, there are now *hundreds* of them! [jamstack.org](jamstack.org) currently lists 333, while [staticsitegenerators.com](staticsitegenerators.com) lists 460. Jekyll, I’d argue, was the catalyst as to why there are so many. So while it may not enjoy the *shiny new toy* treatments other generators receive as of lately, its importance cannot be understated.
 
 ### My Introduction
 
@@ -65,16 +65,16 @@ Following this ethos, I decided on the following:
  - No starting theme or template 
  - Accessible
  - Bootstrap to speed up the design and structure
- - Minimal use of outside plugins because I wanted to learn new things
- - Fast to load
+ - Minimal use of external plugins because I wanted to learn new things
+ - Fast load times
  - Auto-deployment on my own server
- - CMS integration 
+ - Some sort of CMS
 
 Starting a site was fairly straightforward. You install Ruby, you install a few gems, and then you run: `jekyll new . —blank` to make a blank Jekyll site.
 
-Then you `bundle exec jekyll server` to start the web sever/compile and then—BAM! You have a bare-bones Jekyll site you are now free to design to your heart’s content. Pretty easy! The Jekyll documentation is well written (and in my opinion) it’s pretty accessible...in most cases.
+Then you `bundle exec jekyll server` to start the web sever/compile and then—BAM! You have a bare-bones Jekyll site that you are now free to design to your heart’s content. Pretty easy! The Jekyll documentation is well written (and in my opinion) it’s pretty accessible...in most cases.
 
-### Jekyll and the Bundle of Dependents
+### How do you install Jekyll in {{page.date | date: "%Y"}}?
 
 In paper, making a Jekyll site isn't hard—and in most cases it won't be! However, if you are not hip to Ruby and some of the quirks of Jekyll, you might run into some issues.  
 
@@ -114,7 +114,7 @@ That should take care of Ruby! As for Jekyll, you might need a few extra tools.
 If you are running a version of Ruby 3.0 or higher with Jekyll, you will need to include another gem. On your current project run `bundle add webrick`.  This will allow the local server to function properly. 
 
 #### Windows Specific Quirks
-If you're developing on the Windows Subsystem for Linux, you'll also probably need the `wsl` gem (in addition to the command). You'll also need to serve your site from within the Linux subsystem (e.g, not from any directory in `/mnt/c`). If you don't, auto-reload won't work and if you have any JavaScript dependency managers, those will break too. Lastly...you might wanna alias `bundle exec jekyll serve --force_polling --livereload` to serve your site.
+If you're developing on the Windows Subsystem for Linux (WSL), you'll also probably need the `wsl` gem (in addition to the command). You'll also need to serve your site from within the Linux subsystem (e.g, not from any directory in `/mnt/c`). If you don't, auto-reload won't work and if you have any JavaScript dependency managers, those will break too. Lastly...you might wanna alias `bundle exec jekyll serve --force_polling --livereload` to serve your site.
 
 ### Time To Structure
 
@@ -122,9 +122,9 @@ Initially one of the things I spent  the most time on was deciding how I should 
 
 I settled on having only two layouts: one main wrapper (with two structures) and a layout for blog posts that inherits the main layout. In the early stages of the site I played around with the idea of having different layouts per page but with the (lack of) content I had so far, it didn’t make too much sense. I opted on using Bootstrap 5 since their grid system makes things really easy to structure. 
 
-I also went full in on Liquid imports and made components out of every little piece of markup; if I needed to repeat it more than one time, it’s going in the `\_includes` directory. While initially tedious, it has made maintenance and debugging simple.
+I also went full in on Liquid imports and made components out of every little piece of markup; if I needed to repeat it more than one time, it’s going in the `_includes` directory. While initially tedious, it has made maintenance and debugging simple.
 
-Lastly, I went back and fort on how I would use data files. They exists to make the separation of content and structure easier, but I still don’t think I’ve found a great way to standardize them in my site. They handle the links for my navigation menu but some also handle content for a handful of pages.  
+Lastly, I went back and fort on how I would use data files. They exists to make the separation of content and structure easier, but I still don’t think I’ve found a great way to standardize them in my site. They handle the links for my navigation menu but some also handle content for a handful of pages.
 
 ### Liquid
 
@@ -156,10 +156,9 @@ For example, making a menu will usually require a bunch of wrappers and links. W
 {%- endfor -%}
 {% endraw %}
 ```
-
 You can use it to do some pretty advanced things. As mentioned previously, my site only uses two layouts. However, my main layout includes two different configurations: one with and one without a sidebar. 
 
-This is handled via if statements that check each page’s front matter at build time for the variable that enable/disables it. Pretty cool! In theory this means you could do it for more layouts on a single page…but I’d advise against it! At that point you should consider just making a separate layout. 
+This is handled via if statements that check each page’s front matter at build time for the variable that enables or disables it. Pretty cool! In theory this means you could do it for more layouts on a single page but...I’d advise against it. 
     
 ```html
 {% raw %}
@@ -186,17 +185,19 @@ This is handled via if statements that check each page’s front matter at build
 
 ### Design, Flare, and SASS!
 
-Jekyll works with SASS right out of the box. All you need to do is put files within a `\_sass` directory and import it within your asset folder’s main SCSS file. 
+Jekyll works with SASS right out of the box. All you need to do is put files within a `_sass` directory and import it within your asset folder’s main SCSS file. 
 
 My customization was fairly small—only importing the components I needed and tweaking existing variables. It ended up being fairly lean but it definitely looks like a Bootstrap site. 
 
 Bootstrap wasn’t meant to be a long-term solution though; it was mainly included for the sake of time. Right now the site is in a good place functionality-wise so a redesign is around the corner.
 
-The current hurdle I’m trying to get over is just understand the new front-end world. I’ve been living under a rock and the complexity of building a front-end seems to have grown significantly. Wrapping my head around bundlers, npm, 
+The current hurdle I’m trying to get over is just understanding the new front-end world. I’ve been living under a rock and the complexity of building a front-end seems to have grown significantly. Webpack, NPM, TypeScript, server-side hydration, and all of the buzz-words you'd find in a Medium post. It's a little exhausting but exciting.
 
 ### Content Management
 
-A CMS in a static site?! Yeah, I know. I coudln't believe it either
+A few years ago I would've been fine writing my posts on Atom in markdown and editing the site's metadata manually. Nowadays I'm more keen to the idea of having pretty front-end to facilitate the process. 
+
+I tried to look for a headless CMS solution that could help. I landed on NetlifyCMS. As far as content management goes, it ticked all my boxes.  
 
 ## Complexity As a Form of Exercise
 
