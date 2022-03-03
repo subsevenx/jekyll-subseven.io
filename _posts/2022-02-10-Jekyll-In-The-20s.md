@@ -218,14 +218,18 @@ Bootstrap wasn't meant to be a long-term solution though; it was mainly included
 
 A few years ago I would've been fine writing my posts on Atom in markdown and editing the site's metadata manually. Nowadays I'm more keen to the idea of having pretty front-end to facilitate the process. 
 
-I tried to look for a headless CMS solution that could help. I landed on NetlifyCMS. As far as content management goes, it ticked all my boxes.
+I tried to look for a headless CMS solution that could help. I landed on NetlifyCMS. As far as content management goes, it ticked all my boxes. The only issue would be that if you wanted to use NetlifyCMS outside of Netlify, you'd need an authentication point. 
+
+There were community scripts to help with setting up.
 
 ## Complexity As a Form of Exercise
 
-I gave myself many unseeded headaches while building this site. For example, making a tag and category page would be fairly easy had I used one of the many plugins that does it for you, such as [Jekyll Archives](https://github.com/jekyll/jekyll-archives). Deciding not to use plugins didn't come from a "I'm doing it all myself because I am an expert web dev, nyeh" mentality. From the very start of my interest in programming, I tended to learn better if I just jump on the deep end and try to figure it out. The confusion to enlightenement pipeline, as I like to call it. 
+I gave myself many unseeded headaches while building this site. For example, making a tag and category page would be fairly easy had I used one of the many plugins that does it for you, such as [Jekyll Archives](https://github.com/jekyll/jekyll-archives). Deciding not to use plugins (at first) didn't come from a "I'm doing it all myself because I am an expert web dev, nyeh" mentality. From the very start of my journey in web dev, or programming as a whole, I tended to learn better if I just jumped on the deep end and tried to figure it out. The confusion to enlightenement pipeline, as I like to call it. 
 
 In the past few months that has certainly been true. 
 
 I learned how to work with GitHub actions to automate the build process. I learned how to set up an OAuth end point on my server to authenticate NetlifyCMS. I dove into modern JavaScript, web components, and how new front-ends are being built.
 
-It has also been terrifying because I've realized how long I've been stuck on the back-end and how much the web has changed since 2017 (which was the year I began to mainly work with WordPress) Making things from the bottom-up has been super fulfilling.
+It has also been terrifying because I realized just how long I've been stuck on the back-end and how much the web has changed since 2017 (which was the year I began to mainly professionaly work with WordPress.) There's no shortage of things to learn. For me, the overwhelming thing isn't *what* to learn, it's more "dammit, I should probably finish that project in that last stack."
+
+Making things from the bottom-up has been super fulfilling and I wanna keep doing it.
