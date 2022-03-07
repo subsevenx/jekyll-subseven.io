@@ -1,4 +1,4 @@
----
+p---
 title: Bulding a Jekyll Site in the 20s
 tags: 
     - jekyll 
@@ -157,8 +157,7 @@ The main draw for me was that I could break everything into a component and  the
 
 For example, making a menu will usually require a bunch of wrappers and links. With Liquid you can define the main structure and the let Liquid take care of the rest; gathering the links from an external data file and building the rest of the structure via boilerplate.
 
-```html
-{% raw %} 
+<pre> 
 {% for nav-item in site.data.nav.menu %}
 {%- comment -%} Checks to see if there's nested items {%- endcomment -%} 
 {% if nav-item.child[0] %}
@@ -178,12 +177,12 @@ For example, making a menu will usually require a bunch of wrappers and links. W
 {% endif %}
 {%- endfor -%}
 {% endraw %}
-```
+</pre>
 You can use it to do some pretty advanced things. As mentioned previously, my site only uses two layouts. However, my main layout includes two different configurations: one with and one without a sidebar. 
 
 This is handled via if statements that check each page's front matter at build time for the variable that enables or disables it. Pretty cool! In theory this means you could do it for more layouts on a single page but...I'd advise against it. 
     
-```html
+<pre>
 {% raw %}
     {% if page.sidebar == true %}
             <div class="row">
@@ -203,8 +202,7 @@ This is handled via if statements that check each page's front matter at build t
         {% endif %}
             {{- content -}} 
         {% endif %}
-{% endraw %}
-```
+</pre>
 
 ### Design, Flare, and SASS!
 
