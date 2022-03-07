@@ -16,7 +16,7 @@
 <meta name="robots" content="{%- if ix.robots -%}{{ix.robots}}{%- else -%}{{metadata.robots}}{%- endif -%} ">
 
 {%- comment -%} Meta SEO {%- endcomment -%}
-<meta name="title" content="{%- if mt.title -%}{{mt.title}} | {{metadata.title}}{% else %}{{page.title}}{{-metadata.separator-}}{{metadata.title}}{%- endif -%}">    
+<meta name="title" content="{%- if mt.title -%}{{mt.title}}{{metadata.separator}}{{metadata.title}}{% elsif og.title %}{{og.title}}{{metadata.separator}}{{metadata.title}}{% else %}{{page.title}}{{-metadata.separator-}}{{metadata.title}}{%- endif -%}">    
 <meta name="description" content="{%- if mt.description -%}{{mt.description}}{% elsif og.description %}{{og.description}}{%- else -%}{{metadata.description}}{% endif %}">
 <meta name="keywords" content="{%- if mt.keywords -%}{{mt.keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{metadata.keywords}}{% endif %}">
 <meta name="author" content="{%- if mt.author -%}{{mt.author}}{%- elsif page.author -%}{{page.author}}{%- else -%}{{metadata.author}}{%- endif -%}">
