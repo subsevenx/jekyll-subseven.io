@@ -1,0 +1,27 @@
+---
+layout: html_minifier
+---
+
+<!DOCTYPE html>
+<html lang="{{site.lang | default: "en-US"}}">
+
+<head>
+  {%- include /patterns/seo.liquid -%}
+  {%- include /patterns/favicon.liquid -%}
+  {%- include /patterns/styles.liquid -%}
+  {%- include /patterns/analytics.liquid -%}
+</head>
+
+<body>
+  {%- include /components/nav.liquid -%}
+  <div id="main-content" tabindex="-1">
+    {%- if page.layout != "post" -%}
+    {%- include /patterns/page-content.liquid -%}
+    {%- else -%}
+    {{- content -}}  
+    {%- endif -%}
+    {%- include /components/footer.liquid -%}
+    {%- include /patterns/scripts.liquid -%}
+  </div>
+</body>
+</html>
