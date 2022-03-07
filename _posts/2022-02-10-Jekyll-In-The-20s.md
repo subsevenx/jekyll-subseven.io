@@ -1,149 +1,149 @@
-p---
+---
 title: Bulding a Jekyll Site in the 20s
-tags: 
-    - jekyll 
-    - jamstack 
-    - static sites
-categories: 
-    - personal
+author: Daniel Hernandez
+seo:
+  og:
+    title: Building a Jekyll site in the 20s
+    description: How hard is it to build and deploy a Jekyll website nowadays? Read to learn more about an exploration of the static site generator.
+    type: article
+    image:
+tags:
+  - jekyll
+  - jamstack
+  - static sites
+categories:
+  - personal
 date: 2022-02-10 16:19:31 --600
 ---
-*🧠 This is part one series on Jekyll. The following is a personal piece on what it feels like to work with Jekyll in {{page.date | date: "%Y"}}, and a brief exploration of static sites* 
 
-*🔭 Article Scope: This article is written from the viewpoint of a 20-something who spent most of his teens and early adulthood exclusively with PHP, Laravel, WordPress, and the LAMP stack. However, this 20-something has also been falling in love with Ruby. Totally not biased.*
+_🧠 This is part one series on Jekyll. The following is a personal piece on what it feels like to work with Jekyll in {{page.date | date: "%Y"}}, and a brief exploration of static sites_
+
+_🔭 Article Scope: This article is written from the viewpoint of a 20-something who spent most of his teens and early adulthood exclusively with PHP, Laravel, WordPress, and the LAMP stack. However, this 20-something has also been falling in love with Ruby. Totally not biased._
 
 <hr>
 
 ## WordPress
 
-I like WordPress. I've been using it since around 2012 and developing on it since 2015. There's always been some elitist attitudes surrounding it in the web dev community. The greatest hits include: “it's so slow”,  “PHP sucks”,  “it's so bloated”, "it's all site builders" *ad infinitum*. I've made my peace with it, it's part of the job.
+I like WordPress. I've been using it since around 2012 and developing on it since 2015. There's always been some elitist attitudes surrounding it in the web dev community. The greatest hits include: “it's so slow”, “PHP sucks”, “it's so bloated”, "it's all site builders" _ad infinitum_. I've made my peace with it, it's part of the job.
 
-I don't want to evangelize WordPress. While it's robust, easy to set up, and extensible, there are a *lot* of things I don't like about the platform. But, unfortunately, much of what I hear critized is often a misconceptions, half truths, or general dislike of PHP.
+I don't want to evangelize WordPress. While it's robust, easy to set up, and extensible, there are a _lot_ of things I don't like about the platform. But, unfortunately, much of what I hear critized is often a misconceptions, half truths, or general dislike of PHP.
 
-Either way, my experience with it has taught me a lot, and has been (mostly) positive. I certainly wouldn't know as much if I hadn't been involved with it. There's a  very clear correlation between my knowledge about servers, the LAMP stack, and time spent with WordPress.
+Either way, my experience with it has taught me a lot, and has been (mostly) positive. I certainly wouldn't know as much if I hadn't been involved with it. There's a very clear correlation between my knowledge about servers, the LAMP stack, and time spent with WordPress.
 
-I still use it today, but mainly in a professional context. Around 2019 I started getting a little burn out since much of my work revolved around it. Over time, I began to feel like, *yeah, maybe my rarely updated website doesn't need a database*. So I started to look elsewhere. 
+I still use it today, but mainly in a professional context. Around 2019 I started getting a little burn out since much of my work revolved around it. Over time, I began to feel like, _yeah, maybe my rarely updated website doesn't need a database_. So I started to look elsewhere.
 
-## Static Sites, JAMStack, and Beyond 
+## Static Sites, JAMStack, and Beyond
 
-### Static Generators & Jekyll At a Glance
+### At a Glance
 
-At this point, I hope Jekyll requires little introduction&#151;but if you don't know what it is, that's okay! Consider yourself one of today's lucky 10,000. 
+At this point, I hope Jekyll requires little introduction&#151;but if you don't know what it is, that's okay! Consider yourself one of today's lucky 10,000.
 
-<img src="https://imgs.xkcd.com/comics/ten_thousand.png" alt="XKCD Coming: 1053" width="462" height="316" >
+<img class="img-fluid float-end img-shadow m-md-2" src="https://imgs.xkcd.com/comics/ten_thousand.png" alt="XKCD Coming: 1053" width="462" height="316" >
 
-Jekyll is a *slightly* opinionated static site generator. That slight opinion is in how it treats blogging. In Jekyll, blogging is treated as a first-class citizen. 
+Jekyll was released in 2008, written in Ruby, and initially authored by GitHub co-founder Tom Preseton-Werner. For a long time, it was _the_ site generator; sparking a passionate community of enthusiasts, evangelists, and developers. For many, it was their introduction to SSGs as a whole.
 
-It was released in 2008, written in Ruby, and initially authored by GitHub co-founder Tom Preseton-Werner. For a long time, it was *the* premier static site generator; sparking a passionate community of enthusiasts, evangelists, and developers. For many, it was their introduction to static site generators.
+Since 2008, the landscape around static site generators has changed significantly. For one, there are now _hundreds_ of them. [jamstack.org](jamstack.org) currently lists 333, while [staticsitegenerators.com](staticsitegenerators.com) lists 460. From Gatsby to Hugo to 11ty and beyond.
 
-Since 2008, the landscape around static site generators has changed significantly. For one, there are now *hundreds* of them. [jamstack.org](jamstack.org) currently lists 333, while [staticsitegenerators.com](staticsitegenerators.com) lists 460. From Gatsby to Hugo to 11ty and beyond.
+Jekyll, I'd argue, was the catalyst as to why there are so many. So while it may not enjoy the _shiny new toy_ treatments other generators receive as of lately, its importance cannot be understated. It's robust, tried, true, and most importantly&#151;**FUN!**
 
-Jekyll, I'd argue, was the catalyst as to why there are so many. So while it may not enjoy the *shiny new toy* treatments other generators receive as of lately, its importance cannot be understated. It's robust, tried, true, and stable.
+### Jekyll
+
+Jekyll is a _slightly_ opinionated static site generator. The opinion being that it treats blogging as a core concept in the site generation pipelines. E.g: in the default organizational taxonomy, a directory called `_posts` is generated where, you guessed it, posts go!
+
+This doesn't actually mean that you _need_ to make a blog site with Jekyll. You are free to define custom collections&#151;or taxonomies&#151;and have quite a bit of flexibility as to how you can structure your site.
 
 ### My Introduction
 
 My introduction to Jekyll happened in the spring of 2017. A friend of mine was talking to me about Ruby on Rails and in one of the conversations, they mentioned Jekyll. I took a look at it, played with and…didn't quite see what was special about it.
 
-*I can already do this in WordPress 😎*
+<div class="d-flex justify-content-sm-center my-2">
+<q class="text-light bg-primary p-3">I can already do this in WordPress 😎</q>
+</div>
 
-But, come 2019, I wanted to maintain my own website again. Until that point my site comprised a single HTML file. I wanted to make something larger and maintaining HTML without templating is just not something you *should* do anymore. 
+But, come 2019, I wanted to maintain my own website again. Until that point my site comprised a single HTML file. I wanted to make something larger and maintaining HTML without templating is just not something you _should_ do anymore.
 
-I thought about making my site in PHP, maybe with some framework, but that felt like overkill; I was tring to cut overhead after all. 
+I thought about making my site in PHP, maybe with some framework, but that felt like overkill; I was trying to cut overhead after all.
 
-Then, as if the fog had cleared, I remembered Jekyll. I began to read the docs again. This time it clicked. *This is **EXACTLY** what I need* 
+Then, as if the fog had cleared, I remembered Jekyll. I began to read the docs again. This time it clicked. _This is **EXACTLY** what I need_
 
-I'm not sure how to describe the feeling, but working with Jekyll gave me that *I just made things happen on the browser* feeling I got when I first started making website. It made things fun. 
+I'm not sure how to describe the feeling, but working with Jekyll gave me that _I just made things happen on the browser_ feeling I got when I first started making website. It made things fun.
 
-Due to…well, *gestures at the state of the world*, I put the site on hold until September 2021. But once I started, boy, did I start. 
+Due to…well, _gestures at the state of the world_, I put the site on hold until September 2021. But once I started, boy, did I start.
 
 ## The Jekyll Confessional
 
-I didn't really plan out how I wanted to make my site. So, since I'm a millennial, I took a YOLO approach and made decisions based on the order that they appeared in my head. 
+I didn't really plan out how I wanted to make my site. So, since I'm a millennial, I took a ✨YOLO✨ approach and made decisions based on the order that they appeared in my head.
 
-What I did know is that I wanted to build as much of it as possible myself and as quickly as possible. 
+What I did know is that I wanted to build as much of it as possible myself and as quickly as possible.
 
 Following this ethos, I decided on the following:
 
- - No starting theme or template 
- - Accessible
- - Bootstrap to speed up the design and structure
- - Minimal use of external plugins because I wanted to learn new things
- - Fast load times
- - Auto-deployment on my own server
- - Some sort of CMS
+- No starting theme or template
+- Accessible
+- Bootstrap to speed up the design and structure
+- Minimal use of external plugins because I wanted to learn new things
+- Fast load times
+- Auto-deployment on my own server
+- Some sort of CMS
 
 ### How do you install Jekyll in {{page.date | date: "%Y"}}?
 
 I remeber seeing an article some time ago comparing various site generators; their pros, cons, etc. One con I remember seeing for Jekyll was that it had a confusing installation process.
 
-Starting a Jekyll site seemed fairly straightforward to me. You make sure Ruby is installed, you install a few gems, you run: `jekyll new . —blank` to make a blank Jekyll site. Then, you run `bundle exec jekyll server` to start the web sever/compile and finally—BAM! You have a bare-bones Jekyll site that you are now free to design to your heart's desire...in theory.
+Starting a Jekyll site seemed fairly straightforward to me. You make sure Ruby is installed, you install a few gems, you run: `jekyll new . &#151;blank` to make a blank Jekyll site. Then, you run `bundle exec jekyll serve` to start the web sever/compile and finally&#151;BAM! You have a bare-bones Jekyll site that you are now free to design to your heart's desire...in theory.
 
 Admitedlly, articles like theirs (or mine) are subjective by nature, and of course, what might be easy for someone can be absolutely difficult for someone else. I do think the official documentation can get you there fairly painlessly...but the complexity I think lies in something less obvious.
 
 #### Ruby Versions and Ruby Enviroments
 
-Did you know a lot of operating systems have Ruby bundled already? MacOS ships with it. You can check if yours has it by running `ruby -v` in a terminal. 
+Did you know a lot of operating systems have Ruby bundled already? MacOS ships with it. You can check if yours has it by running `ruby -v` in a terminal.
 
 What I didn't know is my Linux distro, KDE Neon, had quite a few core components that had Ruby dependencies. Wanna know how I found out? I blindly followed a tutorial about upgrading your Ruby version, which ended up purging Ruby...and in turn ended up purging a bunch of my system's core components. When did I realize this? After I had pressed enter.
 
 Here are two things I learned (feel free to steal this for your LinkedIn feed; emphasize how this experience changed you as a person):
 
-1) I know better. I should *know* better than to blindly paste commands. But I did it because I was lazy and liability is fully on me. Thankfully (🥲), I've screwed up my OS in similar ways to this in the past and I know how to recover from them.
-2) However, if someone that *doesn't* know better and just wants to get their version up to date (because they're curious or because a tutorial said to); if they end up with a borked system, the tool will be tainted in their eyes.
+1. I know better. I should _know_ better than to blindly paste commands. But I did it because I was lazy and liability is fully on me. Thankfully (🥲), I've screwed up my OS in similar ways to this in the past and I know how to recover from them.
+2. However, if someone that _doesn't_ know better and just wants to get their version up to date (because they're curious or because a tutorial said to); if they end up with a borked system, the tool will be tainted in their eyes.
 
-I know there's safeguards. I know I'm a tad dramatic; purging a language won't make your system explode (usually.) I know in most cases "damage" will be fairly inconsequential. But I also know it's easier to say "it's your fault bro" than to provide a way to mitigate situations like this. I don't subscribe to that mentality. If you don't work with a technology extensively, the quirks of it will be unknown to you. 
+I know there's safeguards. I know I'm a tad dramatic; purging a language won't make your system explode (usually.) I know in most cases "damage" will be fairly inconsequential. But I also know it's easier to say "it's your fault bro" than to provide a way to mitigate situations like this. I don't subscribe to that mentality. If you don't work with a technology extensively, the quirks of it will be unknown to you.
 
-So what's the solution in this case? Use [rbenv](https://github.com/rbenv/rbenv). What does it do? it lets you install and run multiple versions of Ruby side by side. Below is the installation procedure I follow. 
+So what's the solution in this case? Use [rbenv](https://github.com/rbenv/rbenv). What does it do? it lets you install and run multiple versions of Ruby side by side. Below is the installation procedure I follow.
 
-Remember, don't blindly trust my commands!
+Remember, don't blindly trust my commands! **Always** verify.
 
-```sh
-# Installs dependencies you need
-sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
-# Clones rbenv repo and creates .rbenv directory in your home folder
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-# Exports rbenv path to your .bashrc and registers it so you don't have to do it every time you start your shell.
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-#Reloads the shell
-source ~/.bashrc
-# Installs ruby build plugin—which allows you to install any Ruby version.
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-# Install latest stable Ruby version. Alternatively, you could just install the version you prefer. 
-rbenv install $(rbenv install -l | grep -v - | tail -1)
-# Now you can either do: 
-rbenv global version.number #to install globally or
-rbenv local version.number #to install locally
-```
+<script src="https://gist.github.com/subsevenx/6ce35715e26b0e291381d1b25619a4ef.js"></script>
+
 There we go! If you want to know more about how rbenv works, I highly encourage you to [check out this guide](https://www.honeybadger.io/blog/rbenv-rubygems-bundler-path/).
 
-I don't want someone, especially beginners, to get a bad taste of Jekyll or Ruby because of a bad experience with the installation method. To Jekyll's credit, their docs [do mention Ruby version control](https://jekyllrb.com/docs/installation/macos/); it's just not really in the forefront. 
+I don't want someone, especially beginners, to get a bad taste of Jekyll or Ruby because of a bad experience with the installation method. To Jekyll's credit, their docs [do mention Ruby version control](https://jekyllrb.com/docs/installation/macos/); it's just not really in the forefront.
 
-Though, I want to make it perfectly clear that ***this isn't an issue with Ruby or Jekyll.*** This issue isn't even exclusive to languages, rather related to documentation in software as a whole.  
+Though, I want to make it perfectly clear that **_this isn't an issue with Ruby or Jekyll._** This issue isn't even exclusive to languages, rather related to documentation in software as a whole.
 
-Overall, sometimes documentation will have to assume some level of knowledge. Speaking as a technical writer, it's unrealistic to expect (especially for free/open-source software) to have documentation that aims at *every* skill level. I don't have a clear solution but I do think that it's important to consider technology quirks when writing guides.
+Overall, sometimes documentation will have to assume some level of knowledge. Speaking as a technical writer, it's unrealistic to expect (especially for free/open-source software) to have documentation that aims at _every_ skill level. I don't have a clear solution but I do think that it's important to consider technology quirks when writing guides.
 
 #### Ruby Dependencies, Gems, and Bundler
 
-For most Ruby-driven projects, Jekyll included, **always** use bundler and your Gemfile to manage dependencies. If you come from JavaScript, these two technologies work in a similar way that a `package.json` works in npm. They keep your dependencies in check and can help you avoid conflits. 
+For most Ruby-driven projects, Jekyll included, **always** use bundler and your Gemfile to manage dependencies. If you come from JavaScript, these two technologies work in a similar way that a `package.json` works in npm. They keep your dependencies in check and can help you avoid conflits.
 
 **Also!** If you followed Jekyll's official documentation, you should remove your `gems` folder from your home directory, remove the PATH from your `.bashrc` or `.bash_profile`, and restart your shell. Since rbenv is managing Ruby now, removing those references
 
-That should take care of Ruby! As for Jekyll, you might need a few extra tools. 
+That should take care of Ruby! As for Jekyll, you might need a few extra tools.
 
 #### Newer Versions of Ruby
-If you are running a version of Ruby 3.0 or higher with Jekyll, you will need to include another gem. On your current project run `bundle add webrick`.  This will allow the local server to function properly. 
+
+If you are running a version of Ruby 3.0 or higher with Jekyll, you will need to include another gem. On your current project run `bundle add webrick`. This will allow the local server to function properly.
 
 #### Windows Specific Quirks
+
 If you're developing on the Windows Subsystem for Linux (WSL 2+), you'll also need to serve your site from within the Linux subsystem (e.g, not from any directory in `/mnt/c`). If you don't, auto-reload won't work and if you have any JavaScript dependency managers, those will break too. This issue is not Jekyll specific, [read more about it here.](https://github.com/microsoft/WSL/issues/216)
 
-Lastly...you might wanna alias `bundle exec jekyll serve --force_polling --livereload` to serve your site.
+Lastly...you might wanna alias `bundle exec jekyll serve --force_polling --livereload` in your `.bashrc` or `.bash_aliases` to serve your site. I have it set to `jserver`.
 
 ### Time To Structure
 
-Initially one of the things I spent  the most time on was deciding how I should organize things and how I should design it. I spent a good amount of time visiting personal home pages, blogs, and folks on the *indie web* and their repos to get some ideas. 
+Initially one of the things I spent the most time on was deciding how I should organize things and how I should design it. I spent a good amount of time visiting personal home pages, blogs, and folks on the _indie web_ and their repos to get some ideas.
 
-I settled on having only two layouts: one main wrapper (with two structures) and a layout for blog posts that inherits the main layout. In the early stages of the site I played around with the idea of having different layouts per page but with the (lack of) content I had so far, it didn't make too much sense. I opted on using Bootstrap 5 since their grid system makes things really easy to structure. 
+I settled on having only two layouts: one main wrapper (with two structures) and a layout for blog posts that inherits the main layout. In the early stages of the site I played around with the idea of having different layouts per page but with the (lack of) content I had so far, it didn't make too much sense. I opted on using Bootstrap 5 since their grid system makes things really easy to structure.
 
 I also went full in on Liquid compoents and made components out of every little piece of markup; if I needed to repeat it more than one time, it's going in the `_includes` directory. While initially tedious, it has made maintenance and debugging simple.
 
@@ -151,83 +151,82 @@ Lastly, I went back and fort on how I would use data files. They exists to make 
 
 ### Liquid
 
-Jekyll comes bundled with the Liquid templating language. The language is...interesting. It's kinda programmatic but limited. For example, you can loop with it it and it has variables, and most things function as objects. 
+Jekyll comes bundled with the Liquid templating language. The language is...interesting. It's kinda programmatic. Reminds me a lot of erb syntax (which is probably intentional.) You can loop with it, it has variables, and most things function as objects.
 
-The main draw for me was that I could break everything into a component and  then import it into the page. You can also use liquid and external data files to create repetitive markup.   
+The main draw for me was that I could break everything into a component and then import it into the page. You can also use liquid and external data files to create repetitive markup.
 
 For example, making a menu will usually require a bunch of wrappers and links. With Liquid you can define the main structure and the let Liquid take care of the rest; gathering the links from an external data file and building the rest of the structure via boilerplate.
 
-<pre> 
-{% for nav-item in site.data.nav.menu %}
-{%- comment -%} Checks to see if there's nested items {%- endcomment -%} 
-{% if nav-item.child[0] %}
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="{{nav-item.link}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-expanded="{%if nav-item.link == page.url %}true{%else%}false{%endif%}"><img class="img-fluid" height="28" width="28" src="{{nav-item.icon}}" alt="">{{nav-item.name}}</a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-    {% for child in nav-item.child %}
-    <li><a class="dropdown-item {%if child.link == page.url %}active{%endif%}" href="{{child.link}}" {%if child.link == page.url%}aria-current="page"{%endif%}>{{child.name}}</a></li>
-    {%- endfor -%}  
-    </ul>
-</li>
-{%- comment -%} Normal iteration, if item with child exists already, it won't render {%- endcomment -%}
-{% elsif nav-item != nav-item.child %}
-<li class="nav-item" role="menuitem">
-    <a class="nav-link {%if nav-item.link == page.url %}active{%endif%}" href="{{nav-item.link}}" {%if nav-item.link == page.url%}aria-current="page"{%endif%}><img class="img-fluid" height="28" width="28" src="{{nav-item.icon}}" alt="">{{nav-item.name}}</a> 
-</li>
-{% endif %}
-{%- endfor -%}
-{% endraw %}
-</pre>
-You can use it to do some pretty advanced things. As mentioned previously, my site only uses two layouts. However, my main layout includes two different configurations: one with and one without a sidebar. 
+<script src="https://gist.github.com/subsevenx/09021e6ec51716bfdb14ce4b7169dbdd.js"></script>
 
-This is handled via if statements that check each page's front matter at build time for the variable that enables or disables it. Pretty cool! In theory this means you could do it for more layouts on a single page but...I'd advise against it. 
-    
-<pre>
-{% raw %}
-    {% if page.sidebar == true %}
-            <div class="row">
-                <div class="col-lg-9">
-                    {%- if page.blurb -%}
-                        {{page.blurb}}
-                    {%- endif -%}
-                    {{content}}
-                </div>
-                <div class="col-lg-3">
-                    {% include components/sidebar/sidebar.html %}
-                </div>
-            </div>   
-        {% else %} 
-        {%- if page.blurb -%}
-        {{page.blurb}}
-        {% endif %}
-            {{- content -}} 
-        {% endif %}
-</pre>
+You can use it to do some pretty advanced things. As mentioned previously, my site only uses two layouts. However, my main layout includes two different configurations: one with and one without a sidebar.
+
+This is handled via if statements that check each page's front matter at build time for the variable that enables or disables it. Pretty cool! In theory this means you could do it for more layouts on a single page but...I'd advise against it.
+
+<script src="https://gist.github.com/subsevenx/718685cf1e8afc7c2f22b79cf25b51cb.js"></script>
+
+In addition, I also wrote an SEO-based plugin to handle the metadata. While the code is not pretty, it works and I can easily improve it.
 
 ### Design, Flare, and SASS!
 
-Jekyll works with SASS right out of the box. All you need to do is put files within a `_sass` directory and import it within your asset folder's main SCSS file. 
+Jekyll works with SASS right out of the box. All you need to do is put files within a `_sass` directory and import it within your asset folder's main SCSS file.
 
-My customization was fairly small—only importing the components I needed and tweaking existing variables. It ended up being fairly lean but it definitely looks like a Bootstrap site. 
+My customization was fairly small&#151;only importing the components I needed and tweaking existing variables. It ended up being fairly lean but it definitely looks like a Bootstrap site.
 
-Bootstrap wasn't meant to be a long-term solution though; it was mainly included for the sake of time. Right now the site is in a good place functionality-wise so a redesign is around the corner.
+Bootstrap wasn't meant to be a long-term solution though; it was mainly included for the sake of time. Right now the site is in a good place functionality-wise, so a redesign is around the corner!
 
 ### Content Management
 
-A few years ago I would've been fine writing my posts on Atom in markdown and editing the site's metadata manually. Nowadays I'm more keen to the idea of having pretty front-end to facilitate the process. 
+A few years ago I would've been fine writing my posts on Atom in markdown and editing the site's metadata manually. Nowadays I'm more keen to the idea of having pretty front-end to facilitate the process.
 
-I tried to look for a headless CMS solution that could help. I landed on NetlifyCMS. As far as content management goes, it ticked all my boxes. The only issue would be that if you wanted to use NetlifyCMS outside of Netlify, you'd need an authentication point. 
+I tried to look for a headless CMS solution that could help. I landed on NetlifyCMS. As far as content management goes, it ticked all my boxes. The only issue would be that if you wanted to use NetlifyCMS outside of Netlify, you'd need an authentication point.
 
-There were community scripts to help with setting up.
+Netlify is a great service, but unfortunately, my hosting is already taken care of. So I had to look into a way of setting up the end-point.
+
+While there were a lot of community scripts seeking to facilitate the process, most of them were written in JavaScript. I didn't really want to spin up a new server just for a Node app, so researched further to see if there was a way to work with I already had: a LAMP stack server. Comes to worst, I'd probably have to spend a weekend writing my own solution.
+
+Fortunately, I didn't have to write anything myself! [Oliver van Porten already had!](https://www.van-porten.de/blog/2021/01/netlify-auth-provider/) I can't thank him enough for this. Installation went without a hitch and in half an hour, I could authenticate.
+
+### Auto-Deployment 🚀
+
+One of the most exciting prosepects of modern web development to me is auto-deployments. Since I was coming from PHP-land where everything is "server-rendered" by proxy, it was an engaging excercise to think about how to handle the same prospect in the "static" world.
+
+I explore several solutions (Travis CI, Render, self-hosted Netlify-like services) but ultimately opted for GitHub actions and a script. My pipeline is fairly simple:
+
+#### Set up a GitHub Action
+
+<script src="https://gist.github.com/subsevenx/cf8d4a6c11b993e08c6a18783e7240fb.js"></script>
+
+The action is quite simple:
+
+1. Runs on every push to main
+2. SSHs into my server with using a few secrets (courtesy of `appleboy/ssh-action@v0.1.
+3. and then runs two commands
+4. The first commands enters into a directory
+5. The second command executes my build script
+
+#### Deploy Script
+
+<script src="https://gist.github.com/subsevenx/11286e050c72f106091851a05ffc4dee.js"></script>
+
+The script is essentially began as a git hook (found in `.git/hooks/`). The final product is a bash script which:
+
+1. Locally clones site repo
+2. Checks to see if dependencies are installed in the server, if not, it installs them.
+3. If they are installed, it sets site enviroment to production, builds a local copy in temporary directory.
+4. Clones temporary copy to the directory where the webserver is listening on.
+
+Not that fancy! In the future I'd like to improve the script to catch errors. As it is, though, works just fine for what I need.
 
 ## Complexity As a Form of Exercise
 
-I gave myself many unseeded headaches while building this site. For example, making a tag and category page would be fairly easy had I used one of the many plugins that does it for you, such as [Jekyll Archives](https://github.com/jekyll/jekyll-archives). Deciding not to use plugins (at first) didn't come from a "I'm doing it all myself because I am an expert web dev, nyeh" mentality. From the very start of my journey in web dev, or programming as a whole, I tended to learn better if I just jumped on the deep end and tried to figure it out. The confusion to enlightenement pipeline, as I like to call it. 
+I gave myself many unseeded headaches while building this site. For example, making a tag and category page would be fairly easy had I used one of the many plugins that does it for you, such as [Jekyll Archives](https://github.com/jekyll/jekyll-archives). Deciding not to use plugins (at first) didn't come from a "I'm doing it all myself because I am an expert web dev, nyeh" mentality. From the very start of my journey in web dev, or programming as a whole, I tended to learn better if I just jumped on the deep end and tried to figure it out. The confusion to enlightenement pipeline, as I like to call it.
 
-In the past few months that has certainly been true. 
+In the past few months that has certainly been true.
 
-I learned how to work with GitHub actions to automate the build process. I learned how to set up an OAuth end point on my server to authenticate NetlifyCMS. I dove into modern JavaScript, web components, and how new front-ends are being built.
-
-It has also been terrifying because I realized just how long I've been stuck on the back-end and how much the web has changed since 2017 (which was the year I began to mainly professionaly work with WordPress.) There's no shortage of things to learn. For me, the overwhelming thing isn't *what* to learn, it's more "dammit, I should probably finish that project in that last stack."
+It has also been terrifying because I realized just how long I've been stuck on the back-end and how much the web has changed since 2017 (which was the year I began to mainly professionaly work with WordPress.) There's no shortage of things to learn. For me, the overwhelming thing isn't _what_ to learn, it's more "dammit, I should probably stick with one thing for a while."
 
 Making things from the bottom-up has been super fulfilling and I wanna keep doing it.
+
+## Conclusion & Beyond Jekyll
+
