@@ -13,7 +13,7 @@ tags:
   - static sites
 categories:
   - personal
-date: 2022-03-08 01:55:15 --600
+date: 2022-03-08 17:35:30 --600
 ---
 
 _🧠 LONG article. The following is a personal piece on what it feels like to work with Jekyll in {{page.date | date: "%Y"}}, a brief exploration of static sites, and thoughts about Jekyll._
