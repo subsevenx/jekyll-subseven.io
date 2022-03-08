@@ -16,7 +16,7 @@ categories:
 date: 2022-03-07 23:32:09 --600
 ---
 
-_🧠 This is part one series on Jekyll. The following is a personal piece on what it feels like to work with Jekyll in {{page.date | date: "%Y"}}, and a brief exploration of static sites_
+_🧠 This is part one series on Jekyll. The following is a personal piece on what it feels like to work with Jekyll in {{page.date | date: "%Y"}}, and a brief exploration of static sites._
 
 _🔭 Article Scope: This article is written from the viewpoint of a 20-something who spent most of his teens and early adulthood exclusively with PHP, Laravel, WordPress, and the LAMP stack. However, this 20-something has also been falling in love with Ruby. Totally not biased._
 
@@ -42,7 +42,7 @@ At this point, I hope Jekyll requires little introduction&#151;but if you don't 
 
 Jekyll was released in 2008, written in Ruby, and initially authored by GitHub co-founder Tom Preseton-Werner. For a long time, it was _the_ site generator; sparking a passionate community of enthusiasts, evangelists, and developers. For many, it was their introduction to SSGs as a whole.
 
-Since 2008, the landscape around static site generators has changed significantly. For one, there are now _hundreds_ of them. [jamstack.org](https://jamstack.org){:target="_blank"} currently lists 333, while [staticsitegenerators.net](https://staticsitegenerators.net){:target="_blank"} lists 460. From Gatsby to Hugo to 11ty and beyond.
+Since 2008, the landscape around static site generators has changed significantly. For one, there are now _hundreds_ of them. [jamstack.org](https://jamstack.org){:target="\_blank"} currently lists 333, while [staticsitegenerators.net](https://staticsitegenerators.net){:target="\_blank"} lists 460. From Gatsby to Hugo to 11ty and beyond.
 
 Jekyll, I'd argue, was the catalyst as to why there are so many. So while it may not enjoy the _shiny new toy_ treatments other generators receive as of lately, its importance cannot be understated. It's robust, tried, true, and most importantly&#151;**FUN!**
 
@@ -56,8 +56,8 @@ This doesn't actually mean that you _need_ to make a blog site with Jekyll. You 
 
 My introduction to Jekyll happened in the spring of 2017. A friend of mine was talking to me about Ruby on Rails and in one of the conversations, they mentioned Jekyll. I took a look at it, played with and…didn't quite see what was special about it.
 
-<div class="d-flex justify-content-sm-center my-2">
-<q class="text-light bg-primary p-3">I can already do this in WordPress 😎</q>
+<div class="d-flex justify-content-sm-center my-2 border border-5 bg-primary rounded">
+<q class="text-light p-3">I can already do this in WordPress 😎</q>
 </div>
 
 But, come 2019, I wanted to maintain my own website again. Until that point my site comprised a single HTML file. I wanted to make something larger and maintaining HTML without templating is just not something you _should_ do anymore.
@@ -107,15 +107,15 @@ Here are two things I learned (feel free to steal this for your LinkedIn feed; e
 
 I know there's safeguards. I know I'm a tad dramatic; purging a language won't make your system explode (usually.) I know in most cases "damage" will be fairly inconsequential. But I also know it's easier to say "it's your fault bro" than to provide a way to mitigate situations like this. I don't subscribe to that mentality. If you don't work with a technology extensively, the quirks of it will be unknown to you.
 
-So what's the solution in this case? Use [rbenv](https://github.com/rbenv/rbenv){:target="_blank"}. What does it do? it lets you install and run multiple versions of Ruby side by side. Below is the installation procedure I follow.
+So what's the solution in this case? Use [rbenv](https://github.com/rbenv/rbenv){:target="\_blank"}. What does it do? it lets you install and run multiple versions of Ruby side by side. Below is the installation procedure I follow.
 
 Remember, don't blindly trust my commands! **Always** verify.
 
-<script src="https://gist.github.com/subsevenx/6ce35715e26b0e291381d1b25619a4ef.js"></script>
+<script src="https://gist.github.com/subsevenx/6ce35715e26b0e291381d1b25619a4ef.js" defer></script>
 
-There we go! If you want to know more about how rbenv works, I highly encourage you to [check out this guide](https://www.honeybadger.io/blog/rbenv-rubygems-bundler-path/){:target="_blank"}.
+There we go! If you want to know more about how rbenv works, I highly encourage you to [check out this guide](https://www.honeybadger.io/blog/rbenv-rubygems-bundler-path/){:target="\_blank"}.
 
-I don't want someone, especially beginners, to get a bad taste of Jekyll or Ruby because of a bad experience with the installation method. To Jekyll's credit, their docs [do mention Ruby version control](https://jekyllrb.com/docs/installation/macos/){:target="_blank"}; it's just not really in the forefront.
+I don't want someone, especially beginners, to get a bad taste of Jekyll or Ruby because of a bad experience with the installation method. To Jekyll's credit, their docs [do mention Ruby version control](https://jekyllrb.com/docs/installation/macos/){:target="\_blank"}; it's just not really in the forefront.
 
 Though, I want to make it perfectly clear that **_this isn't an issue with Ruby or Jekyll._** This issue isn't even exclusive to languages, rather related to documentation in software as a whole.
 
@@ -135,7 +135,7 @@ If you are running a version of Ruby 3.0 or higher with Jekyll, you will need to
 
 #### Windows Specific Quirks
 
-If you're developing on the Windows Subsystem for Linux (WSL 2+), you'll also need to serve your site from within the Linux subsystem (e.g, not from any directory in `/mnt/c`). If you don't, auto-reload won't work and if you have any JavaScript dependency managers, those will break too. This issue is not Jekyll specific, [read more about it here.](https://github.com/microsoft/WSL/issues/216){:target="_blank"}
+If you're developing on the Windows Subsystem for Linux (WSL 2+), you'll also need to serve your site from within the Linux subsystem (e.g, not from any directory in `/mnt/c`). If you don't, auto-reload won't work and if you have any JavaScript dependency managers, those will break too. This issue is not Jekyll specific, [read more about it here.](https://github.com/microsoft/WSL/issues/216){:target="\_blank"}
 
 Lastly...you might wanna alias `bundle exec jekyll serve --force_polling --livereload` in your `.bashrc` or `.bash_aliases` to serve your site. I have it set to `jserver`.
 
@@ -157,13 +157,13 @@ The main draw for me was that I could break everything into a component and then
 
 For example, making a menu will usually require a bunch of wrappers and links. With Liquid you can define the main structure and the let Liquid take care of the rest; gathering the links from an external data file and building the rest of the structure via boilerplate.
 
-<script defer src="https://gist.github.com/subsevenx/09021e6ec51716bfdb14ce4b7169dbdd.js"></script>
+<script src="https://gist.github.com/subsevenx/09021e6ec51716bfdb14ce4b7169dbdd.js" defer></script>
 
 You can use it to do some pretty advanced things. As mentioned previously, my site only uses two layouts. However, my main layout includes two different configurations: one with and one without a sidebar.
 
 This is handled via if statements that check each page's front matter at build time for the variable that enables or disables it. Pretty cool! In theory this means you could do it for more layouts on a single page but...I'd advise against it.
 
-<script defer src="https://gist.github.com/subsevenx/718685cf1e8afc7c2f22b79cf25b51cb.js"></script>
+<script src="https://gist.github.com/subsevenx/718685cf1e8afc7c2f22b79cf25b51cb.js" defer></script>
 
 In addition, I also wrote an SEO-based plugin to handle the metadata. While the code is not pretty, it works and I can easily improve it.
 
@@ -185,7 +185,7 @@ Netlify is a great service, but unfortunately, my hosting is already taken care 
 
 While there were a lot of community scripts seeking to facilitate the process, most of them were written in JavaScript. I didn't really want to spin up a new server just for a Node app, so researched further to see if there was a way to work with I already had: a LAMP stack server. Comes to worst, I'd probably have to spend a weekend writing my own solution.
 
-Fortunately, I didn't have to write anything myself! [Oliver van Porten already had!](https://www.van-porten.de/blog/2021/01/netlify-auth-provider/){:target="_blank"} I can't thank him enough for this. Installation went without a hitch and in half an hour, I could authenticate.
+Fortunately, I didn't have to write anything myself! [Oliver van Porten already had!](https://www.van-porten.de/blog/2021/01/netlify-auth-provider/){:target="\_blank"} I can't thank him enough for this. Installation went without a hitch and in half an hour, I could authenticate.
 
 ### Auto-Deployment 🚀
 
@@ -195,7 +195,7 @@ I explore several solutions (Travis CI, Render, self-hosted Netlify-like service
 
 #### Set up a GitHub Action
 
-<script defer src="https://gist.github.com/subsevenx/cf8d4a6c11b993e08c6a18783e7240fb.js"></script>
+<script src="https://gist.github.com/subsevenx/cf8d4a6c11b993e08c6a18783e7240fb.js" defer></script>
 
 The action is quite simple:
 
@@ -207,7 +207,7 @@ The action is quite simple:
 
 #### Deploy Script
 
-<script src="https://gist.github.com/subsevenx/11286e050c72f106091851a05ffc4dee.js"></script>
+<script src="https://gist.github.com/subsevenx/11286e050c72f106091851a05ffc4dee.js" defer></script>
 
 The script is essentially began as a git hook (found in `.git/hooks/`). The final product is a bash script which:
 
@@ -220,7 +220,7 @@ Not that fancy! In the future I'd like to improve the script to catch errors. As
 
 ## Complexity As a Form of Exercise
 
-I gave myself many unseeded headaches while building this site. For example, making a tag and category page would be fairly easy had I used one of the many plugins that does it for you, such as [Jekyll Archives](https://github.com/jekyll/jekyll-archives){:target="_blank"}. Deciding not to use plugins (at first) didn't come from a "I'm doing it all myself because I am an expert web dev, nyeh" mentality. From the very start of my journey in web dev, or programming as a whole, I tended to learn better if I just jumped on the deep end and tried to figure it out. The confusion to enlightenement pipeline, as I like to call it.
+I gave myself many unseeded headaches while building this site. For example, making a tag and category page would be fairly easy had I used one of the many plugins that does it for you, such as [Jekyll Archives](https://github.com/jekyll/jekyll-archives){:target="\_blank"}. Deciding not to use plugins (at first) didn't come from a "I'm doing it all myself because I am an expert web dev, nyeh" mentality. From the very start of my journey in web dev, or programming as a whole, I tended to learn better if I just jumped on the deep end and tried to figure it out. The confusion to enlightenement pipeline, as I like to call it.
 
 In the past few months that has certainly been true.
 
@@ -238,15 +238,15 @@ The internal paradigm of what I want my site to be has changed **significantly**
 
 What I wrote about NetlifyCMS still stands; it's a great and simple CMS. However, for me, it has been getting a little tedious to keep up with the config changes. This is mainly my fault! I changed a lot of core components _after_ I had already written the config.
 
-For example, the SEO plugin I made used to work perfectly with NetlifyCMS. Last month I decided to refactor it. The current iteration isn't integrated into NetlifyCMS because I would have to re-write that part of the config _again_. I normally wouldn't mind this but the NetlifyCMS config file is pretty linear (YAML). 
+For example, the SEO plugin I made used to work perfectly with NetlifyCMS. Last month I decided to refactor it. The current iteration isn't integrated into NetlifyCMS because I would have to re-write that part of the config _again_. I normally wouldn't mind this but the NetlifyCMS config file is pretty linear (YAML).
 
 <script src="https://gist.github.com/subsevenx/db14997fdbb003067d1e92954c08f678.js" defer></script>
 
 To my knowledge, there's no way to to reuse similar config options. Which means I'd have to find the existing snippets of config relating to the SEO plugin and then replace them. This would be fine but my config right now is 310 lines of undocumented code with multiple levels of nesting.
 
-The complexity is totally my fault, but I do wish it was easier to maintain. 
+The complexity is totally my fault, but I do wish it was easier to maintain.
 
-I would still recommend it if you're looking for a fast and easy headless CMS solution. Though, if you have the attention span of a pigeon like me, you might want to get your site as "finished" as you can *before* writing the config.
+I would still recommend it if you're looking for a fast and easy headless CMS solution. Though, if you have the attention span of a pigeon like me, you might want to get your site as "finished" as you can _before_ writing the config.
 
 ### Jekyll and Ruby
 
@@ -254,13 +254,12 @@ Overall, working with Jekyll has been a joy and so, so much fun. So much, in fac
 
 In all seriousness, what didn't click about Rails and Ruby as a language back in 2017 , now has. Writing Ruby is so much fun and I'm not sure if I can go back. Not to mention that the community is pretty darn great (one particular dude aside).
 
-
 #### Bridgetown RB
 
-I came across Bridgetown about two months ago. I was browsing the [Jekyll Talk](https://talk.jekyllrb.com/){:target="_blank"} and I saw someone ponder about the future of Jekyll. To address it, one thing you should know about Jekyll is that it's basically in a 'soft' maintenance mode. I don't really want to ponder on what that means, but it's good to keep in mind. 
+I came across Bridgetown about two months ago. I was browsing the [Jekyll Talk](https://talk.jekyllrb.com/){:target="\_blank"} and I saw someone ponder about the future of Jekyll. To address it, one thing you should know about Jekyll is that it's basically in a 'soft' maintenance mode. I don't really want to ponder on what that means, but it's good to keep in mind.
 
-Jekyll met everything I needed from a site generator. However, I did wonder what would happen when it didn't? My freelancing was still primarily WordPress based but I did want to start offering things beyond it. Jekyll *could* work there in most cases. But I know at some point I'd probably hit a wall.
+Jekyll met everything I needed from a site generator. However, I did wonder what would happen when it didn't? My freelancing was still primarily WordPress based but I did want to start offering things beyond it. Jekyll _could_ work there in most cases. But I know at some point I'd probably hit a wall.
 
-In that thread 
+In that thread
 
 <aside class="text-muted py-md-3 text-center"><sub id="cite-1">1. If you are a Rails dev, I would love to connect with you! The part about pivoting is serious and I'm looking for some direction.</sub></aside>
