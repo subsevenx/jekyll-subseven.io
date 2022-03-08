@@ -17,10 +17,10 @@ layout: wrapper
             {%- endcomment -%}
         
         <div class="row">
-            <div class="col-lg-10 col-sm-12 col-xs-12">
+            <section class="col-lg-10 col-sm-12 col-xs-12">
                 <h1 class="h3 fw-bold">{{page.title}}</h1>
                 <p class="h6 fw-light">{{page.author}}</p> 
-            </div>
+            </section>
             <div class="col-lg-2 col-sm-12 col-xs-12">
             <p class="h6"><span class="fw-bold">Posted 🕒</span> 
                 <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
@@ -34,10 +34,8 @@ layout: wrapper
     </div>
 
 
-    <article itemscope itemtype="https://schema.org/CreativeWork">
-        <section markdown="1"> 
-            {{- content -}}
-        </section>
+    <article itemscope itemtype="https://schema.org/CreativeWork"  markdown="1">
+        {{- content -}}
     </article>
     
     {%- comment -%} Categories {%- endcomment -%}
