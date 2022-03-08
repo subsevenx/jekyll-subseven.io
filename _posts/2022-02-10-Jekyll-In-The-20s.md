@@ -145,7 +145,7 @@ Initially one of the things I spent the most time on was deciding how I should o
 
 I settled on having only two layouts: one main wrapper (with two structures) and a layout for blog posts that inherits the main layout. In the early stages of the site I played around with the idea of having different layouts per page but with the (lack of) content I had so far, it didn't make too much sense. I opted on using Bootstrap 5 since their grid system makes things really easy to structure.
 
-I also went full in on Liquid compoents and made components out of every little piece of markup; if I needed to repeat it more than one time, it's going in the `_includes` directory. While initially tedious, it has made maintenance and debugging simple.
+I also went full in on Liquid components and made components out of every little piece of markup; if I needed to repeat it more than one time, it's going in the `_includes` directory. While initially tedious, it has made maintenance and debugging simple.
 
 Lastly, I went back and fort on how I would use data files. They exists to make the separation of content and structure easier, but I still don't think I've found a great way to standardize them in my site. They handle the links for my navigation menu but some also handle content for a handful of pages.
 
@@ -228,5 +228,41 @@ It has also been terrifying because I realized just how long I've been stuck on 
 
 Making things from the bottom-up has been super fulfilling and I wanna keep doing it.
 
-## Conclusion & Beyond Jekyll
+## Conclusions
 
+It's funny, this article has been stuck in draft mode since pretty much around the same time I started to work on the website. Since then, my preferences in web development have been changing; I have been overwhelmed with ideas, learning things, and exploring new venues. In short, this took longer than I expected!
+
+The internal paradigm of what I want my site to be has changed **significantly**. From the tools I use to my ideas of what comprises "personal homepages".
+
+### Content Management
+
+What I wrote about NetlifyCMS still stands; it's a great and simple CMS. However, for me, it has been getting a little tedious to keep up with the config changes. This is mainly my fault! I changed a lot of core components _after_ I had already written the config.
+
+For example, the SEO plugin I made used to work perfectly with NetlifyCMS. Last month I decided to refactor it. The current iteration isn't integrated into NetlifyCMS because I would have to re-write that part of the config _again_. I normally wouldn't mind this but the NetlifyCMS config file is pretty linear (YAML). 
+
+<script src="https://gist.github.com/subsevenx/db14997fdbb003067d1e92954c08f678.js"></script>
+
+To my knowledge, there's no way to to reuse similar config options. Which means I'd have to find the existing snippets of config relating to the SEO plugin and then replace them. This would be fine but my config right now is 310 lines of undocumented code with multiple levels of nesting.
+
+The complexity is totally my fault, but I do wish it was easier to maintain. 
+
+I would still recommend it if you're looking for a fast and easy headless CMS solution. Though, if you have the attention span of a pigeon like me, you might want to get your site as "finished" as you can *before* writing the config.
+
+### Jekyll and Ruby
+
+Overall, working with Jekyll has been a joy and so, so much fun. So much, in fact, that it got me curious about Ruby. I'm happy to announce that I am going to purge all knowledge of WordPress and pivot into Rails development<sup><a href="#cite-1">1</a></sup>. Later PHP 😎
+
+In all seriousness, what didn't click about Rails and Ruby as a language back in 2017 for me, now has. Writing Ruby is so much fun and I'm not sure if I can go back. Not to mention that the community is pretty darn great (one particular dude aside).
+
+In fact, one community I found has been amazing.
+
+#### Bridgetown RB
+
+#### Pondering 🤔
+I came across Bridgetown about two months ago. I was browsing the [Jekyll Talk](https://talk.jekyllrb.com/) and I saw someone ponder about the future of Jekyll. To address it, one thing you should know about Jekyll is that it's basically in a 'soft' maintenance mode. I don't really want to ponder on what that means, but it's good to keep in mind. 
+
+Jekyll met everything I needed from a site generator. However, I did wonder what would happen when it didn't? My freelancing was still primarily WordPress based but I did want to start offering things beyond it. Jekyll *could* work there for most cases. But if it didn't? It should go without saying, but Open Source software comes with no warranty; I know this. But it did made me think.
+
+In that thread 
+
+<aside class="bg-primary py-md-3 text-center"><sub id="cite-1" class="text-light">1. If you are a Rails dev, I would love to connect with you! The part about pivoting is serious and I'm looking for some direction.</sub></aside>
