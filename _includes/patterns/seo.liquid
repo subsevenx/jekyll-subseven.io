@@ -23,7 +23,7 @@
 <meta name="language" content="{%- if mt.language -%}{{mt.language}}{%- elsif page.language -%}{{page.language}}{%- else -%}{{- site.language -}}{%- endif -%}">
 
 {%- comment -%} OG SEO {%- endcomment -%}
-<meta property="og:title" content="{%- if og.title -%}{{- og.title -}} | {{metadata.title}}{% else %}{{page.title}} {{- metadata.separator -}} {{metadata.title}}{%- endif -%}">
+<meta property="og:title" content="{%- if og.title -%}{{- og.title -}}{{-metadata.separator-}}{{metadata.title}}{% else %}{{page.title}} {{- metadata.separator -}} {{metadata.title}}{%- endif -%}">
 <meta property="og:description" content="{% if og.description %}{{og.description}}{% else %}{{metadata.description}}{% endif %}">
 <meta property="og:type" content="{%- if og.type == nil -%}{%- if site.post -%}article{%- else -%}website{%- endif -%}{%- else -%}{{og.type}}{% endif %}">
 <meta property="og:url" content="{%- if page.url != / -%}{{site.url}}{{page.url}}" {% elsif page.url == / %}{{site.url}}{%- endif -%}> 
