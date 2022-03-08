@@ -6,7 +6,7 @@ seo:
     title: Building a Jekyll site in the 20s
     description: How hard is it to build and deploy a Jekyll website nowadays? Read to learn more about an exploration of the static site generator.
     type: article
-    image: /assets/img/blog/blog_img_jekyll.png
+    image: https://subseven.io/assets/img/blog/blog_img_jekyll.png
 tags:
   - jekyll
   - jamstack
