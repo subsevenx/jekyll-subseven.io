@@ -1,31 +1,30 @@
 ---
 layout: wrapper
 ---
-<main class="container">
+<main class="container" id="top">
     <div class="post-meta-container">
         <div class="row mb-3 mt-0">
             {% if page.image %}
             <img src="{{post.featured | relative_url}}" class="img-fluid" alt="{{post.alt}}">
             {% endif %}
-        </div>
-            
+        </div>  
             {%- comment -%}
             <!-- Fallback image in case of no image declared in the post 
                 {% else %}
                 <img src="/assets/img/uploads/featured/img.png" class="img-fluid" alt="Fallback post banner image that says S7"> 
             -->
-            {%- endcomment -%}
-        
+            {%- endcomment -%}      
         <div class="row">
             <section class="col-lg-10 col-sm-12 col-xs-12">
                 <h1 class="h3 fw-bold">{{page.title}}</h1>
                 <p class="h6 fw-light">{{page.author}}</p> 
+                {%- include /components/back-button.liquid buttonName="Back to Blog" class="post-back-button" symbol="&#8592;" path="/blog/" -%}
             </section>
             <div class="col-lg-2 col-sm-12 col-xs-12">
-            <p class="h6"><span class="fw-bold">Posted 🕒</span> 
+                <p class="h6"><span class="fw-bold">Posted 🕒</span> 
                 <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
                 <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> 
-            </p>
+                </p>
             </div>
         </div>
         <section class="my-3">  
@@ -33,14 +32,11 @@ layout: wrapper
         </section>
     </div>
 
-
     <article itemscope itemtype="https://schema.org/CreativeWork"  markdown="1">
         {{- content -}}
     </article>
-    
     {%- comment -%} Categories {%- endcomment -%}
-    <div class="row">
-        
+    <div class="row">   
         <div class="col-md-6 fst-italic">
             {% if page.categories %}
             <div>
@@ -61,7 +57,6 @@ layout: wrapper
             {% endif %}
         </div>            
     </div>
-
     {%- comment -%} Tags {%- endcomment -%}
         <div class="col-md-6 fst-italic">
             <div> 
@@ -80,7 +75,6 @@ layout: wrapper
                 {% endif %}
             </div>
         </div>
-
     {%- comment -%} Prev/Next {%- endcomment -%}
         <div class="col-md-12">
             <div class="flex-row d-flex align-items-center">
@@ -94,9 +88,6 @@ layout: wrapper
                     <a class="post-prev" href="{{page.previous.url}}">Next Post &raquo;</a>
                     {% endif %}
                 </div>
-            </div>
-            <div class="text-center py-2"> 
-                {%- include /components/back-button.liquid buttonName="Back to Blog" class="post-back-button" symbol="&#8592;" path="/blog/" -%}
             </div>
         </div>
     </div>
