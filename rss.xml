@@ -2,7 +2,7 @@
 ---
 {%- assign metadata = site.data.metadata -%}
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>{{ metadata.title | xml_escape }}</title>
         <description>{{ metadata.description | xml_escape }}</description>
