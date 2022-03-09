@@ -1,11 +1,4 @@
-<div id="table-of-contents">
-    <div class="card">
-        <div class="card-header bg-dark text-white"> 
-            <h2 class="h4">Table of Contents</h2>
-        </div>
-        <div class="class card-body">
-            {% include /imports/toc.liquid html=content h_min=2 ordered=true %}
-        </div>
-    </div>
-    <hr>
-</div>
+<details class="card card-header p-md-3">
+    <summary class="h4 text-center">Table of Contents (Expand)</summary>
+    <div class="card card-body">{% include /imports/toc.liquid html=content h_min=2 ordered=true %}</div>
+</detai>
