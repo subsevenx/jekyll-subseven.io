@@ -2,7 +2,6 @@
 layout: wrapper
 ---
 <main class="container" id="top">
-<article itemscope itemtype="https://schema.org/CreativeWork"  markdown="1">
     <div id="post-meta-container">    
         <header class="row">
             <section class="col-lg-10 col-sm-12 col-xs-12">
@@ -14,13 +13,14 @@ layout: wrapper
                 <h2 class="h6"><span class="fw-bold">Posted 🕒</span> 
                 <time datetime="{{page.date | date: " %F"}}"> {{page.date | date: "%m/%d/%Y"}}</time> 
                 <time datetime="{{page.date | date: " %T"}}"> {{page.date | date: "%T"}} </time> 
-                </h2>
-            </section>
+            </h2>
+        </section>
         </header>
         <section class="my-3">  
             {%- include /components/toc.liquid -%}
         </section>
     </div>
+    <article itemscope itemtype="https://schema.org/CreativeWork"  markdown="1">
     <section class="my-2">
         {{- content -}}
     </section>
@@ -36,7 +36,7 @@ layout: wrapper
             <hr class="post-hr">
 
             {% for category in page.categories %}  
-            <p class="flex text-center post-categories p-1" id="{{category | replace: ' ', '-' | downcase}}"><a href="/blog/categories/#{{category | replace: ' ', '-' | downcase}}" class="text-decoration-none">{{category | capitalize }}</a></p>
+            <p class="flex text-center post-categories p-1" id="cat-{{category | replace: ' ', '-' | downcase}}"><a href="/blog/categories/#cat-{{category | replace: ' ', '-' | downcase}}" class="text-decoration-none">{{category | capitalize }}</a></p>
             {% endfor %}
             {% if page.categories.size < 1  %}
             <p class="text-center h6 text-muted pb-2">This post has no categories :(</p>
@@ -50,7 +50,7 @@ layout: wrapper
             <hr class="post-hr">
 
             {%- for tag in page.tags -%}
-            <p class="flex post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag | capitalize }}</a></p>
+            <p class="flex post-tag text-center p-1" id="tag-{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#tag-{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag | capitalize }}</a></p>
             {% endfor %}
             {% if page.tags.size < 1  %}
             <p class="text-center h6 text-muted pb-2">This post has no tags :(</p>
