@@ -36,3 +36,4 @@ defaults:
       type: "now"
     values:
       layout: "now"
+      permalink: /now/:year/:title/
