@@ -1,1 +1,1 @@
-<button name="{{include.buttonName}}" {%- if include.class -%} class="{{include.class}}"{%- endif -%} onclick="location.href='{{include.path}}'">{%- if include.symbol -%}{{include.symbol}}{%- endif -%}{{-include.buttonName-}}</button>
+<button name="{{include.buttonName}}" {% if include.class %} class="{{include.class}}" {% endif %} onclick="location.href='{{include.path}}'">{% if include.symbol %} {{include.symbol}} {%- endif -%}{{-include.buttonName-}}</button>
