@@ -31,3 +31,9 @@ defaults:
       type: "pages"
     values:
       author: "Daniel Hernandez"
+  - scope:
+      path: ""
+      type: "now"
+    values:
+      layout: "now"
+      permalink: /now/:year/:title/
