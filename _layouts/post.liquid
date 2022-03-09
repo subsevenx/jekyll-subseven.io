@@ -21,7 +21,7 @@ layout: wrapper
             {%- include /components/toc.liquid -%}
         </section>
     </div>
-    <section>
+    <section class="my-2">
         {{- content -}}
     </section>
     {%- comment -%} Categories {%- endcomment -%}
@@ -44,25 +44,21 @@ layout: wrapper
             {% endif %}
         </section>
     {%- comment -%} Tags {%- endcomment -%}
-        <div class="col-md-6 fst-italic">
-            <div> 
-                {% if page.tags %}
-                <p class="text-center h6">Tag{% if page.tags.size > 1 %}s{% endif %}</p>
-                <hr class="post-hr">
-            </div>
+        <section class="col-md-6 fst-italic">
+            {% if page.tags %}
+            <h2 class="text-center h6">Tag{% if page.tags.size > 1 %}s{% endif %}</h2>
+            <hr class="post-hr">
 
-            <div> 
-                {%- for tag in page.tags -%}
-                <span class="post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag | capitalize }}</a></span>
-                {% endfor %}
-                {% if page.tags.size < 1  %}
-                <p class="text-center h6 text-muted pb-2">This post has no tags :(</p>
-                {% endif %}
-                {% endif %}
-            </div>
-        </div>
+            {%- for tag in page.tags -%}
+            <p class="flex post-tag text-center p-1" id="{{tag | replace: ' ', '-' | downcase}}"><a href="/blog/tags/#{{tag | downcase | replace: ' ', '-' }}" class="text-decoration-none">{{tag | capitalize }}</a></p>
+            {% endfor %}
+            {% if page.tags.size < 1  %}
+            <p class="text-center h6 text-muted pb-2">This post has no tags :(</p>
+            {% endif %}
+            {% endif %}
+        </section>
     {%- comment -%} Prev/Next {%- endcomment -%}
-        <div class="col-md-12">
+        <nav class="col-md-12">
             <div class="flex-row d-flex align-items-center">
                 <div class="col-6 text-center">
                     {% if page.next.url %}
@@ -75,7 +71,7 @@ layout: wrapper
                     {% endif %}
                 </div>
             </div>
-        </div>
+        </nav>
     </div>
 </article>
 </main>
