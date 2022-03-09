@@ -13,7 +13,7 @@ blurb: A blog at the intersection of technology and life.
         {% if post.thumbnail %}
         <img src="{{post.thumbnail}}" class="img-fluid post-card" width="683" height="384" alt="Featured image for post title: {{post.title}}">
         {% else %}
-        <img src="/assets/img/uploads/featured/img.png" class="img-fluid post-card" alt="Placeholder for featured images">
+        <img src="/assets/img/uploads/featured/img.png" class="img-fluid post-card" alt="Featured image for post title: {{post.title}}">
         {% endif %}
         <hr>
         <h3 class="px-3 h6 fw-bold py-2">{{post.title | upcase}}</h3>
