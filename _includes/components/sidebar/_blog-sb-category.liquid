@@ -6,7 +6,7 @@
         {% endif %}
         
         {% for categories in site.categories %}
-              <p class="h6 card-header text-center" id="{{categories[0] | replace: ' ', '-' | downcase }}"><span class="text-capitalize"><a href="categories/#{{categories[0]  | remove: ',' | limit: 5}}">{{categories[0] | limit: 5}}</a> </span></p>
+              <p class="h6 card-header text-center" id="cat-{{categories[0] | replace: ' ', '-' | downcase }}"><span class="text-capitalize"><a href="categories/#{{categories[0]  | remove: ',' | limit: 5}}">{{categories[0] | limit: 5}}</a> </span></p>
         {% endfor %}
     </div>
 </section>
