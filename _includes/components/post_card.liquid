@@ -1,18 +1,18 @@
-<article class="row"> 
+<article id="post-card-component" class="row post-card"> 
 {% for post in site.posts %}
   <div class="col-sm-12 col-md-6"> 
-    <section class="card my-2"> 
+    <div class="card my-2"> 
+      <header>
       {% if post.thumbnail %}
-      <img src="{{post.thumbnail}}" class="img-fluid post-card" width="683" height="384" alt="Featured image for post title: {{post.title}}">
+      <img src="{{post.thumbnail}}" class="img-fluid" width="683" height="384" alt="Featured image for post title: {{post.title}}">
       {% else %}
       <img src="/assets/img/uploads/featured/img.png" class="img-fluid post-card" alt="Featured image for post title: {{post.title}}">
       {% endif %}
       <hr>
-      <h2 class="px-3 h6 fw-bold py-2">{{post.title | upcase}}</h2>
-      <header>
+      <h2 class="h6 fw-bold px-3 py-2">{{post.title | upcase}}</h2>
       </header>
-      <details open class="card-body py-0 fs-6" toggle="open">
-        <summary>Post Excerpt</summary>
+      <details open class="card-body py-0 fs-6">
+        <summary>Post Excerpt: </summary>
         <p class="card-text">{{post.excerpt | strip_html | truncatewords: 50}}</p>
       </details>
       <footer class="card-footer text-center">
@@ -21,11 +21,11 @@
             <time class="h6" datetime="{{post.date | date: "%F"}}">On: {{post.date | date: "%b %-d, %Y"}}</time>
           </div>
           <div class="col-6">
-            <a href="{{site.url}}{{post.url}}" class="read-post-url card-link">Read More &#10148;</a>
+            <a href="{{site.url}}{{post.url}}">Read More &#10148;</a>
           </div>
         </div>
       </footer>
-    </section>
+    </div>
   </div>
 {% endfor %}
 </article>
