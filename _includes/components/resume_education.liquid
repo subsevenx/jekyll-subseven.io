@@ -1,0 +1,11 @@
+<section>
+    <h2 class="mt-3">Education</h2>
+    {% for item in site.data.education.list %}
+    <details>
+        <summary class="p-md-2">{{item.school}}</summary>
+        <h3 class="h6 my-2">{{ item.degree }}</h3>
+        <p class="fw-bold"> From {{ item.start }} to {{ item.end }}</p>
+        {{ item.blurb | markdownify }}
+    </details>
+    {% endfor %}
+</section>

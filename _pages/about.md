@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 sidebar: true
 ---
-<section markdown="1">
-
 ## Information About This Site
 
 You can find the <a href="https://github.com/subsevenx/jekyll-subseven.io" target="_blank" rel="dofollow noopener">source code for this site here</a>.
@@ -41,5 +39,3 @@ So...I decided to publish it while it still is in development. There's a bunch o
 * <s>Automated Deploy</s> | Done, 12.14.21 | I love GH actions 
 
 If you have any resources that can help me accomplish any of these, please <a href="/contact/">contact me</a>.
-
-</section>
