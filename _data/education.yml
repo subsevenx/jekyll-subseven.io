@@ -1,14 +1,12 @@
 #For use in resume.html 
 list:
-  - id: 1
-    degree: B.A. Liberal Arts. Minor Creative Writing
+  - degree: B.A. Liberal Arts. Minor Creative Writing
     school: Northeastern Illinois University
     start: 2017
     end: 2020
     blurb: Four year university. Recipient of TheDream.US Scholarship. Course work comprised a mix of tech courses and creative writing.
     
-  - id: 2
-    degree: A.S Science
+  - degree: A.S Science
     school: City Colleges of Chicago
     start: 2014
     end: 2017
