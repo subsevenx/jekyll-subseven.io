@@ -1,6 +1,7 @@
 <article class="row"> 
-  {% for post in site.posts %}
-  <div class="col-sm-12 col-md-6 card my-2"> 
+{% for post in site.posts %}
+  <div class="col-sm-12 col-md-6"> 
+    <section class="card my-2"> 
       {% if post.thumbnail %}
       <img src="{{post.thumbnail}}" class="img-fluid post-card" width="683" height="384" alt="Featured image for post title: {{post.title}}">
       {% else %}
@@ -10,7 +11,7 @@
       <h2 class="px-3 h6 fw-bold py-2">{{post.title | upcase}}</h2>
       <header>
       </header>
-      <details open class="card-body py-0 fs-6">
+      <details open class="card-body py-0 fs-6" toggle="open">
         <summary>Post Excerpt</summary>
         <p class="card-text">{{post.excerpt | strip_html | truncatewords: 50}}</p>
       </details>
@@ -24,6 +25,7 @@
           </div>
         </div>
       </footer>
+    </section>
   </div>
-  {% endfor %}
+{% endfor %}
 </article>
