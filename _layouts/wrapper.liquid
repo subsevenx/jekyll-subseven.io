@@ -13,6 +13,7 @@ layout: html_minifier
 </head>
 
 <body>
+  {% include /components/content_skip.liquid %}
   {%- include /components/nav.liquid -%}
   <div id="main-content" tabindex="-1">
     {%- if page.layout != "post" -%}
