@@ -1,0 +1,11 @@
+<div class="row d-flex gx-5">
+    {%- for item in site.data.portfolio.list -%}
+        <div class="col-md-6 col-sm-12">
+            <h2 class="text-center">{{item.title}}</h2>
+            <img src="{{item.img}}" class="img-fluid" alt="Screenshot of website {{item.title}}">
+                <div class="portfolio-metadata py-2">
+                {{item.text}}
+                </div>
+        </div>
+    {% endfor %}
+</div>
