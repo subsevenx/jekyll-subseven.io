@@ -6,24 +6,4 @@ sidebar: true
 ---
 
 {%- include /components/nav_button.liquid path="/blog/" buttonName="Back to Blog" class="post-back-button" symbol="&#8592;" -%}
-
-<section id="site-categories">
-  <div class="row">
-    {% for categories in site.categories %}
-    <div class="col-sm-12 col-lg-6">
-      <div class="card mt-2">
-        <div> 
-          <h2 class="h4 text-center card-header" id="cat-{{categories[0] | replace: ' ', '-' | downcase | remove: ',' }}"><span class="text-capitalize">{{categories[0] | remove: ',' }}</span></h2>
-        </div> 
-        <div class="card-body p-2"> 
-          <ul class="list-unstyled text-center">
-            {% for post in categories[1] %}
-            <li><a href="{{post.url | relative_url}}">{{post.title}}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div> 
-    </div>
-    {% endfor %}
-  </div>
-</section>
+{%- include /components/post_categories.liquid -%}
