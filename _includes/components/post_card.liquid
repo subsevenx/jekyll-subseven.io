@@ -6,7 +6,7 @@
       {% if post.thumbnail %}
       <img src="{{post.thumbnail}}" class="img-fluid" width="683" height="384" alt="Featured image for post title: {{post.title}}">
       {% else %}
-      <img src="{{site.data.metadata.image}}" class="img-fluid post-card" alt="Default site image that say S7">
+      <img src="{{site.data.metadata.image}}" class="img-fluid post-card" width="683" height="384" alt="Default site image that say S7">
       {% endif %}
       <hr>
       <h2 class="h6 fw-bold px-3 py-2">{{post.title | upcase}}</h2>
