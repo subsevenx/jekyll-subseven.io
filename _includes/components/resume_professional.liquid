@@ -1,0 +1,10 @@
+<section> 
+    <h2 class="mt-3">Professional</h2>
+    {% for item in site.data.experience.list %}
+    <details>
+      <summary class="p-md-2">{{item.title}}</summary>
+      <h3 class="h6 my-2"> From {{item.start}} to {{item.end}}</h3>
+      {{ item.blurb | markdownify }}
+    </details>
+    {% endfor %}
+</section>

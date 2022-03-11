@@ -1,11 +1,8 @@
 {%- comment -%} Sidebar. For now, it only displays blog links but will expand as more use cases are needed. {%- endcomment -%}
 <aside class="mt-sm-3 mb-3">
-
-    {% include /components/sidebar/_general-sb-posts.liquid %}
-
+    {% include /components/sidebar/_general_sb_posts.liquid %}
     {%- if page.url == "/blog/" -%}        
-    {% include /components/sidebar/_blog-sb-category.liquid %}
-    {% include /components/sidebar/_blog-sb-tags.liquid %}    
-    {% endif %}
-
+    {% include /components/sidebar/_blog_sb_category.liquid %}
+    {% include /components/sidebar/_blog_sb_tags.liquid %}    
+    {%- endif -%}
 </aside>

@@ -8,8 +8,6 @@ seo:
   meta-description: Policy regarding privacy practices for subseven.io
   meta-keywords: privacy policy, info handling
 ---
-<section id="privacy-policy" markdown="1">
-
 *Updated: 01/04/22*
 
 ## Privacy Policy Statement
@@ -57,5 +55,3 @@ I reserve the right to update or change my Privacy Policy at any time and you sh
 ## Contact Information
 
 For any questions or concerns regarding the privacy policy, please [contact me](/contact/).
-
-</section>

@@ -1,22 +1,26 @@
 #For use in resume.html 
 list:
-  - id: 1
-    title: Technical Marketing / Web Developer
+  - title: Technical Marketing / Web Developer
     job: Ankle N Foot
     start: 2018
     end: Present
-    blurb: <p>Responsible for managing technical marketing initiatives involving the company's website and online presence. This includes link building, content editing, copy, schema, & site performance enhancements.</p> <p>Responsible of managing website's content according to the company's specifications. Responsible for providing technical recommendations and implementing them. </p> <p>Responsible for management of site infrastructure and its upkeep. </p> <p>Responsible for management of paid ad campaigns and email marketing campaigns.</p>
+    blurb: |
+      - Responsible for managing technical marketing initiatives involving the company's website and online presence. This includes link building, content editing, copy, schema, & site performance enhancements.
+      - Responsible of managing website's content according to the company's specifications. 
+      - Responsible for providing technical recommendations and implementing them.  
+      - Responsible for management of site infrastructure and its upkeep.  
+      - Responsible for management of paid ad campaigns and email marketing campaigns.
   
-  - id: 2
-    title: Full-Stack Web Developer
+  - title: Full-Stack Web Developer
     job: Echo Nova / SubSeven Designs / Monva Digital
     start: 2017
     end: Present
-    blurb: <p>Freelance web development. Collaborated across a number of projects with peers + independently. Projects primarily consisted of WordPress-based websites with specifications for client control and managed servers. </p> <p>Occasional support for Magneto & Drupal websites.</p>
+    blurb: | 
+      Freelance web development. Collaborated across a number of projects with peers + independently. Projects primarily consisted of WordPress-based websites with specifications for client control and managed servers.  Occasional support for Magneto & Drupal websites.
   
-  - id: 3
-    title: Social Impact Intern
+  - title: Social Impact Intern
     job: GitHub
     start: Summer 2017
     end: Fall 2017
-    blurb: <p>Responsible for conducting survey and marketing campaign for GitHub nonprofit users.</p> <p>Survey data was then interpreted and analyzed with the help of the data science team. Used R, Python, Looker, and SQL.</p> <p>Finally, wrote documentation on leveraging the use of open source for non-profit organizations.</p>
+    blurb: | 
+      Responsible for conducting survey and marketing campaign for GitHub nonprofit users. Survey data was then interpreted and analyzed with the help of the data science team. Used R, Python, Looker, and SQL. Finally, wrote documentation on leveraging the use of open source for non-profit organizations.

@@ -1,0 +1,32 @@
+<article class="row">
+{%- assign sorted_collection = site.now | sort: 'date' | reverse | uniq | limit: 10 -%}
+{%- for now_post in sorted_collection -%}
+    <div class="col-12 mb-3"> 
+        <div class="card mx-lg-5 mx-sm-0"> 
+            <header class="container">
+                <div class="card-body"> 
+                <details>
+                    <summary>
+                        <span class="card-title">{{now_post.title}}</span>
+                    </summary>   
+                    {{now_post.content}}
+                </details>
+                </div> 
+            </header>
+            <footer class="card-footer">
+                <div class="row"> 
+                    <div class="col-6">
+                        <time datetime="{{now_post.date | date: "%T"}}">{{now_post.date | date: '%B %d, %Y'}} at {{now_post.date | date: '%r'}}</time> 
+                    </div>
+                    <div class="col-4">
+                        <span>#{{now_post.tags}}</span>
+                    </div>
+                    <div class="col-2">
+                        <p><a href="{{now_post.url}}">Permalink</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div> 
+    </div>
+    {% endfor %}
+</article>    
