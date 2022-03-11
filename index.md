@@ -1,12 +1,19 @@
 ---
 seo:
-  meta-title: "SubSeven: Web Dev, Musician, Writer"
-  meta-description: I am a web developer and technical marketer based out of the midwest.
+  meta-title: 
+  meta-description: 
   meta-keywords: subseven, subseven.io, sub7.dev, subseven.me
   og-title: "SubSeven: Web Dev, Musician, Writer"
   og-image: /assets/img/sub7_def.png
-  og-description: I am web dev, writer, and technical marketer based out of the midwest.
-  index: index, follow
+
+seo:
+  og:
+    description: Hey there! I am a web developer and technical marketer based out of the midwest.
+    type: website
+    image: https://imagedelivery.net/fDayHQi5y0lm6y93ekDYPw/da8bce8e-b2fe-4c4d-9721-9d41b4a2da00/thumbnail
+
+
+
 layout: wrapper
 title: Home
 sidebar: true
