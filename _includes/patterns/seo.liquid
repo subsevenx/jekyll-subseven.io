@@ -27,7 +27,7 @@
 <meta property="og:description" content="{% if og.description %}{{og.description}}{% else %}{{metadata.description}}{% endif %}">
 <meta property="og:type" content="{%- if og.type == nil -%}{%- if site.post -%}article{%- else -%}website{%- endif -%}{%- else -%}{{og.type}}{% endif %}">
 <meta property="og:url" content="{%- if page.url != / -%}{{site.url}}{{page.url}}" {% elsif page.url == / %}{{site.url}}{%- endif -%}> 
-<meta property="og:image" content="{% if og.image %}{{og.image}}{% elsif page.featured %}{{page.featured}}{% else %}{{metadata.img_path}}{% endif %}">
+<meta property="og:image" content="{% if og.image %}{{og.image}}{% elsif page.featured %}{{page.featured}}{% else %}{{metadata.image}}{% endif %}">
 <meta property="og:site_name" content="{%- if og.site_name -%}{{og.site_name}} {% else %}{{metadata.title}}{%- endif -%}">
 <meta property="og:locale" content="{%- if og.locale -%}{{og.locale}}{% else %}{{site.og_locale | default: "en_US"}}{%- endif -%}">
 
