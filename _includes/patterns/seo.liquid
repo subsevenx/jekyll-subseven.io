@@ -47,6 +47,10 @@
     {%- endif -%}
 {%- endcapture -%}
 
+{%- capture meta_theme_color -%}
+    {{- metadata.meta_theme_color | default: "#FFF" -}}
+{%- endcapture -%}
+
 {%- capture meta_author -%}
     {%- if mt.author %}
         {{- mt.author -}}
@@ -136,7 +140,7 @@ to provide it. Cuts build time and confusion.
 <title>{{ full_site_title }}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#000">
+<meta name="theme-color" content="{{ meta_theme_color }}">
 {%- comment -%} Indexing {%- endcomment -%}
 <meta name="revisit-after" content="{{ meta_revisit_after }}">
 <meta name="robots" content="{{ meta_robots }}">
