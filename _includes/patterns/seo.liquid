@@ -6,38 +6,160 @@
 {%- assign ix = page.seo.index -%}
 {%- assign metadata = site.data.metadata -%}
 
-<title>{{- page.title -}} {{- metadata.separator -}} {{- metadata.title -}}</title>
+{%- capture full_site_title -%}
+    {{- page.title -}} 
+    {%- if metadata.separator -%}
+        {{- metadata.separator -}} 
+    {%- endif -%}
+    
+    {{- metadata.title -}} 
+    
+    {%- if metadata.separator2 -%}    
+        {{- metadata.separator2 -}} 
+    {%- endif -%}
+
+    {%- if metadata.tagline -%}
+        {{- metadata.tagline -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture social_site_title -%}
+    {%- if og.title -%}
+        {{- og.title }} {{- metadata.separator -}} {{- metadata.title -}} {{- metadata.separator2 -}} {{- metadata.tagline -}}
+    {%- else -%}
+        {{- page.title -}} {{- metadata.separator -}} {{- metadata.title -}} {{- metadata.separator2 -}} {{- metadata.tagline -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture meta_robots -%}
+    {%- if ix.robots -%}
+        {{- ix.robots -}}
+    {%- else -%}
+        {{- metadata.robots -}}
+    {% endif %} 
+{%- endcapture -%}
+
+{%- capture meta_revisit_after -%}
+    {%- if ix.revisit -%}
+        {{- ix.revisit -}}
+    {% else %}
+        {{- metadata.revisit -}}
+    {% endif %}
+{%- endcapture -%}
+
+{%- capture meta_keywords -%}
+    {%- if mt.keywords -%}
+        {{ mt.keywords }}
+    {%- elsif page.tags -%}
+        {{- page.tags | sort | join: ", " -}}
+    {% else %}
+        {{- metadata.keywords -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture meta_author -%}
+    {%- if mt.author %}
+        {{- mt.author -}}
+    {%- elsif page.author -%}
+        {{- page.author -}}
+    {%- else -%}
+        {{- metadata.author -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture meta_language -%}
+    {%- if mt.language -%}
+        {{- mt.language -}}
+    {%- elsif page.language -%}
+        {{ page.language }}
+    {%- else -%}
+        {{- metadata.language -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture social_description -%}
+    {%- if mt.description -%}
+        {{- mt.description -}}
+    {% elsif og.description %}
+        {{- og.description -}}
+    {% else %}
+        {{- metadata.description -}}
+    {% endif %}
+{%- endcapture -%}
+
+{%- capture social_content_type -%}
+    {%- if og.type == nil -%}
+        {% if site.post %}article
+        {% else %}website
+    {%- endif %}
+    {%- else -%}
+        {{- og.type -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture social_url -%}
+    {%- if page.url != '/' -%}
+        {{- site.url -}}{{- page.url -}}
+    {%- elsif page.url == '/' -%}
+        {{- site.url -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture social_image -%}
+    {%- if og.image -%}
+        {{ og.image }}
+    {%- elsif metadata.image -%}
+        {{- metadata.image -}}
+    {%- else -%}
+        {{- page.image -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture social_site_name -%}
+    {%- if og.site_name -%}
+        {{- og.site_name -}}
+    {% else %}
+        {{- metadata.title -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture social_locale -%}
+    {%- if og.locale -%}
+        {{- og.locale -}}
+    {%- else -%}
+        {{- site.og_locale | default: "en_US" -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+<title>{{ full_site_title }}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#000">
-
 {%- comment -%} Indexing {%- endcomment -%}
-<meta name="revisit-after" content="{%- if ix.revisit -%}{{ix.revisit}}{%- else -%}{{metadata.revisit}}{%- endif -%}">
-<meta name="robots" content="{%- if ix.robots -%}{{ix.robots}}{%- else -%}{{metadata.robots}}{%- endif -%} ">
-
+<meta name="revisit-after" content="{{ meta_revisit_after }}">
+<meta name="robots" content="{{ meta_robots }}">
 {%- comment -%} Meta SEO {%- endcomment -%}
-<meta name="title" content="{%- if mt.title -%}{{mt.title}}{{metadata.separator}}{{metadata.title}}{% elsif og.title %}{{og.title}}{{metadata.separator}}{{metadata.title}}{% else %}{{page.title}}{{-metadata.separator-}}{{metadata.title}}{%- endif -%}">    
-<meta name="description" content="{%- if mt.description -%}{{mt.description}}{% elsif og.description %}{{og.description}}{%- else -%}{{metadata.description}}{% endif %}">
-<meta name="keywords" content="{%- if mt.keywords -%}{{mt.keywords}}{% elsif page.tags %}{{page.tags | sort | join: ", "}}{% else %}{{metadata.keywords}}{% endif %}">
-<meta name="author" content="{%- if mt.author -%}{{mt.author}}{%- elsif page.author -%}{{page.author}}{%- else -%}{{metadata.author}}{%- endif -%}">
-<meta name="language" content="{%- if mt.language -%}{{mt.language}}{%- elsif page.language -%}{{page.language}}{%- else -%}{{- site.language -}}{%- endif -%}">
-
+<meta name="title" content="{{ social_site_title }}">    
+<meta name="description" content="{{ social_description }}">
+<meta name="keywords" content="{{ meta_keywords }}">
+<meta name="author" content="{{ meta_author }}">
+<meta name="language" content="{{ meta_language }}">
 {%- comment -%} OG SEO {%- endcomment -%}
-<meta property="og:title" content="{%- if og.title -%}{{- og.title -}}{{-metadata.separator-}}{{metadata.title}}{% else %}{{page.title}} {{- metadata.separator -}} {{metadata.title}}{%- endif -%}">
-<meta property="og:description" content="{% if og.description %}{{og.description}}{% else %}{{metadata.description}}{% endif %}">
-<meta property="og:type" content="{%- if og.type == nil -%}{%- if site.post -%}article{%- else -%}website{%- endif -%}{%- else -%}{{og.type}}{% endif %}">
-<meta property="og:url" content="{%- if page.url != / -%}{{site.url}}{{page.url}}" {% elsif page.url == / %}{{site.url}}{%- endif -%}> 
-<meta property="og:image" content="{% if og.image %}{{og.image}}{% elsif page.featured %}{{page.featured}}{% else %}{{metadata.image}}{% endif %}">
-<meta property="og:site_name" content="{%- if og.site_name -%}{{og.site_name}} {% else %}{{metadata.title}}{%- endif -%}">
-<meta property="og:locale" content="{%- if og.locale -%}{{og.locale}}{% else %}{{site.og_locale | default: "en_US"}}{%- endif -%}">
-
+<meta property="og:title" content="{{ social_site_title }}">
+<meta property="og:description" content="{{ social_description }}">
+<meta property="og:type" content="{{ social_content_type }}">
+<meta property="og:url" content="{{ social_url }}"> 
+<meta property="og:image" content="{{ social_image }}">
+<meta property="og:site_name" content="{{ social_site_name }}">
+<meta property="og:locale" content="{{ social_locale }}">
 {%- comment -%} Twitter Cards {%- endcomment -%}
-
 {%- if metadata.twitter_card == true -%}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{%- if tw.title -%}{{- tw.title -}} | {{metadata.title}}{% else %}{{page.title}} {{- metadata.separator -}} {{metadata.title}}{%- endif -%}">
-<meta name="twitter:description" content="{%- if tw.description -%}{{tw.description}}{% else %}{{metadata.description}}{% endif %}">
-<meta name="twitter:site" content="{{site.url}}">
-<meta name="twitter:image" content="{%- if tw.image -%}{{tw.image}}{%- else -%}{{metadata.img_path}}{%- endif -%}">
-<meta name="twitter:creator" content="{{site.twitter_username}}">
+<meta name="twitter:title" content="{{ social_site_title }}">
+<meta name="twitter:description" content="{{ social_description }}">
+<meta name="twitter:site" content="{{ social_url }}">
+<meta name="twitter:image" content="{{ social_image }}">
+<meta name="twitter:creator" content="{{ metadata.twitter_username }}">
 {%- endif -%}
+
+<link rel="alternate" type="application/atom+xml" title="{{- metadata.title -}}" href="{{site.url}}/rss.xml">
