@@ -133,7 +133,7 @@ to provide it. Cuts build time and confusion.
     {%- if og.locale -%}
         {{- og.locale -}}
     {%- else -%}
-        {{- site.og_locale | default: "en_US" -}}
+        {{- metadata.og_locale | default: "en_US" -}}
     {%- endif -%}
 {%- endcapture -%}
 
@@ -172,3 +172,4 @@ to provide it. Cuts build time and confusion.
 {%- endif -%}
 
 <link rel="alternate" type="application/atom+xml" title="{{- social_site_title -}}" href="{{- site.url -}}/rss.xml">
+<link rel="canonical" href="{{- social_url -}}" />
