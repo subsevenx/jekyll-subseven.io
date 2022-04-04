@@ -12,7 +12,7 @@ layout: null
     {% endfor %}
     
     {% for page in site.pages %}
-    {% if page.url contains '.xml' or page.url contains 'assets' or page.seo.index == "noindex, nofollow" %} 
+    {% if page.url contains '.xml' or page.url contains 'assets' or page.seo.index == "noindex, nofollow"  or page.path == ".htaccess" %}
     {% else %} 
     <url>
         <loc>{{site.url}}{{page.url | remove: 'index.html'}}</loc>
