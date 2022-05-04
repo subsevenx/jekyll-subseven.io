@@ -13,7 +13,7 @@ menu:
     icon: /assets/img/icons/1F4BC.svg
     child:
       - name: Portfolio
-        link: /portfolio/
+        link: #
   - name: Now 
     link: /now/
     icon: /assets/img/icons/1F554.svg
