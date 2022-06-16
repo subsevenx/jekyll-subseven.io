@@ -1,5 +1,5 @@
 ---
-title: Bulding a Jekyll Site in the 20s
+title: Building a Jekyll Site in the 20s
 author: Daniel Hernandez
 thumbnail: https://imagedelivery.net/fDayHQi5y0lm6y93ekDYPw/895849c8-9d8c-4279-ee9a-3a4a2814c000/thumbnail
 seo:
